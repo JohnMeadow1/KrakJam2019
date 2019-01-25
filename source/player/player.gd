@@ -15,10 +15,12 @@ var walk_cycle:float     = 0
 var timer:float        = 5
 
 var carry_item_handle:Node = null
+var originPosition:Vector3 = Vector3()
 
 func _ready():
 	PLAYER_CONTROLS  = PLAYER_NUM
 	self.state       = STATE_IDLE
+	originPosition   = self.translation
 	
 func _physics_process(delta):
 	if timer > 0:
@@ -68,7 +70,9 @@ func _physics_process(delta):
 
 	$Spatial.translation.z =  -sin( walk_cycle ) * 0.2
 	move                   = move_and_slide(move)
-	
+	translation.y      = originPosition.y
+	move               *= 0.90
+
 func handle_input(offset):
 	var player_moved = false
 	if Input.is_action_pressed("move_up_p" + str(PLAYER_CONTROLS)):
