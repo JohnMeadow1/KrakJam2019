@@ -19,7 +19,7 @@ var originPosition:Vector3 = Vector3()
 
 func _ready():
 	PLAYER_CONTROLS  = PLAYER_NUM
-	self.state       = STATE_IDLE
+	self.state       = STATE.STATE_IDLE
 	originPosition   = self.translation
 	
 func _physics_process(delta):
@@ -49,12 +49,12 @@ func _physics_process(delta):
 		var player_moved = handle_input(offset)
 	
 		if player_moved:
-			self.state = STATE_WALK
+			self.state = STATE.STATE_WALK
 			walk_cycle += 0.2
 			if walk_cycle >= PI:
 				walk_cycle -= PI
 #				get_node("steps/Steps_" + str( randi() % 10 + 1 ) ).play()
-		elif self.state != STATE_IDLE:
+		elif self.state != STATE.STATE_IDLE:
 
 			if walk_cycle > PI * 0.5:
 				walk_cycle += 0.2
@@ -66,7 +66,7 @@ func _physics_process(delta):
 #					get_node("steps/Steps_"+str(randi()%10+1)).play()
 					pass
 				walk_cycle = 0
-				self.state = STATE_IDLE
+				self.state = STATE.STATE_IDLE
 
 	$Spatial.translation.z =  -sin( walk_cycle ) * 0.2
 	move                   = move_and_slide(move)
