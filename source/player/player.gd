@@ -1,6 +1,7 @@
 extends KinematicBody
 
-const MOVE_SPEED  = 50
+const MOVE_SPEED  = 10
+const WALK_HEIGHT  = 0.1
 const STUN_TIME   = 1
 
 export(int) var PLAYER_NUM:int = 1
@@ -11,7 +12,7 @@ enum STATE {STATE_IDLE, STATE_WALK, STATE_FIGHT, STATE_STUN}
 var state:int = STATE.STATE_IDLE
 
 var move:Vector3       = Vector3()
-var walk_cycle:float     = 0
+var walk_cycle:float   = 0
 var timer:float        = 5
 
 var carry_item_handle:Node = null
@@ -68,7 +69,8 @@ func _physics_process(delta):
 				walk_cycle = 0
 				self.state = STATE.STATE_IDLE
 
-	$Spatial.translation.z =  -sin( walk_cycle ) * 0.2
+	$Spatial.translation.z =  -sin( walk_cycle ) * WALK_HEIGHT
+	$shade.opacity =  0.8 + $Spatial.translation.z * 5
 	move                   = move_and_slide(move)
 	translation.y      = originPosition.y
 	move               *= 0.90
