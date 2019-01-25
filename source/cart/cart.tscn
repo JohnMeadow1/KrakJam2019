@@ -22,3 +22,7 @@ transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0
 flip_h = true
 texture = ExtResource( 2 )
 
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+aabb = AABB( -0.699102, -0.365393, -0.171218, 1.3982, 0.730785, 0.342437 )
+
+[connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
