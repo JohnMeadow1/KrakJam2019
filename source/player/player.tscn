@@ -61,7 +61,7 @@ region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 
 [node name="shade" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0.01, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
