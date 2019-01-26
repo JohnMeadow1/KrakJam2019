@@ -71,7 +71,10 @@ func _physics_process(delta):
 
 	$Spatial.translation.z =  -sin( walk_cycle ) * WALK_HEIGHT
 	$shade.opacity =  0.8 + $Spatial.translation.z * 5
-	move                   = move_and_slide(move)
+	$shade.scale.x =  1.2 - $Spatial.translation.z * 5
+	$shade.scale.y =  1.2 - $Spatial.translation.z * 5
+
+	move               = move_and_slide(move)
 	translation.y      = originPosition.y
 	move               *= 0.90
 

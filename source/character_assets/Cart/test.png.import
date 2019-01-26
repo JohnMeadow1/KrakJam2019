@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shade.png-e8b4ed29d8409ca16ecfbe3fe07c3359.stex"
+path="res://.import/test.png-46ceb69d7095e976df7cc4aa2b0bf69d.stex"
 
 [deps]
 
-source_file="res://sprites/shade.png"
-dest_files=[ "res://.import/shade.png-e8b4ed29d8409ca16ecfbe3fe07c3359.stex" ]
+source_file="res://character_assets/Cart/test.png"
+dest_files=[ "res://.import/test.png-46ceb69d7095e976df7cc4aa2b0bf69d.stex" ]
 
 [params]
 
