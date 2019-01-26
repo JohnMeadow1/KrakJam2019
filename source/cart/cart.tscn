@@ -116,7 +116,6 @@ hframes = 2
 frame = 4
 
 [node name="cart" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 20, -47 )
 texture = ExtResource( 3 )
 hframes = 5

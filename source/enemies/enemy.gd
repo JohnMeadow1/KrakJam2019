@@ -66,6 +66,7 @@ func _on_sware_distance_body_exited(body):
 		return
 	
 	if body.is_in_group("player"):
+		wait_timer = wait_time * 2.0
 		state = STATES.STATE_WAIT
 	
 func players_position() -> Vector2:

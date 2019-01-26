@@ -1,6 +1,5 @@
 extends Node
 func _ready():
-	globals.cart = $YSort/cart/treasure
 	globals.players_position = $players_position
 	globals.camera = $Camera
 	globals.players.append( $YSort/player_1 )
