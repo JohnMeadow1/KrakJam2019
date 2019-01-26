@@ -24,7 +24,6 @@ func _physics_process(delta):
 	move.y += current_stering * 3
 	translate(move.normalized() * speed * delta)
 
-
 func _process(delta):
 	timer += delta * 10
 	stering_bias += rand_range(-(1+stering_bias*0.01), 1-stering_bias*0.01 )

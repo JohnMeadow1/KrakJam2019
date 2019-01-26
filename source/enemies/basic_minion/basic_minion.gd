@@ -7,7 +7,8 @@ export(float) var charge_speed:float	= 250.0
 export(float) var attack_distance = 70.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	target = get_tree().get_nodes_in_group("treasure").front()
+	target = globals.cart
+	print(target.name)
 
 func _physics_process(delta):
 	if state == STATES.STATE_ATTACK:
