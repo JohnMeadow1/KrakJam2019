@@ -97,4 +97,3 @@ func _on_pickup_area_loot_entered(area):
 		held_item = target
 		target.grab(30)
 		state = STATES.STATE_RUN
-

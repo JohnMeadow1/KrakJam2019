@@ -13,7 +13,6 @@
 [node name="Enviroment" type="Node"]
 
 [node name="Ground" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 10000, 10000 )
@@ -517,10 +516,10 @@ __meta__ = {
 script = ExtResource( 3 )
 
 [node name="YSort" type="YSort" parent="."]
-sort_enabled = true
 
 [node name="plant1" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( -375, -140 )
+frame = 0
 
 [node name="dragon_head" parent="." instance=ExtResource( 5 )]
 position = Vector2( -37, 42 )

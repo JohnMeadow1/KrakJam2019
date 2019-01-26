@@ -113,10 +113,9 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 
 [node name="player_scan" type="Area2D" parent="."]
-visible = false
 monitorable = false
 collision_layer = 0
-collision_mask = 1536
+collision_mask = 1538
 __meta__ = {
 "_edit_lock_": true
 }
@@ -166,6 +165,7 @@ position = Vector2( 0, -4 )
 rotation = 1.5708
 shape = SubResource( 7 )
 
+[connection signal="area_entered" from="player_scan" to="." method="_on_player_scan_area_entered"]
 [connection signal="body_entered" from="player_scan" to="." method="_on_player_scan_body_entered"]
 [connection signal="body_exited" from="player_scan" to="." method="_on_player_scan_body_exited"]
 [connection signal="body_entered" from="critical_distance" to="." method="_on_critical_distance_body_entered"]
