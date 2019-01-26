@@ -1,26 +1,33 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://cart/cart.gd" type="Script" id=1]
 [ext_resource path="res://character_assets/Cart/test3.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-custom_solver_bias = 0.0
 extents = Vector2( 60, 20 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+extents = Vector2( 50, 35 )
 
 [node name="cart" type="KinematicBody2D"]
 position = Vector2( 0, 0.224616 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-motion/sync_to_physics = false
 script = ExtResource( 1 )
-speed = 10.0
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -20.2246 )
 shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="." groups=[
+"drop_point",
+]]
+input_pickable = false
+
+[node name="TreasureReach" type="CollisionShape2D" parent="Area2D"]
+modulate = Color( 0.839216, 0.984314, 0.0156863, 1 )
+position = Vector2( 40, -20 )
+shape = SubResource( 2 )
 
 [node name="pivot" type="Node2D" parent="."]
 
@@ -31,13 +38,13 @@ vframes = 2
 hframes = 5
 frame = 2
 
-[node name="VisibilityNotifier" type="VisibilityEnabler2D" parent="."]
-rect = Rect2( -10, -10, 20, 20 )
-pause_animations = true
-freeze_bodies = true
-pause_particles = true
-pause_animated_sprites = true
-process_parent = false
-physics_process_parent = false
+[node name="treasure" type="Node2D" parent="pivot" groups=[
+"treasure",
+]]
+position = Vector2( 60, -20 )
 
+[node name="VisibilityNotifier" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 50.6231, -23.3208 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]

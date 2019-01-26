@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
@@ -6,20 +6,22 @@
 
 [sub_resource type="CircleShape2D" id=1]
 
-custom_solver_bias = 0.0
-radius = 10.0
 
-[node name="player_1" type="KinematicBody2D"]
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-motion/sync_to_physics = false
+[sub_resource type="CircleShape2D" id=2]
+
+radius = 20.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+radius = 25.0
+
+[node name="player_1" type="KinematicBody2D" groups=[
+"player",
+]]
 script = ExtResource( 1 )
-PLAYER_NUM = 1
-player_enabled = null
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -4 )
 shape = SubResource( 1 )
 
 [node name="shade" type="Sprite" parent="."]
@@ -29,9 +31,28 @@ texture = ExtResource( 2 )
 
 [node name="pivot" type="Node2D" parent="."]
 
+[node name="drop_area" type="Area2D" parent="pivot"]
+position = Vector2( 20, -4 )
+collision_layer = 0
+
+[node name="Shape2D" type="CollisionShape2D" parent="pivot/drop_area"]
+shape = SubResource( 2 )
+
 [node name="player_sprite" type="Sprite" parent="pivot"]
 position = Vector2( -14, -78 )
 texture = ExtResource( 3 )
 centered = false
 hframes = 2
+
+[node name="held_item" type="Position2D" parent="pivot"]
+position = Vector2( 28, 4 )
+
+[node name="pickup_area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Shape2D" type="CollisionShape2D" parent="pickup_area"]
+position = Vector2( 0, -4 )
+rotation = 1.5708
+shape = SubResource( 3 )
 

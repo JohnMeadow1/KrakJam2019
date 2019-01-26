@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://flat_enviro_assets/pobrane.jpg" type="Texture" id=3]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=5]
-[ext_resource path="res://stand_enviro_assets/Apple-Tree-Sprite.png" type="Texture" id=6]
+[ext_resource path="res://sprites/neina.png" type="Texture" id=5]
+[ext_resource path="res://sprites/hiryu.png" type="Texture" id=6]
+[ext_resource path="res://sprites/leszek.png" type="Texture" id=7]
+[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sprites/tree2.png" type="Texture" id=9]
+[ext_resource path="res://enemies/basic_minion/basic_minion.tscn" type="PackedScene" id=10]
+[ext_resource path="res://objects/loot.tscn" type="PackedScene" id=11]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -13,152 +18,106 @@ script = ExtResource( 1 )
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 0, 3 )
 scale = Vector2( 1, 0.707107 )
-anchor_mode = 1
-rotating = false
 current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
+
+[node name="players_position" type="Node2D" parent="."]
+position = Vector2( 0, 4.76837e-007 )
+scale = Vector2( 1, 1 )
 
 [node name="Enviroment" type="Node" parent="."]
 
 [node name="Ground" type="Sprite" parent="Enviroment"]
 modulate = Color( 0.341176, 0.72549, 0.384314, 1 )
-position = Vector2( 0, -0.001 )
 scale = Vector2( 100, 100 )
 texture = ExtResource( 2 )
 
 [node name="Road" type="Node2D" parent="Enviroment"]
-editor/display_folded = true
 
 [node name="road_1" type="Sprite" parent="Enviroment/Road"]
 modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -234, -1 )
+position = Vector2( 77, 35 )
 texture = ExtResource( 3 )
-
-[node name="road_2" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( 232, -2 )
-texture = ExtResource( 3 )
-
-[node name="road_3" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( 5.06879, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_4" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( 7.31879, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_5" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -8.43121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_6" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -6.18121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_7" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -3.93121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_8" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -1.68121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_9" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
-
-[node name="road_10" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
-
-[node name="road_11" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
-
-[node name="road_12" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="YSort" type="YSort" parent="."]
-sort_enabled = true
 
 [node name="player_1" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 167, 53 )
+position = Vector2( 54, 96 )
 player_enabled = true
 
 [node name="player_2" parent="YSort" instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( 1.83542, 0.00454092 )
+position = Vector2( 164, 13.9955 )
 player_enabled = true
+
+[node name="player_sprite" parent="YSort/player_2/pivot" index="1"]
+position = Vector2( -24, -80.9955 )
+texture = ExtResource( 5 )
 
 [node name="player_3" parent="YSort" instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( -153, 17 )
+position = Vector2( -58, -12 )
 player_enabled = true
+
+[node name="player_sprite" parent="YSort/player_3/pivot" index="1"]
+position = Vector2( -49, -78 )
+texture = ExtResource( 6 )
 
 [node name="player_4" parent="YSort" instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( 0.691579, 0.00454092 )
+position = Vector2( 95.6916, -29 )
 player_enabled = true
 
-[node name="cart" parent="YSort" instance=ExtResource( 5 )]
+[node name="player_sprite" parent="YSort/player_4/pivot" index="1"]
+position = Vector2( -23.6916, -85 )
+texture = ExtResource( 7 )
+
+[node name="cart" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 328, 34 )
 collision/safe_margin = 0.001
 speed = 50.0
 
 [node name="tree_1" type="Sprite" parent="YSort"]
-position = Vector2( 259, -22 )
-texture = ExtResource( 6 )
+position = Vector2( 259, -23 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_2" type="Sprite" parent="YSort"]
-position = Vector2( 256, 170 )
-texture = ExtResource( 6 )
+position = Vector2( 392, -19 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_3" type="Sprite" parent="YSort"]
-position = Vector2( 147, -10 )
-texture = ExtResource( 6 )
+position = Vector2( 147, -11 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_4" type="Sprite" parent="YSort"]
-position = Vector2( -50, -24 )
-texture = ExtResource( 6 )
+position = Vector2( -50, -25 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
+[node name="basic_minion" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -72, 71 )
+
+[node name="basic_minion2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -267.709, 11.9556 )
+
+[node name="basic_minion3" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -271.69, 177.811 )
+
+[node name="basic_minion4" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 154.297, 267.406 )
+
+[node name="basic_minion5" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 389.689, 269.035 )
+
+[node name="loot" parent="." instance=ExtResource( 11 )]
+
+
+[editable path="YSort/player_2"]
+
+[editable path="YSort/player_3"]
+
+[editable path="YSort/player_4"]

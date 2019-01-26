@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cart1.png-0b5f56b6e3607482a9e92d7fd6793e24.stex"
+path="res://.import/tree2.png-4e8767fc721d65303169202cb05543a4.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart1.png"
-dest_files=[ "res://.import/Cart1.png-0b5f56b6e3607482a9e92d7fd6793e24.stex" ]
+source_file="res://sprites/tree2.png"
+dest_files=[ "res://.import/tree2.png-4e8767fc721d65303169202cb05543a4.stex" ]
 
 [params]
 

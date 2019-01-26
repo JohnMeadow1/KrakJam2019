@@ -13,3 +13,9 @@ extends Node
 #var won                = false
 #var timer              = 3
 #var screen             = Vector2()
+
+var cart:Node2D = null
+var players_position:Node2D = null
+var camera:Camera2D = null
+
+var players:Array = []
