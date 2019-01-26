@@ -5,18 +5,13 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-custom_solver_bias = 0.0
 extents = Vector2( 60, 20 )
 
-[node name="cart" type="KinematicBody2D"]
+[node name="cart" type="KinematicBody2D" groups=[
+"cart",
+]]
 position = Vector2( 0, 0.224616 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-motion/sync_to_physics = false
 script = ExtResource( 1 )
-speed = 10.0
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -20.2246 )
@@ -32,12 +27,5 @@ hframes = 5
 frame = 2
 
 [node name="VisibilityNotifier" type="VisibilityEnabler2D" parent="."]
-rect = Rect2( -10, -10, 20, 20 )
-pause_animations = true
-freeze_bodies = true
-pause_particles = true
-pause_animated_sprites = true
-process_parent = false
-physics_process_parent = false
 
 [connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
