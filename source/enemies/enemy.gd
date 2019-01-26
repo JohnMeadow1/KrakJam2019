@@ -1,10 +1,13 @@
 extends KinematicBody2D
 class_name Enemy
 
-export(float) var move_away_time	= 1.0
+export(float) var move_away_time	= 0.8
 var move_away_timer:float = 0.0
 
-enum STATES {STATE_IDLE, STATE_CHASE, STATE_RUN, STATE_MOVE_AWAY}
+export(float) var wait_time	= 0.2
+var wait_timer:float = 0.0
+
+enum STATES {STATE_IDLE, STATE_WAIT, STATE_CHASE, STATE_RUN, STATE_MOVE_AWAY, STATE_ATTACK}
 
 var state:int		= STATES.STATE_CHASE
 var has_loot:bool	= false
@@ -12,6 +15,9 @@ var looted:bool		= false
 
 var target:Node2D	= null
 var players:Array = []
+
+export(int) var friends_courage:int = 3
+var firends_count:int = 1
 
 func _ready():
 	state = STATES.STATE_CHASE

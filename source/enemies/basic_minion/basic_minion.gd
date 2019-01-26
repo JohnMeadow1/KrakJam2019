@@ -10,19 +10,22 @@ func _ready():
 	print(state)
 
 func _physics_process(delta):
-	if state == STATES.STATE_IDLE:
-		idle(delta)
+	if state == STATES.STATE_RUN && target != null:
+		run(delta)
 	elif state == STATES.STATE_CHASE && target != null:
 		chase(delta)
-	elif state == STATES.STATE_RUN && target != null:
-		run(delta)
 	elif state == STATES.STATE_MOVE_AWAY:
 		if	move_away_timer > 0:
 			move_away_timer -= delta
 			move_away(delta)
 		else:
+			wait_timer = wait_time
+			state = STATES.STATE_WAIT
+	elif state == STATES.STATE_WAIT:
+		if	wait_timer > 0:
+			wait_timer -= delta
+		else:
 			state = STATES.STATE_CHASE
-		pass
 	else:
 		idle(delta)
 
@@ -55,6 +58,9 @@ func run(delta):
 	self.move_and_slide(direction * offset)
 
 func move_away(delta):
+	if players.size() > 0:
+		move_away_timer = move_away_time
+	
 	var offset = run_speed * delta * 100.0
 	var direction = self.position - globals.players_position.global_position
 	direction = direction.normalized()

@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Player
 
 const MOVE_SPEED  = 1000
 const WALK_HEIGHT  = 5

@@ -100,7 +100,6 @@ offset = Vector2( 0, -100 )
 
 [node name="basic_minion" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( -72, 71 )
-move_away_time = 0.5
 
 [node name="loot" parent="." instance=ExtResource( 11 )]
 
