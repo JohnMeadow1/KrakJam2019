@@ -1,15 +1,18 @@
 extends KinematicBody2D
 
 export(float) var speed:float = 10.0
-
+var current_speed:float = 0.0
 var move:Vector2       = Vector2.ZERO
 
 var bump_velcocity:float = 0.0
 var current_stering:float = 0.0
 var target_stering:float = 0
 var stering_bias:float = 0.0
-var loot_in_cart:int = 10
+var loot_in_cart:int = 5
 var timer:float = 0.0
+
+var in_drive_area:int = 0
+
 
 var loot_object = load("res://objects/loot.tscn")
 
@@ -20,15 +23,16 @@ func _ready():
 
 func _physics_process(delta):
 	move = Vector2.ZERO
-	move.x -= speed 
+	current_speed = lerp(current_speed, speed, 0.1)
+	move.x -= current_speed 
 	move.y += current_stering * 3
-	translate(move.normalized() * speed * delta)
+	translate(move.normalized() * current_speed * delta)
 
 
 func _process(delta):
 	timer += delta * 10
-	stering_bias += rand_range(-(1+stering_bias*0.01), 1-stering_bias*0.01 )
-	stering_bias = clamp(stering_bias,-3,3)
+	stering_bias += rand_range(-(0.1+stering_bias*0.01), 0.1-stering_bias*0.01 )
+	stering_bias = clamp(stering_bias,-0.2,0.2)
 	target_stering += stering_bias
 	target_stering = clamp(target_stering, -10,10)
 
@@ -61,10 +65,12 @@ func spawn_loot():
 	new_loot.position = $treasure.global_position
 	new_loot.position.y +=30
 	loot_in_cart -= 1
+	$cart.frame = int(loot_in_cart*0.5)
 	return new_loot
 	
 func add_loot():
 	loot_in_cart += 1
+	$cart.frame = clamp(int(loot_in_cart*0.5), 0,4)
 
 func _on_bump_area_entered(area):
 	area.get_node("Shape2D").disabled = true
@@ -73,3 +79,17 @@ func _on_bump_area_entered(area):
 		var new_loot = spawn_loot()
 		new_loot.get_node("pivot").position.y -= 40
 		new_loot.velocity = -5
+
+func _on_drive_control_body_entered(body):
+	if in_drive_area == 0:
+		$TextureProgress.visible = true
+	in_drive_area +=1
+	body.can_drive = true
+
+
+func _on_drive_control_body_exited(body):
+	in_drive_area -=1
+	if in_drive_area == 0:
+		$TextureProgress.visible = false
+	body.can_drive = false
+

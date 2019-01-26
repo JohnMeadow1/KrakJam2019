@@ -24,7 +24,7 @@ height = 20.0
 "player",
 ]]
 input_pickable = false
-collision_layer = 1
+collision_layer = 1025
 collision_mask = 1
 collision/safe_margin = 0.08
 motion/sync_to_physics = false
@@ -44,6 +44,7 @@ texture = ExtResource( 2 )
 [node name="pivot" type="Node2D" parent="."]
 
 [node name="drop_area" type="Area2D" parent="pivot"]
+editor/display_folded = true
 position = Vector2( 20, -4 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
