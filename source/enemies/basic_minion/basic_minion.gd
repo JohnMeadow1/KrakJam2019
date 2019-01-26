@@ -4,11 +4,10 @@ export(float) var chase_speed:float 	= 75.0
 export(float) var run_speed:float		= 120.0
 export(float) var charge_speed:float	= 250.0
 
-export(float) var attack_distance = 70.0
+export(float) var attack_distance = 100.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = globals.cart
-	print(target.name)
 
 func _physics_process(delta):
 	if state == STATES.STATE_ATTACK:

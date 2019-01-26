@@ -47,6 +47,8 @@ func _physics_process(delta):
 		pickup_loot()
 
 	elif player_enabled :
+		$StunParticle.emitting = false
+		
 		var offset = MOVE_SPEED * delta
 		var player_moved = handle_input(offset)
 		
@@ -109,3 +111,4 @@ func handle_input(offset):
 func stun():
 	state = STATE.STATE_STUN
 	stun_timer += STUN_TIME
+	$StunParticle.emitting = true
