@@ -31,24 +31,14 @@ func _physics_process(delta):
 	if held_item:
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
 		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
+			for area in $pivot/drop_area.get_overlapping_areas():
+				if area.is_in_group("drop_point"):
+					held_item.queue_free()
+					area.get_parent().add_loot()
 			held_item.drop()
 			held_item = null
 	if player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 		pickup_loot()
-
-#		$pickup_area/Shape2D.disabled = false
-		
-#		if pick_up:
-#			get_node("pick_up/Pick_up_" + str( randi() % 4 + 1) ).play()
-#		else:
-#			get_node("stab/stab_" + str( randi() % 4 + 1) ).play()
-#			$AnimationPlayer.play("swing")
-#			for body in get_tree().get_nodes_in_group("players"):
-#				if body != self && body.position.distance_to(self.position) < 3:
-#					var direction = body.position - self.position
-#			for body in get_tree().get_nodes_in_group("sage"):
-#				if body.position.distance_to(self.position) < 4:
-#					body.checkWin(self)
 
 	elif player_enabled :
 		var offset = MOVE_SPEED * delta
@@ -110,11 +100,4 @@ func handle_input(offset):
 
 	return player_moved
 
-func _loot_area_entered(area):
-	print(area)
-	pass # Replace with function body.
 
-
-func _loot_area_exited(area):
-	print(area)
-	pass # Replace with function body.
