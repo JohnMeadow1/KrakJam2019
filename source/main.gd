@@ -3,7 +3,10 @@ func _ready():
 	globals.cart = $YSort/cart/pivot/treasure
 	globals.players_position = $players_position
 	globals.camera = $Camera
-	print(globals.cart.name)
+	globals.players.append( $YSort/player_1 )
+	globals.players.append( $YSort/player_2 )
+	globals.players.append( $YSort/player_3 )
+	globals.players.append( $YSort/player_4 )
 	pass # Replace with function body.
 
 

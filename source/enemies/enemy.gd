@@ -17,7 +17,7 @@ var target:Node2D	= null
 var players:Array = []
 
 export(int) var friends_courage:int = 3
-var firends_count:int = 1
+var friends_count:int = 1
 
 func _ready():
 	state = STATES.STATE_CHASE
@@ -29,15 +29,27 @@ func grab_loot():
 	target = globals.camera
 
 func _on_player_scan_body_entered(body:KinematicBody2D):
-	if body.is_in_group("player"):
+	if body.is_in_group("enemy"):
+		friends_count += 1
+		if friends_count >= friends_courage:
+			state = STATES.STATE_ATTACK
+			
+			var distance:float = 100000000.0
+			for pl in globals.players:
+				if (target.position - self.position).length_squared() < distance:
+					target = pl
+
+	elif body.is_in_group("player"):
 		players.append(body as Node2D)
 		if looted == false:
 			move_away_timer = move_away_time
 			state = STATES.STATE_MOVE_AWAY
-		
+	
 func _on_player_scan_body_exited(body:KinematicBody2D):
 	if body.is_in_group("player"):
 		players.erase(body)
+	elif body.is_in_group("enemy"):
+		friends_count -= 1
 
 func _on_critical_distance_body_entered(body:KinematicBody2D):
 	if body.is_in_group("player"):

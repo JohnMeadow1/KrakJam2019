@@ -101,6 +101,18 @@ offset = Vector2( 0, -100 )
 [node name="basic_minion" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( -72, 71 )
 
+[node name="basic_minion2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -267.709, 11.9556 )
+
+[node name="basic_minion3" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -271.69, 177.811 )
+
+[node name="basic_minion4" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 154.297, 267.406 )
+
+[node name="basic_minion5" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 389.689, 269.035 )
+
 [node name="loot" parent="." instance=ExtResource( 11 )]
 
 
