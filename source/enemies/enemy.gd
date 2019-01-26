@@ -24,7 +24,7 @@ func _ready():
 
 
 func _on_player_scan_body_entered(body:KinematicBody2D):
-	if state == STATES.STATE_ATTACK:
+	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
 		pass
 
 	elif body.is_in_group("enemy"):
@@ -83,3 +83,8 @@ func drop_loot():
 	if held_item:
 		held_item.drop()
 		held_item = null
+		
+func _on_VisibilityNotifier2D_screen_exited():
+	if state == STATES.STATE_RUN:
+		get_parent().remove_child(held_item)
+		get_parent().remove_child(self)

@@ -18,6 +18,7 @@ func _process(delta):
 
 func spawn_minion():
 	var new_enemy = goblin_minion_object.instance()
+	
 	get_parent().add_child(new_enemy)
 
 	var spawn_point:Vector2 = globals.players_position.position - globals.cart.position
