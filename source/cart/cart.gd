@@ -77,7 +77,7 @@ func spawn_loot():
 	new_loot.position.y +=30
 	new_loot.get_node("pivot").position.y -= 40
 	new_loot.velocity = -5
-	loot_in_cart -= 1
+	loot_in_cart = max(loot_in_cart-1,0)
 	$cart.frame = int(loot_in_cart*0.5)
 	return new_loot
 	
