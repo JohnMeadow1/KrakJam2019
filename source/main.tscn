@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://flat_enviro_assets/pobrane.jpg" type="Texture" id=3]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=5]
-[ext_resource path="res://stand_enviro_assets/Apple-Tree-Sprite.png" type="Texture" id=6]
+[ext_resource path="res://sprites/neina.png" type="Texture" id=5]
+[ext_resource path="res://sprites/hiryu.png" type="Texture" id=6]
+[ext_resource path="res://sprites/leszek.png" type="Texture" id=7]
+[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=8]
+[ext_resource path="res://stand_enviro_assets/Apple-Tree-Sprite.png" type="Texture" id=9]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -119,46 +122,64 @@ texture = ExtResource( 3 )
 sort_enabled = true
 
 [node name="player_1" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 167, 53 )
+position = Vector2( 54, 96 )
 player_enabled = true
 
 [node name="player_2" parent="YSort" instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( 1.83542, 0.00454092 )
+position = Vector2( 164, 13.9955 )
 player_enabled = true
+
+[node name="player_sprite" parent="YSort/player_2/pivot" index="0"]
+position = Vector2( -24, -80.9955 )
+texture = ExtResource( 5 )
 
 [node name="player_3" parent="YSort" instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( -153, 17 )
+position = Vector2( -58, -12 )
 player_enabled = true
+
+[node name="player_sprite" parent="YSort/player_3/pivot" index="0"]
+position = Vector2( -49, -78 )
+texture = ExtResource( 6 )
 
 [node name="player_4" parent="YSort" instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( 0.691579, 0.00454092 )
+position = Vector2( 95.6916, -29 )
 player_enabled = true
 
-[node name="cart" parent="YSort" instance=ExtResource( 5 )]
+[node name="player_sprite" parent="YSort/player_4/pivot" index="0"]
+position = Vector2( -23.6916, -85 )
+texture = ExtResource( 7 )
+
+[node name="cart" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 328, 34 )
 collision/safe_margin = 0.001
 speed = 50.0
 
 [node name="tree_1" type="Sprite" parent="YSort"]
 position = Vector2( 259, -22 )
-texture = ExtResource( 6 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_2" type="Sprite" parent="YSort"]
-position = Vector2( 256, 170 )
-texture = ExtResource( 6 )
+position = Vector2( 311, 155 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_3" type="Sprite" parent="YSort"]
 position = Vector2( 147, -10 )
-texture = ExtResource( 6 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_4" type="Sprite" parent="YSort"]
 position = Vector2( -50, -24 )
-texture = ExtResource( 6 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
+
+[editable path="YSort/player_2"]
+
+[editable path="YSort/player_3"]
+
+[editable path="YSort/player_4"]
