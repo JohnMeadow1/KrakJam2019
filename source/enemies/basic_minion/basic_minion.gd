@@ -8,7 +8,6 @@ export(float) var attack_distance = 70.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = get_tree().get_nodes_in_group("treasure").front()
-	print(state)
 
 func _physics_process(delta):
 	if state == STATES.STATE_ATTACK:

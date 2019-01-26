@@ -3,7 +3,7 @@ class_name Player
 
 const MOVE_SPEED  = 1000
 const WALK_HEIGHT  = 5
-const STUN_TIME   = 1
+const STUN_TIME   = 2
 
 export(int) var PLAYER_NUM:int = 1
 export var player_enabled:bool = false
@@ -12,9 +12,10 @@ var PLAYER_CONTROLS:int = 0
 enum STATE {STATE_IDLE, STATE_WALK, STATE_FIGHT, STATE_STUN}
 var state:int = STATE.STATE_IDLE
 
-var move:Vector2       = Vector2()
-var walk_cycle:float   = 0
-var timer:float        = 5
+var move:Vector2		= Vector2()
+var walk_cycle:float	= 0
+var timer:float			= 5
+var stun_timer:float	= 0
 
 var originPosition:Vector2 = Vector2()
 
@@ -38,13 +39,17 @@ func _physics_process(delta):
 					area.get_parent().add_loot()
 			held_item.drop()
 			held_item = null
-	if player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
+			
+	
+	if state == STATE.STATE_STUN && stun_timer > 0:
+		stun_timer -= delta
+	elif player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 		pickup_loot()
 
 	elif player_enabled :
 		var offset = MOVE_SPEED * delta
 		var player_moved = handle_input(offset)
-	
+		
 		if player_moved:
 			self.state = STATE.STATE_WALK
 			walk_cycle += 0.2
@@ -102,5 +107,5 @@ func handle_input(offset):
 	return player_moved
 
 func stun():
-#	print("stuned " + name)
-	pass
+	state = STATE.STATE_STUN
+	stun_timer += STUN_TIME

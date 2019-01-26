@@ -16,7 +16,7 @@ var held_item:Node = null
 var target:Node2D	= null
 var players:Array = []
 
-export(int) var friends_courage:int = 3
+export(int) var friends_courage:int = 2
 var friends_count:int = 1
 
 func _ready():
