@@ -166,6 +166,7 @@ anims/move = SubResource( 4 )
 blend_times = [  ]
 
 [node name="wheels_bump" type="Area2D" parent="cart"]
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -182,6 +183,9 @@ shape = SubResource( 5 )
 
 [node name="wheel_position" type="Position2D" parent="cart"]
 position = Vector2( 5, 45 )
+
+[node name="seat" type="Position2D" parent="cart"]
+position = Vector2( -30, -2 )
 
 [node name="goat2" type="Sprite" parent="."]
 position = Vector2( -60, -27.1284 )

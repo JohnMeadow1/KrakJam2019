@@ -9,9 +9,9 @@ var wait_timer:float = 0.0
 
 enum STATES {STATE_IDLE, STATE_WAIT, STATE_CHASE, STATE_RUN, STATE_MOVE_AWAY, STATE_ATTACK}
 
-var state:int		= STATES.STATE_CHASE
-var has_loot:bool	= false
-var looted:bool		= false
+var state:int       = STATES.STATE_CHASE
+var looted:bool     = false
+var held_item:Node = null
 
 var target:Node2D	= null
 var players:Array = []
@@ -22,15 +22,11 @@ var friends_count:int = 1
 func _ready():
 	state = STATES.STATE_CHASE
 
-func grab_loot():
-	has_loot = true
-	looted = true
-	state = STATES.STATE_RUN
-	target = globals.camera
 
 func _on_player_scan_body_entered(body:KinematicBody2D):
 	if state == STATES.STATE_ATTACK:
 		pass
+
 	elif body.is_in_group("enemy"):
 		friends_count += 1
 		if friends_count >= friends_courage:
@@ -77,7 +73,13 @@ func players_target(direction:Vector2):
 	
 	return direction
 	
+func grab_loot():
+	looted = true
+	held_item.grab(16)
+	state = STATES.STATE_RUN
+	target = globals.camera
+	
 func drop_loot():
-	if has_loot:
-		has_loot = false
-#		drop loot
+	if held_item:
+		held_item.drop()
+		held_item = null

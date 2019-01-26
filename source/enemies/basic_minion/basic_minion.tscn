@@ -49,6 +49,9 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 centered = false
 
+[node name="held_item" type="Position2D" parent="pivot"]
+position = Vector2( 20, 4 )
+
 [node name="player_scan" type="Area2D" parent="."]
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
