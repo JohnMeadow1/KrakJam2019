@@ -29,15 +29,20 @@ func grab_loot():
 	target = globals.camera
 
 func _on_player_scan_body_entered(body:KinematicBody2D):
-	if body.is_in_group("enemy"):
+	if state == STATES.STATE_ATTACK:
+		pass
+	elif body.is_in_group("enemy"):
 		friends_count += 1
 		if friends_count >= friends_courage:
 			state = STATES.STATE_ATTACK
 			
 			var distance:float = 100000000.0
 			for pl in globals.players:
-				if (target.position - self.position).length_squared() < distance:
+				if (pl.position - self.position).length_squared() < distance:
+					distance = (pl.position - self.position).length_squared()
 					target = pl
+			
+			print("Target: " + target.name)
 
 	elif body.is_in_group("player"):
 		players.append(body as Node2D)
