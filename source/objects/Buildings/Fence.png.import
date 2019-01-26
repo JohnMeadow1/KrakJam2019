@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/loots.png-6b8551b6b65a87d4e21d19da9ae85d3b.stex"
+path="res://.import/Fence.png-631d9101b2863e7055bfcffe89002a90.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/loots.png"
-dest_files=[ "res://.import/loots.png-6b8551b6b65a87d4e21d19da9ae85d3b.stex" ]
+source_file="res://objects/Buildings/Fence.png"
+dest_files=[ "res://.import/Fence.png-631d9101b2863e7055bfcffe89002a90.stex" ]
 
 [params]
 

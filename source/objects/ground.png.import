@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plant.png-3941f24dcde4ef59822e3a83054600da.stex"
+path="res://.import/ground.png-dfa6fbb884b4c60a29027e3972ba125d.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/Plant.png"
-dest_files=[ "res://.import/Plant.png-3941f24dcde4ef59822e3a83054600da.stex" ]
+source_file="res://objects/ground.png"
+dest_files=[ "res://.import/ground.png-dfa6fbb884b4c60a29027e3972ba125d.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

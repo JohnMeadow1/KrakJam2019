@@ -2,13 +2,13 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/pobrane.jpg-a09ddff82e89059053af7ea282fe5346.s3tc.stex"
-path.etc2="res://.import/pobrane.jpg-a09ddff82e89059053af7ea282fe5346.etc2.stex"
+path.s3tc="res://.import/pobrane.jpg-efb313b8a2bc886fe4e9bc1b198d0332.s3tc.stex"
+path.etc2="res://.import/pobrane.jpg-efb313b8a2bc886fe4e9bc1b198d0332.etc2.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/pobrane.jpg"
-dest_files=[ "res://.import/pobrane.jpg-a09ddff82e89059053af7ea282fe5346.s3tc.stex", "res://.import/pobrane.jpg-a09ddff82e89059053af7ea282fe5346.etc2.stex" ]
+source_file="res://objects/pobrane.jpg"
+dest_files=[ "res://.import/pobrane.jpg-efb313b8a2bc886fe4e9bc1b198d0332.s3tc.stex", "res://.import/pobrane.jpg-efb313b8a2bc886fe4e9bc1b198d0332.etc2.stex" ]
 
 [params]
 

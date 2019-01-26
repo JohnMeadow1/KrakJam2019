@@ -1,0 +1,566 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://objects/ground.png" type="Texture" id=1]
+[ext_resource path="res://objects/Road_tiles_3x2.png" type="Texture" id=2]
+[ext_resource path="res://scripts/wheel_marks.gd" type="Script" id=3]
+[ext_resource path="res://enviro/plant1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enviro/dragon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://enviro/home.tscn" type="PackedScene" id=6]
+[ext_resource path="res://enviro/rock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enviro/rock_small.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enviro/fence.tscn" type="PackedScene" id=9]
+
+[node name="Enviroment" type="Node"]
+
+[node name="Ground" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 10000, 10000 )
+
+[node name="Road" type="Node2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_1" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -320, 1 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_2" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -1120, 0 )
+rotation = -3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_32" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -9920, -320 )
+rotation = -3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_41" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -10720, -315 )
+rotation = -3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_40" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -7520, 320 )
+rotation = -3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_3" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -1920, 0 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_20" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -6720, 320 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_33" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -9120, -320 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_12" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -4320, -640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_6" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -1920, 320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_15" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -4320, -320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_8" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -2720, 640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_23" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5920, 0 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_36" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -8320, -640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_30" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -7520, -960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_14" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -4320, 960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 2
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_7" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -2720, 320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_24" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5920, -320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_37" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -8320, -960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_31" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -7520, -1280 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_25" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -6720, 0 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_38" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -9120, -640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_13" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -4320, 640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 1
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_4" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -1920, -320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 5
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_16" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -4320, -960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 5
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_11" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -3520, -640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 5
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_27" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5120, -1280 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 5
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_21" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5920, 640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 5
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_35" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -8320, 0 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 5
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_5" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -2720, -320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_28" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5920, -1280 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_29" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -6720, -1280 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_22" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5120, -320 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_10" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -3520, -320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 4
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_26" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5120, -960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 4
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_19" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -6720, 640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 4
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_39" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -9120, 0 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 4
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_18" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5920, 960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 4
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_34" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -8320, 320 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+frame = 4
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_9" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -3520, 640 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road_17" type="Sprite" parent="Road"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( -5120, 960 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 3
+region_rect = Rect2( 100, 100, 1000, 100 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="wheel_marks" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="YSort" type="YSort" parent="."]
+sort_enabled = true
+
+[node name="plant1" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( -375, -140 )
+
+[node name="dragon_head" parent="." instance=ExtResource( 5 )]
+position = Vector2( -37, 42 )
+
+[node name="everything else" type="Node2D" parent="."]
+
+[node name="home" parent="everything else" instance=ExtResource( 6 )]
+position = Vector2( -10919, -287 )
+
+[node name="rock" parent="everything else" instance=ExtResource( 7 )]
+position = Vector2( 6, -100 )
+
+[node name="rock2" parent="everything else" instance=ExtResource( 7 )]
+position = Vector2( -179, -238 )
+
+[node name="rock_small" parent="everything else" instance=ExtResource( 8 )]
+position = Vector2( -85, 185 )
+
+[node name="rock_small2" parent="everything else" instance=ExtResource( 8 )]
+position = Vector2( -218, 127 )
+
+[node name="rock_small3" parent="everything else" instance=ExtResource( 8 )]
+position = Vector2( -266, -189 )
+
+[node name="rock_small" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2070, 200 )
+
+[node name="rock_small2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2043, 147 )
+frame = 11
+
+[node name="rock_small3" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2038, -89 )
+frame = 11
+
+[node name="rock_small4" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2062, -145 )
+frame = 10
+
+[node name="rock_small5" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2137, -169 )
+frame = 9
+

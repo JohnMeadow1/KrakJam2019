@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hut_top.png-1f9ca41d952a3b7becd038542ea8d0b8.stex"
+path="res://.import/Hut_Bottom.png-71dfaa4a89cab1b084e723d3a11d6cd1.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/Buildings/Hut_top.png"
-dest_files=[ "res://.import/Hut_top.png-1f9ca41d952a3b7becd038542ea8d0b8.stex" ]
+source_file="res://objects/Buildings/Hut_Bottom.png"
+dest_files=[ "res://.import/Hut_Bottom.png-71dfaa4a89cab1b084e723d3a11d6cd1.stex" ]
 
 [params]
 

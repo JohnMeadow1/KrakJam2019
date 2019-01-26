@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Home.png-56f28b6bd4286f7b4bfa639ea8fcbb27.stex"
+path="res://.import/Home.png-44fe77b6dd3e26d837d7833996d577f4.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/Buildings/Home.png"
-dest_files=[ "res://.import/Home.png-56f28b6bd4286f7b4bfa639ea8fcbb27.stex" ]
+source_file="res://objects/Buildings/Home.png"
+dest_files=[ "res://.import/Home.png-44fe77b6dd3e26d837d7833996d577f4.stex" ]
 
 [params]
 

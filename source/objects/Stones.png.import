@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stones.png-34f56a33f56908f65b1b3718ae9ae311.stex"
+path="res://.import/Stones.png-fb28ddf44e06c6079598ed5f77fb5f34.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/Stones.png"
-dest_files=[ "res://.import/Stones.png-34f56a33f56908f65b1b3718ae9ae311.stex" ]
+source_file="res://objects/Stones.png"
+dest_files=[ "res://.import/Stones.png-fb28ddf44e06c6079598ed5f77fb5f34.stex" ]
 
 [params]
 

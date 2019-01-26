@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://enviro/rock.gd" type="Script" id=1]
+[ext_resource path="res://objects/Buildings/Home.png" type="Texture" id=2]
+
+[node name="home" type="Area2D"]
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 32
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+frame = null
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 3, -129 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -47, 3 )
+build_mode = 0
+polygon = PoolVector2Array( -14, -14, -151, -31, -151, -151, -65, -170, 230, -121, 230, -76 )
+
