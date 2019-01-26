@@ -9,8 +9,6 @@ func _process(delta):
 
 func handle_camera():
 	var target_camera_position = Vector3()
-	target_camera_position = $player_1.translation + $player_2.translation + $player_3.translation + $player_4.translation + $cart.translation
+	target_camera_position = $YSort/player_1.position + $YSort/player_2.position + $YSort/player_3.position + $YSort/player_4.position + $YSort/cart.position
 	target_camera_position *= 0.2
-	target_camera_position.y = $Camera.translation.y
-	target_camera_position.z += 3.0
-	$Camera.translation = lerp($Camera.translation, target_camera_position, 0.1)
+	$Camera.position = lerp($Camera.position, target_camera_position, 0.1)

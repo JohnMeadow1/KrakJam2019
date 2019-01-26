@@ -1,28 +1,43 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://cart/cart.gd" type="Script" id=1]
-[ext_resource path="res://character_assets/cart_r.png" type="Texture" id=2]
+[ext_resource path="res://character_assets/Cart/test3.png" type="Texture" id=2]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="RectangleShape2D" id=1]
 
-extents = Vector3( 0.689416, 0.180994, 0.368224 )
+custom_solver_bias = 0.0
+extents = Vector2( 60, 20 )
 
-[node name="cart" type="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224616, 0 )
+[node name="cart" type="KinematicBody2D"]
+position = Vector2( 0, 0.224616 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+motion/sync_to_physics = false
 script = ExtResource( 1 )
+speed = 10.0
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0 )
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -20.2246 )
 shape = SubResource( 1 )
 
-[node name="Spatial" type="Spatial" parent="."]
+[node name="pivot" type="Node2D" parent="."]
 
-[node name="player_sprite" type="Sprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
-flip_h = true
+[node name="player_sprite" type="Sprite" parent="pivot"]
+position = Vector2( -2.14044, -28.7892 )
 texture = ExtResource( 2 )
+vframes = 2
+hframes = 5
+frame = 2
 
-[node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-aabb = AABB( -0.699102, -0.365393, -0.171218, 1.3982, 0.730785, 0.342437 )
+[node name="VisibilityNotifier" type="VisibilityEnabler2D" parent="."]
+rect = Rect2( -10, -10, 20, 20 )
+pause_animations = true
+freeze_bodies = true
+pause_particles = true
+pause_animated_sprites = true
+process_parent = false
+physics_process_parent = false
 
 [connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]

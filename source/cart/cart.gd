@@ -1,15 +1,15 @@
-extends KinematicBody
+extends KinematicBody2D
 
-export(float) var speed:float = 1.0
+export(float) var speed:float = 10.0
 
-var move:Vector3       = Vector3.ZERO
+var move:Vector2       = Vector2.ZERO
 
 
 func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	move = Vector3.ZERO
+	move = Vector2.ZERO
 	move.x -= speed * delta
 	translate(move)
 

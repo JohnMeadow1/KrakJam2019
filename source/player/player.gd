@@ -1,6 +1,6 @@
-extends KinematicBody
+extends KinematicBody2D
 
-const MOVE_SPEED  = 10
+const MOVE_SPEED  = 1000
 const WALK_HEIGHT  = 0.1
 const STUN_TIME   = 1
 
@@ -11,17 +11,17 @@ var PLAYER_CONTROLS:int = 0
 enum STATE {STATE_IDLE, STATE_WALK, STATE_FIGHT, STATE_STUN}
 var state:int = STATE.STATE_IDLE
 
-var move:Vector3       = Vector3()
+var move:Vector2       = Vector2()
 var walk_cycle:float   = 0
 var timer:float        = 5
 
 var carry_item_handle:Node = null
-var originPosition:Vector3 = Vector3()
+var originPosition:Vector2 = Vector2()
 
 func _ready():
 	PLAYER_CONTROLS  = PLAYER_NUM
 	self.state       = STATE.STATE_IDLE
-	originPosition   = self.translation
+	originPosition   = self.position
 	
 func _physics_process(delta):
 	if timer > 0:
@@ -39,10 +39,10 @@ func _physics_process(delta):
 #			get_node("stab/stab_" + str( randi() % 4 + 1) ).play()
 #			$AnimationPlayer.play("swing")
 #			for body in get_tree().get_nodes_in_group("players"):
-#				if body != self && body.translation.distance_to(self.translation) < 3:
-#					var direction = body.translation - self.translation
+#				if body != self && body.position.distance_to(self.position) < 3:
+#					var direction = body.position - self.position
 			for body in get_tree().get_nodes_in_group("sage"):
-				if body.translation.distance_to(self.translation) < 4:
+				if body.position.distance_to(self.position) < 4:
 					body.checkWin(self)
 
 	elif player_enabled :
@@ -69,23 +69,22 @@ func _physics_process(delta):
 				walk_cycle = 0
 				self.state = STATE.STATE_IDLE
 
-	$Spatial.translation.z =  -sin( walk_cycle ) * WALK_HEIGHT
-	$shade.opacity =  0.8 + $Spatial.translation.z * 5
-	$shade.scale.x =  1.2 - $Spatial.translation.z * 5
-	$shade.scale.y =  1.2 - $Spatial.translation.z * 5
+	$pivot.position.y =  -sin( walk_cycle ) * WALK_HEIGHT
+	$shade.modulate.a =  0.8 + $pivot.position.y * 5
+	$shade.scale.x =  1.2 - $pivot.position.y * 5
+	$shade.scale.y =  1.2 - $pivot.position.y * 5
 
-	move               = move_and_slide(move)
-	translation.y      = originPosition.y
-	move               *= 0.90
+	move            = move_and_slide(move)
+	move            *= 0.90
 
 func handle_input(offset):
 	var player_moved = false
 	if Input.is_action_pressed("move_up_p" + str(PLAYER_CONTROLS)):
-		move.z      -= offset
+		move.y      -= offset
 		player_moved = true
 
 	if Input.is_action_pressed("move_down_p" + str(PLAYER_CONTROLS)):
-		move.z      += offset
+		move.y      += offset
 		player_moved = true
 	
 	if Input.is_action_pressed("move_left_p" + str(PLAYER_CONTROLS)):
