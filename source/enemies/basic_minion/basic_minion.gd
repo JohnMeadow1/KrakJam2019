@@ -38,8 +38,7 @@ func idle(delta):
 func chase(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = target.global_position - self.position
-	
-	direction = players_target(direction)
+#	direction = players_target(direction)
 	direction = direction.normalized()
 	
 	self.move_and_slide(direction * offset)
