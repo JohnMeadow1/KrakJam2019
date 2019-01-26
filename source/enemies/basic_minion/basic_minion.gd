@@ -80,6 +80,7 @@ func charge(delta):
 	if direction.length() <= attack_distance:
 		state = STATES.STATE_RUN
 		run_speed = charge_speed
+		$pivot/AnimationPlayer.play("throw")
 		(target as Player).stun()
 	
 	direction = direction.normalized()
