@@ -11,8 +11,9 @@ var stering_bias:float = 0.0
 var loot_in_cart:int = 5
 var timer:float = 0.0
 
-var in_drive_area:int = 0
-
+var in_drive_area:int  = 0
+#var drive_progress:int = 20
+var is_driven = false
 
 var loot_object = load("res://objects/loot.tscn")
 
@@ -22,18 +23,22 @@ func _ready():
 	globals.cart_node = self
 
 func _physics_process(delta):
+#	drive_progress = clamp(drive_progress + 1,0,20)
+	$TextureProgress.value += 1
 	move = Vector2.ZERO
 	current_speed = lerp(current_speed, speed, 0.1)
 	move.x -= current_speed 
 	move.y += current_stering * 3
 	translate(move.normalized() * current_speed * delta)
-
+#	$AnimationPlayer.playback_speed = current_speed/50.0
+	$cart/AnimationPlayer.playback_speed = current_speed/100.0
 func _process(delta):
 	timer += delta * 10
-	stering_bias += rand_range(-(0.1+stering_bias*0.01), 0.1-stering_bias*0.01 )
-	stering_bias = clamp(stering_bias,-0.2,0.2)
-	target_stering += stering_bias
-	target_stering = clamp(target_stering, -10,10)
+	if !is_driven:
+		stering_bias += rand_range(-(0.1+stering_bias*0.01), 0.1-stering_bias*0.01 )
+		stering_bias = clamp(stering_bias,-0.2,0.2)
+		target_stering += stering_bias
+		target_stering = clamp(target_stering, -10,10)
 
 	current_stering = lerp(current_stering, target_stering, 0.1)
 	$goat.position.y  = abs(sin(timer)*2)-40 + current_stering
@@ -80,7 +85,7 @@ func _on_bump_area_entered(area):
 		new_loot.velocity = -5
 
 func _on_drive_control_body_entered(body):
-	if in_drive_area == 0:
+	if !is_driven && in_drive_area == 0:
 		$TextureProgress.visible = true
 	in_drive_area +=1
 	body.can_drive = true
@@ -92,3 +97,11 @@ func _on_drive_control_body_exited(body):
 		$TextureProgress.visible = false
 	body.can_drive = false
 
+func get_in():
+	$TextureProgress.value -= 2
+	if $TextureProgress.value == 0:
+		$TextureProgress.visible = false
+		is_driven = true
+		target_stering = 0
+		return true
+	return false

@@ -12,10 +12,12 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
+custom_solver_bias = 0.0
 extents = Vector2( 60, 20 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
+custom_solver_bias = 0.0
 extents = Vector2( 50, 35 )
 
 [sub_resource type="Animation" id=3]
@@ -23,6 +25,7 @@ extents = Vector2( 50, 35 )
 resource_name = "goat_move"
 length = 0.8
 loop = true
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("goat:frame")
 tracks/0/interp = 1
@@ -50,7 +53,9 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=4]
 
+length = 1.0
 loop = true
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("wheel_front:frame")
 tracks/0/interp = 1
@@ -78,6 +83,7 @@ tracks/1/keys = {
 
 [sub_resource type="RectangleShape2D" id=5]
 
+custom_solver_bias = 0.0
 extents = Vector2( 5, 11.8716 )
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -87,7 +93,13 @@ extents = Vector2( 20, 34 )
 
 [node name="cart" type="KinematicBody2D"]
 position = Vector2( 0, 0.224616 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+motion/sync_to_physics = false
 script = ExtResource( 1 )
+speed = 10.0
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -26.9038 )
@@ -98,6 +110,12 @@ shape = SubResource( 1 )
 ]]
 position = Vector2( 0, -6.90382 )
 input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
 [node name="TreasureReach" type="CollisionShape2D" parent="Area2D"]
 modulate = Color( 0.839216, 0.984314, 0.0156863, 1 )
@@ -105,8 +123,13 @@ position = Vector2( 40, -20 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
 autoplay = "goat_move"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/goat_move = SubResource( 3 )
+blend_times = [  ]
 
 [node name="goat" type="Sprite" parent="."]
 position = Vector2( -50, -40.4492 )
@@ -116,7 +139,6 @@ hframes = 2
 frame = 4
 
 [node name="cart" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 20, -47 )
 texture = ExtResource( 3 )
 hframes = 5
@@ -143,13 +165,25 @@ hframes = 10
 frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="cart"]
+root_node = NodePath("..")
 autoplay = "move"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/move = SubResource( 4 )
+blend_times = [  ]
 
 [node name="wheels_bump" type="Area2D" parent="cart"]
 editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
 collision_layer = 0
 collision_mask = 32
+audio_bus_override = false
+audio_bus_name = "Master"
 
 [node name="Shape2D" type="CollisionShape2D" parent="cart/wheels_bump"]
 position = Vector2( 5, 37 )
@@ -191,7 +225,7 @@ position = Vector2( -60, -27.2708 )
 texture = ExtResource( 2 )
 vframes = 5
 hframes = 2
-frame = 5
+frame = 4
 
 [node name="treasure" type="Node2D" parent="." groups=[
 "treasure",
@@ -200,6 +234,13 @@ position = Vector2( 60, -27.353 )
 
 [node name="VisibilityNotifier" type="VisibilityEnabler2D" parent="."]
 position = Vector2( 50.6231, -30.2246 )
+rect = Rect2( -10, -10, 20, 20 )
+pause_animations = true
+freeze_bodies = true
+pause_particles = true
+pause_animated_sprites = true
+process_parent = false
+physics_process_parent = false
 
 [node name="drive_control" type="Area2D" parent="."]
 input_pickable = true
@@ -222,10 +263,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -14.0
-margin_top = -68.0
-margin_right = 26.0
-margin_bottom = -28.0
+margin_left = -56.0
+margin_top = -73.0
+margin_right = -16.0
+margin_bottom = -33.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -233,7 +274,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 min_value = 0.0
-max_value = 20.0
+max_value = 60.0
 step = 1.0
 page = 0.0
 value = 20.0
