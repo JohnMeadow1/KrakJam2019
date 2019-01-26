@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cart_wheel_back.png-979c72f5c548c3bb1e3c945599d017b1.stex"
+path="res://.import/rod.png-9b51e56bee89d665e72b1cf7fc58f18d.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart/Cart_wheel_back.png"
-dest_files=[ "res://.import/Cart_wheel_back.png-979c72f5c548c3bb1e3c945599d017b1.stex" ]
+source_file="res://character_assets/rod.png"
+dest_files=[ "res://.import/rod.png-9b51e56bee89d665e72b1cf7fc58f18d.stex" ]
 
 [params]
 

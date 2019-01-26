@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cart_body_treasure_lvl3.png-ffd69d4e640b8d3165ac0a6cd1351224.stex"
+path="res://.import/goat.png-961d2fa3671cce5484c6c2e1764d1ace.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart/Cart_body_treasure_lvl3.png"
-dest_files=[ "res://.import/Cart_body_treasure_lvl3.png-ffd69d4e640b8d3165ac0a6cd1351224.stex" ]
+source_file="res://character_assets/goat.png"
+dest_files=[ "res://.import/goat.png-961d2fa3671cce5484c6c2e1764d1ace.stex" ]
 
 [params]
 

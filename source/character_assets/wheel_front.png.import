@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cart_body_treasure_lvl1.png-e1c8156db62352113b0912e4ae611c08.stex"
+path="res://.import/wheel_front.png-692f507413899cef5ff3d9290a80d41e.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart/Cart_body_treasure_lvl1.png"
-dest_files=[ "res://.import/Cart_body_treasure_lvl1.png-e1c8156db62352113b0912e4ae611c08.stex" ]
+source_file="res://character_assets/wheel_front.png"
+dest_files=[ "res://.import/wheel_front.png-692f507413899cef5ff3d9290a80d41e.stex" ]
 
 [params]
 

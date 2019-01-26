@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test3.png-4f2b2ddd3b39f71300e1bb67038db860.stex"
+path="res://.import/rock.png-df3db6a52b5550609cfe72347aaf985f.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart/test3.png"
-dest_files=[ "res://.import/test3.png-4f2b2ddd3b39f71300e1bb67038db860.stex" ]
+source_file="res://sprites/rock.png"
+dest_files=[ "res://.import/rock.png-df3db6a52b5550609cfe72347aaf985f.stex" ]
 
 [params]
 
