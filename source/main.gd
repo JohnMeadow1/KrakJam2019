@@ -1,5 +1,6 @@
 extends Node
 func _ready():
+	globals.camera = $Camera
 	pass # Replace with function body.
 
 
