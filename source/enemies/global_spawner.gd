@@ -17,6 +17,9 @@ func _process(delta):
 		timer = 2.0
 
 func spawn_minion():
+	if globals.cart_node.loot_in_cart <= 0:
+		return
+	
 	var new_enemy = goblin_minion_object.instance()
 	
 	get_parent().add_child(new_enemy)

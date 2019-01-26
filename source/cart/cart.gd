@@ -8,7 +8,7 @@ var bump_velcocity:float = 0.0
 var current_stering:float = 0.0
 var target_stering:float = 0
 var stering_bias:float = 0.0
-var loot_in_cart:int = 5
+var loot_in_cart:int = 1
 var timer:float = 0.0
 
 var in_drive_area:int  = 0

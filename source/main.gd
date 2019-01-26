@@ -9,7 +9,6 @@ func _ready():
 	globals.players.append( $YSort/player_4 )
 	pass # Replace with function body.
 
-
 func _process(delta):
 	handle_players_position()
 	handle_camera()

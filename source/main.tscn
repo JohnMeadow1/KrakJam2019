@@ -58,6 +58,7 @@ position = Vector2( 159, 42 )
 script = ExtResource( 6 )
 
 [node name="YSort" type="YSort" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }

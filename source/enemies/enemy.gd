@@ -62,11 +62,11 @@ func _on_sware_distance_body_entered(body):
 		state = STATES.STATE_SWARE
 
 func _on_sware_distance_body_exited(body):
-	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
+	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN || state == STATES.STATE_MOVE_AWAY:
 		return
 	
 	if body.is_in_group("player"):
-		state = STATES.STATE_CHASE
+		state = STATES.STATE_WAIT
 	
 func players_position() -> Vector2:
 	var position:Vector2 = Vector2.ZERO

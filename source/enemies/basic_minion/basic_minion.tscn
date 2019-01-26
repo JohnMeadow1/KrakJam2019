@@ -75,4 +75,5 @@ rect = Rect2( -20, -20, 40, 40 )
 [connection signal="body_exited" from="player_scan" to="." method="_on_player_scan_body_exited"]
 [connection signal="body_entered" from="critical_distance" to="." method="_on_critical_distance_body_entered"]
 [connection signal="body_entered" from="sware_distance" to="." method="_on_sware_distance_body_entered"]
+[connection signal="body_exited" from="sware_distance" to="." method="_on_sware_distance_body_exited"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
