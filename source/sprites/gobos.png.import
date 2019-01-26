@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cart_body_treasure_lvl2.png-fd708488ec3613bfb3b2142ed1b28c70.stex"
+path="res://.import/gobos.png-299cf130a4c11e95ad94700d47491806.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart/Cart_body_treasure_lvl2.png"
-dest_files=[ "res://.import/Cart_body_treasure_lvl2.png-fd708488ec3613bfb3b2142ed1b28c70.stex" ]
+source_file="res://sprites/gobos.png"
+dest_files=[ "res://.import/gobos.png-299cf130a4c11e95ad94700d47491806.stex" ]
 
 [params]
 
