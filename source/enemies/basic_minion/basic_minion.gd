@@ -21,14 +21,14 @@ func _physics_process(delta):
 	elif state == STATES.STATE_CHASE && target != null:
 		chase(delta)
 	elif state == STATES.STATE_MOVE_AWAY:
-		if	move_away_timer > 0:
+		if move_away_timer > 0:
 			move_away_timer -= delta
 			move_away(delta)
 		else:
 			wait_timer = wait_time
 			state = STATES.STATE_WAIT
 	elif state == STATES.STATE_WAIT:
-		if	wait_timer > 0:
+		if wait_timer > 0:
 			wait_timer -= delta
 		else:
 			state = STATES.STATE_CHASE
@@ -41,7 +41,7 @@ func idle(delta):
 func chase(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = Vector2()
-	if target:
+	if !target==null:
 		direction = target.global_position - self.position
 	else:
 		chose_new_target()
@@ -52,9 +52,9 @@ func chase(delta):
 	
 func run(delta):
 	var lootDrag = 1
-	if held_item:
+	if !held_item==null:
 		lootDrag = 0.3
-		target = globals.camera
+		target   = globals.camera
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
 	else:
 		target = globals.players_position
@@ -83,11 +83,14 @@ func move_away(delta):
 func charge(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = target.global_position - self.position
-	if direction.length() <= attack_distance:
-		state = STATES.STATE_RUN
-		run_speed = charge_speed
-		$pivot/AnimationPlayer.play("throw")
-		(target as Player).stun()
+	if !target == null:
+		if direction.length() <= attack_distance:
+			state = STATES.STATE_RUN
+			run_speed = charge_speed
+			$pivot/AnimationPlayer.play("throw")
+			(target as Player).stun()
+	else:
+		chose_new_target()
 	
 	direction = direction.normalized()
 	self.move_and_slide(direction * offset)

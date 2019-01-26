@@ -98,7 +98,7 @@ shape = SubResource( 1 )
 ]]
 position = Vector2( 0, -6.90382 )
 input_pickable = false
-collision_layer = 0
+collision_layer = 8192
 collision_mask = 512
 
 [node name="TreasureReach" type="CollisionShape2D" parent="Area2D"]

@@ -107,7 +107,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 		
 func chose_new_target():
 	var loots = get_tree().get_nodes_in_group("loot")
-	if randi() % loots.size() == 0  :
+	if loots.size() == 0 || randi() % loots.size() == 0  :
 		target = globals.cart
 	else:
 		target = loots[randi()%loots.size()]

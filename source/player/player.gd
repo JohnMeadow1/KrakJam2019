@@ -36,8 +36,10 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 			for area in $pivot/drop_area.get_overlapping_areas():
 				if area.is_in_group("drop_point"):
+					print(area.get_name())
 					held_item.queue_free()
 					area.get_parent().add_loot()
+					break
 			held_item.drop()
 			held_item = null
 			
@@ -106,9 +108,11 @@ func enable_coliders():
 	$pivot/drop_area/Shape2D.disabled = false
 func pickup_loot():
 	var loot = $pickup_area.get_overlapping_areas()
-	if loot.size()>0:
-		loot[0].grab(50)
-		held_item = loot[0]
+	for item in loot:
+		if item.is_in_group("loot"):
+			item.grab(50)
+			held_item = item
+			return
 		
 func handle_drive_input():
 	var target_stering = Vector2(50,0)
@@ -152,3 +156,6 @@ func stun():
 	state = STATE.STATE_STUN
 	stun_timer += STUN_TIME
 	$StunParticle.emitting = true
+	if held_item:
+		held_item.drop()
+		held_item = null
