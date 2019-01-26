@@ -14,6 +14,8 @@ func _physics_process(delta):
 		charge(delta)
 	elif state == STATES.STATE_RUN && target != null:
 		run(delta)
+	elif state == STATES.STATE_SWARE:
+		sware(delta)
 	elif state == STATES.STATE_CHASE && target != null:
 		chase(delta)
 	elif state == STATES.STATE_MOVE_AWAY:
@@ -59,6 +61,9 @@ func run(delta):
 	
 	self.move_and_slide(direction * offset)
 
+func sware(delta):
+	pass
+
 func move_away(delta):
 	if players.size() > 0:
 		move_away_timer = move_away_time
@@ -79,3 +84,4 @@ func charge(delta):
 	
 	direction = direction.normalized()
 	self.move_and_slide(direction * offset)
+

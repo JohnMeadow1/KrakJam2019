@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://enemies/basic_minion/basic_minion.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
@@ -14,6 +14,10 @@ radius = 100.0
 [sub_resource type="CircleShape2D" id=3]
 
 radius = 60.0
+
+[sub_resource type="CircleShape2D" id=4]
+
+radius = 125.0
 
 [node name="basic_minion" type="KinematicBody2D" groups=[
 "enemy",
@@ -56,10 +60,19 @@ collision_layer = 0
 modulate = Color( 0.8, 0.176471, 1, 1 )
 shape = SubResource( 3 )
 
+[node name="sware_distance" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 0
+
+[node name="scan_shape" type="CollisionShape2D" parent="sware_distance"]
+modulate = Color( 0.603922, 1, 0.176471, 0.301961 )
+shape = SubResource( 4 )
+
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 rect = Rect2( -20, -20, 40, 40 )
 
 [connection signal="body_entered" from="player_scan" to="." method="_on_player_scan_body_entered"]
 [connection signal="body_exited" from="player_scan" to="." method="_on_player_scan_body_exited"]
 [connection signal="body_entered" from="critical_distance" to="." method="_on_critical_distance_body_entered"]
+[connection signal="body_entered" from="sware_distance" to="." method="_on_sware_distance_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

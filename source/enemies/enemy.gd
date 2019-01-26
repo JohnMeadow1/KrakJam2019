@@ -7,7 +7,7 @@ var move_away_timer:float = 0.0
 export(float) var wait_time	= 0.2
 var wait_timer:float = 0.0
 
-enum STATES {STATE_IDLE, STATE_WAIT, STATE_CHASE, STATE_RUN, STATE_MOVE_AWAY, STATE_ATTACK}
+enum STATES {STATE_IDLE, STATE_SWARE, STATE_WAIT, STATE_CHASE, STATE_RUN, STATE_MOVE_AWAY, STATE_ATTACK}
 
 var state:int       = STATES.STATE_CHASE
 var looted:bool     = false
@@ -22,10 +22,9 @@ var friends_count:int = 0
 func _ready():
 	state = STATES.STATE_CHASE
 
-
 func _on_player_scan_body_entered(body:KinematicBody2D):
 	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
-		pass
+		return
 
 	elif body.is_in_group("enemy"):
 		friends_count += 1
@@ -55,6 +54,20 @@ func _on_critical_distance_body_entered(body:KinematicBody2D):
 		state = STATES.STATE_RUN
 		drop_loot()
 
+func _on_sware_distance_body_entered(body):
+	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
+		return
+		
+	if body.is_in_group("player"):
+		state = STATES.STATE_SWARE
+
+func _on_sware_distance_body_exited(body):
+	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
+		return
+	
+	if body.is_in_group("player"):
+		state = STATES.STATE_CHASE
+	
 func players_position() -> Vector2:
 	var position:Vector2 = Vector2.ZERO
 	
