@@ -42,6 +42,7 @@ func _physics_process(delta):
 			held_item = null
 			
 	if is_driving:
+		position = globals.cart_node.position
 		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 			pass
 		var target_stering = handle_drive_input()
@@ -51,8 +52,10 @@ func _physics_process(delta):
 	elif state == STATE.STATE_STUN && stun_timer > 0:
 		stun_timer -= delta
 	elif can_drive && Input.is_action_pressed("action_p" + str(PLAYER_CONTROLS)):
-		if globals.cart_node.get_in():
+		if globals.cart_node.get_in(PLAYER_CONTROLS):
 			is_driving = true
+			disable_coliders()
+			
 	elif player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 		pickup_loot()
 
@@ -89,7 +92,18 @@ func _physics_process(delta):
 
 	move = move_and_slide(move)
 	move *= 0.90
-
+func disable_coliders():
+	$shade.visible = false
+	$CollisionShape.disabled = true
+	$pivot/player_sprite.visible = false
+	$pickup_area/Shape2D.disabled = true
+	$pivot/drop_area/Shape2D.disabled = true
+func enable_coliders():
+	$shade.visible = true
+	$CollisionShape.disabled = false
+	$pivot/player_sprite.visible = true
+	$pickup_area/Shape2D.disabled = false
+	$pivot/drop_area/Shape2D.disabled = false
 func pickup_loot():
 	var loot = $pickup_area.get_overlapping_areas()
 	if loot.size()>0:
