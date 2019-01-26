@@ -18,7 +18,7 @@ var timer:float			= 5
 var stun_timer:float	= 0
 
 var originPosition:Vector2 = Vector2()
-
+var can_drive = false
 var held_item:Node = null
 
 func _ready():
