@@ -5,9 +5,11 @@ export(float) var run_speed:float		= 120.0
 export(float) var charge_speed:float	= 250.0
 
 export(float) var attack_distance = 100.0
+
+var curent_run_speed:float = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	target = globals.cart
+	chose_new_target()
 
 func _physics_process(delta):
 	if state == STATES.STATE_ATTACK:
@@ -38,7 +40,11 @@ func idle(delta):
 	
 func chase(delta):
 	var offset = chase_speed * delta * 100.0
-	var direction = target.global_position - self.position
+	var direction = Vector2()
+	if target:
+		direction = target.global_position - self.position
+	else:
+		chose_new_target()
 #	direction = players_target(direction)
 	direction = direction.normalized()
 	
@@ -52,8 +58,8 @@ func run(delta):
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
 	else:
 		target = globals.players_position
-	
-	var offset = run_speed * delta * lootDrag * 100.0
+	curent_run_speed = lerp(curent_run_speed, run_speed, 0.1)
+	var offset = curent_run_speed * delta * lootDrag * 100.0
 	var direction = self.position - target.global_position
 	
 	direction = players_target(direction)
@@ -67,7 +73,7 @@ func sware(delta):
 func move_away(delta):
 	if players.size() > 0:
 		move_away_timer = move_away_time
-	
+	curent_run_speed = lerp(curent_run_speed, run_speed, 0.1)
 	var offset = run_speed * delta * 100.0
 	var direction = self.position - globals.players_position.global_position
 	direction = direction.normalized()
@@ -85,4 +91,10 @@ func charge(delta):
 	
 	direction = direction.normalized()
 	self.move_and_slide(direction * offset)
+
+func _on_pickup_area_loot_entered(area):
+	if area == target:
+		held_item = target
+		target.grab(30)
+		state = STATES.STATE_RUN
 

@@ -14,6 +14,7 @@ var timer:float = 0.0
 var in_drive_area:int  = 0
 #var drive_progress:int = 20
 var is_driven = false
+var spawn_new_loot = false
 
 var loot_object = load("res://objects/loot.tscn")
 
@@ -34,6 +35,9 @@ func _physics_process(delta):
 #	$AnimationPlayer.playback_speed = current_speed/50.0
 	$cart/AnimationPlayer.playback_speed = current_speed/100.0
 func _process(delta):
+	if spawn_new_loot:
+		spawn_new_loot = false
+		spawn_loot()
 	timer += delta * 10
 	if !is_driven:
 		stering_bias += rand_range(-(0.1+stering_bias*0.01), 0.1-stering_bias*0.01 )
@@ -61,14 +65,18 @@ func _on_Area2D_body_entered(body):
 	
 	if not enemy:
 		return
-	enemy.held_item = spawn_loot()
-	enemy.grab_loot()
+	spawn_new_loot = true
+#	enemy.held_item = spawn_loot()
+#	enemy.grab_loot()
+	enemy.cart_hited()
 	
 func spawn_loot():
 	var new_loot = loot_object.instance()
 	get_parent().add_child(new_loot)
 	new_loot.position = $treasure.global_position
 	new_loot.position.y +=30
+	new_loot.get_node("pivot").position.y -= 40
+	new_loot.velocity = -5
 	loot_in_cart -= 1
 	$cart.frame = int(loot_in_cart*0.5)
 	return new_loot
@@ -78,12 +86,12 @@ func add_loot():
 	$cart.frame = clamp(int(loot_in_cart*0.5), 0,4)
 
 func _on_bump_area_entered(area):
-	area.get_node("Shape2D").disabled = true
+#	dissable_area = true
+	area.get_node("Shape2D").queue_free()
 	bump_velcocity -= rand_range(1,3)
 	if randi()%100 < 50:
-		var new_loot = spawn_loot()
-		new_loot.get_node("pivot").position.y -= 40
-		new_loot.velocity = -5
+		spawn_new_loot = true
+
 
 func _on_drive_control_body_entered(body):
 	if !is_driven && in_drive_area == 0:

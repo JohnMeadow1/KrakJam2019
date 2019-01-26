@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 var sprites = [ "res://objects/loot_0.png", 
 				"res://objects/loot_1.png",

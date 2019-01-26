@@ -87,7 +87,7 @@ func players_target(direction:Vector2):
 	
 func grab_loot():
 	looted = true
-	held_item.grab(16)
+#	held_item.grab(16)
 	state = STATES.STATE_RUN
 	target = globals.camera
 	
@@ -96,8 +96,23 @@ func drop_loot():
 		held_item.drop()
 		held_item = null
 		
+func cart_hited():
+	chose_new_target()
+	
 func _on_VisibilityNotifier2D_screen_exited():
 	if state == STATES.STATE_RUN:
 		if held_item:
 			held_item.queue_free()
 		self.queue_free()
+		
+func chose_new_target():
+	var loots = get_tree().get_nodes_in_group("loot")
+	if randi() % loots.size() == 0  :
+		target = globals.cart
+	else:
+		target = loots[randi()%loots.size()]
+		if target.is_held:
+			for player in globals.players:
+				if player.held_item == target:
+					target = player
+					state = STATES.STATE_ATTACK

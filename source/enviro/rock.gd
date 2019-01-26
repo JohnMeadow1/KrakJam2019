@@ -1,5 +1,5 @@
 tool
-extends Area2D
+extends Node2D
 
 export(int) onready var frame:int = 0 setget setterfunc, getterfunc
 

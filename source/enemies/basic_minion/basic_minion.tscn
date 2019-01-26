@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://enemies/basic_minion/basic_minion.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 
 resource_name = "throw"
 length = 0.7
@@ -55,21 +55,26 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.776471, 0, 0, 0.678431 ), Color( 0.776471, 0, 0, 0 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 
 radius = 100.0
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=5]
 
 radius = 60.0
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="CircleShape2D" id=6]
 
 radius = 125.0
+
+[sub_resource type="CapsuleShape2D" id=7]
+
+radius = 25.0
 
 [node name="basic_minion" type="KinematicBody2D" groups=[
 "enemy",
 ]]
+collision_layer = 513
 collision_mask = 3
 script = ExtResource( 1 )
 
@@ -98,7 +103,7 @@ position = Vector2( 20, 4 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="pivot"]
 autoplay = "goblin_move"
 anims/goblin_move = SubResource( 2 )
-anims/throw = SubResource( 6 )
+anims/throw = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="pivot"]
 visible = false
@@ -108,47 +113,58 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 
 [node name="player_scan" type="Area2D" parent="."]
-editor/display_folded = true
 visible = false
 monitorable = false
 collision_layer = 0
+collision_mask = 1536
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="scan_shape" type="CollisionShape2D" parent="player_scan"]
 modulate = Color( 0.176471, 0.537255, 1, 1 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="critical_distance" type="Area2D" parent="."]
 editor/display_folded = true
 visible = false
 monitorable = false
 collision_layer = 0
+collision_mask = 1024
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="scan_shape" type="CollisionShape2D" parent="critical_distance"]
 modulate = Color( 0.8, 0.176471, 1, 1 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="sware_distance" type="Area2D" parent="."]
 editor/display_folded = true
 visible = false
 monitorable = false
 collision_layer = 0
+collision_mask = 1024
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="scan_shape" type="CollisionShape2D" parent="sware_distance"]
 modulate = Color( 0.603922, 1, 0.176471, 0.301961 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 visible = false
 rect = Rect2( -20, -20, 40, 40 )
+
+[node name="pickup_area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Shape2D" type="CollisionShape2D" parent="pickup_area"]
+position = Vector2( 0, -4 )
+rotation = 1.5708
+shape = SubResource( 7 )
 
 [connection signal="body_entered" from="player_scan" to="." method="_on_player_scan_body_entered"]
 [connection signal="body_exited" from="player_scan" to="." method="_on_player_scan_body_exited"]
@@ -156,3 +172,4 @@ rect = Rect2( -20, -20, 40, 40 )
 [connection signal="body_entered" from="sware_distance" to="." method="_on_sware_distance_body_entered"]
 [connection signal="body_exited" from="sware_distance" to="." method="_on_sware_distance_body_exited"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="area_entered" from="pickup_area" to="." method="_on_pickup_area_loot_entered"]

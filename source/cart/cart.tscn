@@ -98,6 +98,8 @@ shape = SubResource( 1 )
 ]]
 position = Vector2( 0, -6.90382 )
 input_pickable = false
+collision_layer = 0
+collision_mask = 512
 
 [node name="TreasureReach" type="CollisionShape2D" parent="Area2D"]
 modulate = Color( 0.839216, 0.984314, 0.0156863, 1 )
@@ -146,7 +148,6 @@ autoplay = "move"
 anims/move = SubResource( 4 )
 
 [node name="wheels_bump" type="Area2D" parent="cart"]
-editor/display_folded = true
 collision_layer = 0
 collision_mask = 32
 
@@ -201,6 +202,7 @@ position = Vector2( 60, -27.353 )
 position = Vector2( 50.6231, -30.2246 )
 
 [node name="drive_control" type="Area2D" parent="."]
+editor/display_folded = true
 collision_layer = 0
 collision_mask = 1024
 
