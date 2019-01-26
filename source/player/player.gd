@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const MOVE_SPEED  = 1000
-const WALK_HEIGHT  = 0.1
+const WALK_HEIGHT  = 5
 const STUN_TIME   = 1
 
 export(int) var PLAYER_NUM:int = 1
@@ -70,9 +70,9 @@ func _physics_process(delta):
 				self.state = STATE.STATE_IDLE
 
 	$pivot.position.y =  -sin( walk_cycle ) * WALK_HEIGHT
-	$shade.modulate.a =  0.8 + $pivot.position.y * 5
-	$shade.scale.x =  1.2 - $pivot.position.y * 5
-	$shade.scale.y =  1.2 - $pivot.position.y * 5
+	$shade.modulate.a =  0.8 + $pivot.position.y * 0.1
+	$shade.scale.x =  1.2 - $pivot.position.y * 0.1
+	$shade.scale.y =  $shade.scale.x *0.5
 
 	move            = move_and_slide(move)
 	move            *= 0.90
