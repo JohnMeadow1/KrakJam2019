@@ -16,15 +16,15 @@ var held_item:Node = null
 var target:Node2D	= null
 var players:Array = []
 
-export(int) var friends_courage:int = 3
-var friends_count:int = 1
+export(int) var friends_courage:int = 2
+var friends_count:int = 0
 
 func _ready():
 	state = STATES.STATE_CHASE
 
 
 func _on_player_scan_body_entered(body:KinematicBody2D):
-	if state == STATES.STATE_ATTACK:
+	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
 		pass
 
 	elif body.is_in_group("enemy"):
@@ -37,8 +37,6 @@ func _on_player_scan_body_entered(body:KinematicBody2D):
 				if (pl.position - self.position).length_squared() < distance:
 					distance = (pl.position - self.position).length_squared()
 					target = pl
-			
-#			print("Target: " + target.name)
 
 	elif body.is_in_group("player"):
 		players.append(body as Node2D)
@@ -83,3 +81,8 @@ func drop_loot():
 	if held_item:
 		held_item.drop()
 		held_item = null
+		
+func _on_VisibilityNotifier2D_screen_exited():
+	if state == STATES.STATE_RUN:
+		get_parent().remove_child(held_item)
+		get_parent().remove_child(self)

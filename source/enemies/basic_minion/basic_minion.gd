@@ -7,8 +7,8 @@ export(float) var charge_speed:float	= 250.0
 export(float) var attack_distance = 70.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	target = get_tree().get_nodes_in_group("treasure").front()
-	print(state)
+	target = globals.cart
+	print(target.name)
 
 func _physics_process(delta):
 	if state == STATES.STATE_ATTACK:
@@ -38,8 +38,7 @@ func idle(delta):
 func chase(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = target.global_position - self.position
-	
-	direction = players_target(direction)
+#	direction = players_target(direction)
 	direction = direction.normalized()
 	
 	self.move_and_slide(direction * offset)

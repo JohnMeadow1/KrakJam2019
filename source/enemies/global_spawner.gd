@@ -14,17 +14,16 @@ func _process(delta):
 		timer -= delta
 	else:
 		spawn_minion()
-		timer = 5.0
+		timer = 2.0
 
 func spawn_minion():
 	var new_enemy = goblin_minion_object.instance()
+	
 	get_parent().add_child(new_enemy)
 
 	var spawn_point:Vector2 = globals.players_position.position - globals.cart.position
 	spawn_point = spawn_point.normalized()
 	spawn_point *= -spawn_distance
 	spawn_point += globals.cart.position
-	
-#	print(spawn_point)
 	
 	new_enemy.position = spawn_point
