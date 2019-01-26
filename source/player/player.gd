@@ -15,7 +15,6 @@ var move:Vector2       = Vector2()
 var walk_cycle:float   = 0
 var timer:float        = 5
 
-var carry_item_handle:Node = null
 var originPosition:Vector2 = Vector2()
 
 var held_item:Node = null
@@ -28,15 +27,13 @@ func _ready():
 func _physics_process(delta):
 	if timer > 0:
 		timer -= delta
-#	if !$pickup_area/Shape2D.disabled :
-#		$pickup_area/Shape2D.disabled = true
+
 	if held_item:
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
 		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 			held_item.drop()
 			held_item = null
 	if player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
-		var pick_up = false
 		pickup_loot()
 
 #		$pickup_area/Shape2D.disabled = false

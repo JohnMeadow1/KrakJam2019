@@ -45,80 +45,17 @@ editor_draw_drag_margin = false
 
 [node name="Ground" type="Sprite" parent="Enviroment"]
 modulate = Color( 0.341176, 0.72549, 0.384314, 1 )
-position = Vector2( 0, -0.001 )
 scale = Vector2( 100, 100 )
 texture = ExtResource( 2 )
 
 [node name="Road" type="Node2D" parent="Enviroment"]
-editor/display_folded = true
 
 [node name="road_1" type="Sprite" parent="Enviroment/Road"]
 modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -234, -1 )
+position = Vector2( 77, 35 )
 texture = ExtResource( 3 )
-
-[node name="road_2" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( 232, -2 )
-texture = ExtResource( 3 )
-
-[node name="road_3" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( 5.06879, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_4" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( 7.31879, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_5" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -8.43121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_6" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -6.18121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_7" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -3.93121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_8" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -1.68121, 0.463287 )
-texture = ExtResource( 3 )
-
-[node name="road_9" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
-
-[node name="road_10" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
-
-[node name="road_11" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
-
-[node name="road_12" type="Sprite" parent="Enviroment/Road"]
-modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-position = Vector2( -2.70121, 0.463287 )
-rotation = -3.14159
-scale = Vector2( 4.37114e-008, -1 )
-texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="YSort" type="YSort" parent="."]
 sort_enabled = true
@@ -169,7 +106,7 @@ texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
 [node name="tree_2" type="Sprite" parent="YSort"]
-position = Vector2( 311, 154 )
+position = Vector2( 392, -19 )
 texture = ExtResource( 9 )
 offset = Vector2( 0, -100 )
 
