@@ -19,6 +19,7 @@ var stun_timer:float	= 0
 
 var originPosition:Vector2 = Vector2()
 var can_drive = false
+var is_driving = false
 var held_item:Node = null
 
 func _ready():
@@ -40,9 +41,21 @@ func _physics_process(delta):
 			held_item.drop()
 			held_item = null
 			
-	
-	if state == STATE.STATE_STUN && stun_timer > 0:
+	if is_driving:
+		position = globals.cart_node.position
+		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
+			pass
+		var target_stering = handle_drive_input()
+		globals.cart_node.target_stering = target_stering.y
+		globals.cart_node.speed = target_stering.x
+		
+	elif state == STATE.STATE_STUN && stun_timer > 0:
 		stun_timer -= delta
+	elif can_drive && Input.is_action_pressed("action_p" + str(PLAYER_CONTROLS)):
+		if globals.cart_node.get_in(PLAYER_CONTROLS):
+			is_driving = true
+			disable_coliders()
+			
 	elif player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 		pickup_loot()
 
@@ -79,12 +92,39 @@ func _physics_process(delta):
 
 	move = move_and_slide(move)
 	move *= 0.90
-
+func disable_coliders():
+	$shade.visible = false
+	$CollisionShape.disabled = true
+	$pivot/player_sprite.visible = false
+	$pickup_area/Shape2D.disabled = true
+	$pivot/drop_area/Shape2D.disabled = true
+func enable_coliders():
+	$shade.visible = true
+	$CollisionShape.disabled = false
+	$pivot/player_sprite.visible = true
+	$pickup_area/Shape2D.disabled = false
+	$pivot/drop_area/Shape2D.disabled = false
 func pickup_loot():
 	var loot = $pickup_area.get_overlapping_areas()
 	if loot.size()>0:
 		loot[0].grab(50)
 		held_item = loot[0]
+		
+func handle_drive_input():
+	var target_stering = Vector2(50,0)
+	if Input.is_action_pressed("move_up_p" + str(PLAYER_CONTROLS)):
+		target_stering.y = -10
+
+	if Input.is_action_pressed("move_down_p" + str(PLAYER_CONTROLS)):
+		target_stering.y = 10
+		
+	if Input.is_action_pressed("move_left_p" + str(PLAYER_CONTROLS)):
+		target_stering.x = 75
+
+	if Input.is_action_pressed("move_right_p" + str(PLAYER_CONTROLS)):
+		target_stering.x = 0
+		
+	return target_stering
 
 func handle_input(offset):
 	var player_moved = false

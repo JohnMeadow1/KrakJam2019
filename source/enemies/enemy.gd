@@ -97,5 +97,6 @@ func drop_loot():
 		
 func _on_VisibilityNotifier2D_screen_exited():
 	if state == STATES.STATE_RUN:
-		get_parent().remove_child(held_item)
-		get_parent().remove_child(self)
+		if held_item:
+			held_item.queue_free()
+		self.queue_free()
