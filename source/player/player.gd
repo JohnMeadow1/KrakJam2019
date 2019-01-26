@@ -104,10 +104,12 @@ func handle_input(offset):
 	if Input.is_action_pressed("move_left_p" + str(PLAYER_CONTROLS)):
 		move.x      -= offset
 		player_moved = true
+		$pivot.scale.x = -1
 
 	if Input.is_action_pressed("move_right_p" + str(PLAYER_CONTROLS)):
 		move.x      += offset
 		player_moved = true
+		$pivot.scale.x = 1
 
 	return player_moved
 

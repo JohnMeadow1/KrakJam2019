@@ -6,6 +6,8 @@
 
 [sub_resource type="CircleShape2D" id=1]
 
+custom_solver_bias = 0.0
+radius = 10.0
 
 [sub_resource type="CapsuleShape2D" id=2]
 
@@ -14,7 +16,14 @@ radius = 25.0
 height = 20.0
 
 [node name="player_1" type="KinematicBody2D"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+motion/sync_to_physics = false
 script = ExtResource( 1 )
+PLAYER_NUM = 1
+player_enabled = null
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -4 )
@@ -34,7 +43,7 @@ centered = false
 hframes = 2
 
 [node name="held_item" type="Position2D" parent="pivot"]
-position = Vector2( -29, 4 )
+position = Vector2( 28, 4 )
 
 [node name="pickup_area" type="Area2D" parent="."]
 input_pickable = true
