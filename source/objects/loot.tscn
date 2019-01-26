@@ -1,13 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/loot.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
-[ext_resource path="res://sprites/loot.png" type="Texture" id=3]
+[ext_resource path="res://objects/loot_1.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "idle"
+length = 0.6
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
 
 [node name="loot" type="Area2D" groups=[
 "loot",
@@ -30,14 +49,24 @@ shape = SubResource( 1 )
 
 [node name="shade" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 1, -5 )
+position = Vector2( 5.96046e-008, -5 )
 scale = Vector2( 1.4, 0.7 )
 texture = ExtResource( 2 )
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="pivot" type="Node2D" parent="."]
 
-[node name="sprite" type="Sprite" parent="Node2D"]
-position = Vector2( -13, -30 )
+[node name="sprite" type="Sprite" parent="pivot"]
+position = Vector2( -19, -37 )
 texture = ExtResource( 3 )
 centered = false
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="pivot"]
+root_node = NodePath("..")
+autoplay = "idle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle = SubResource( 2 )
+blend_times = [  ]
 
