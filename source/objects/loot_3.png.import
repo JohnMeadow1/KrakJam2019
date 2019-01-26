@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Skarby.png-9e0ed795615004b4c5530bc5d61ef581.stex"
+path="res://.import/loot_3.png-4310addddcb57953532550eb8cf2c8fe.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/Skarby.png"
-dest_files=[ "res://.import/Skarby.png-9e0ed795615004b4c5530bc5d61ef581.stex" ]
+source_file="res://objects/loot_3.png"
+dest_files=[ "res://.import/loot_3.png-4310addddcb57953532550eb8cf2c8fe.stex" ]
 
 [params]
 
