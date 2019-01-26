@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 enum {STATE_IDLE, STATE_RUN, STATE_CHASE}
 
-export(float) var chase_speed:float = 75.0
+export(float) var chase_speed:float = 70.0
 
 var state        = null
 
@@ -27,7 +27,7 @@ func idle(delta):
 	pass
 	
 func chase(delta):
-	var offset = chase_speed * delta
+	var offset = chase_speed * delta * 100.0
 	var direction = target.position - self.position
 	direction = direction.normalized()
 	
