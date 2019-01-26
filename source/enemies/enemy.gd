@@ -38,7 +38,7 @@ func _on_player_scan_body_entered(body:KinematicBody2D):
 					distance = (pl.position - self.position).length_squared()
 					target = pl
 			
-			print("Target: " + target.name)
+#			print("Target: " + target.name)
 
 	elif body.is_in_group("player"):
 		players.append(body as Node2D)

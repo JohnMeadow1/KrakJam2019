@@ -74,7 +74,6 @@ func move_away(delta):
 func charge(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = target.global_position - self.position
-#	print(direction.length())
 	if direction.length() <= attack_distance:
 		state = STATES.STATE_RUN
 		run_speed = charge_speed

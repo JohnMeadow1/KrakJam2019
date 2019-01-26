@@ -102,5 +102,5 @@ func handle_input(offset):
 	return player_moved
 
 func stun():
-	print("stuned " + name)
+#	print("stuned " + name)
 	pass

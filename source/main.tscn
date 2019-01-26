@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://audio/hgh_bg.wav" type="AudioStream" id=2]
@@ -6,14 +6,15 @@
 [ext_resource path="res://flat_enviro_assets/pobrane.jpg" type="Texture" id=4]
 [ext_resource path="res://enviro/rock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/wheel_marks.gd" type="Script" id=6]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://sprites/neina.png" type="Texture" id=8]
-[ext_resource path="res://sprites/hiryu.png" type="Texture" id=9]
-[ext_resource path="res://sprites/leszek.png" type="Texture" id=10]
-[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=11]
-[ext_resource path="res://enviro/tree.tscn" type="PackedScene" id=12]
-[ext_resource path="res://enemies/basic_minion/basic_minion.tscn" type="PackedScene" id=13]
-[ext_resource path="res://objects/loot.tscn" type="PackedScene" id=14]
+[ext_resource path="res://enemies/global_spawner.gd" type="Script" id=7]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sprites/neina.png" type="Texture" id=9]
+[ext_resource path="res://sprites/hiryu.png" type="Texture" id=10]
+[ext_resource path="res://sprites/leszek.png" type="Texture" id=11]
+[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=12]
+[ext_resource path="res://enviro/tree.tscn" type="PackedScene" id=13]
+[ext_resource path="res://enemies/basic_minion/basic_minion.tscn" type="PackedScene" id=14]
+[ext_resource path="res://objects/loot.tscn" type="PackedScene" id=15]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -31,6 +32,7 @@ current = true
 position = Vector2( 0, 4.76837e-007 )
 
 [node name="Enviroment" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Ground" type="Sprite" parent="Enviroment"]
 modulate = Color( 0.341176, 0.72549, 0.384314, 1 )
@@ -38,6 +40,7 @@ scale = Vector2( 100, 100 )
 texture = ExtResource( 3 )
 
 [node name="Road" type="Node2D" parent="Enviroment"]
+editor/display_folded = true
 
 [node name="road_1" type="Sprite" parent="Enviroment/Road"]
 modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
@@ -56,56 +59,62 @@ position = Vector2( 159, 42 )
 script = ExtResource( 6 )
 
 [node name="YSort" type="YSort" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="player_1" parent="YSort" instance=ExtResource( 7 )]
+[node name="global_enemy_spawner" type="Node" parent="YSort"]
+script = ExtResource( 7 )
+
+[node name="player_1" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 54, 96 )
 player_enabled = true
 
-[node name="player_2" parent="YSort" instance=ExtResource( 7 )]
+[node name="player_2" parent="YSort" instance=ExtResource( 8 )]
 editor/display_folded = true
 position = Vector2( 176, -3 )
 player_enabled = true
 
 [node name="player_sprite" parent="YSort/player_2/pivot" index="1"]
 position = Vector2( -24, -80.9955 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="Shape2D" parent="YSort/player_2/pickup_area" index="0"]
 position = Vector2( 0, -4.9955 )
 
-[node name="player_3" parent="YSort" instance=ExtResource( 7 )]
+[node name="player_3" parent="YSort" instance=ExtResource( 8 )]
 editor/display_folded = true
 position = Vector2( -58, -12 )
 player_enabled = true
 
 [node name="player_sprite" parent="YSort/player_3/pivot" index="1"]
 position = Vector2( -49, -78 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
-[node name="player_4" parent="YSort" instance=ExtResource( 7 )]
+[node name="player_4" parent="YSort" instance=ExtResource( 8 )]
 editor/display_folded = true
 position = Vector2( 95.6916, -29 )
 player_enabled = true
 
 [node name="player_sprite" parent="YSort/player_4/pivot" index="1"]
 position = Vector2( -23.6916, -85 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
-[node name="cart" parent="YSort" instance=ExtResource( 11 )]
+[node name="cart" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 345, 60 )
 collision/safe_margin = 0.001
 speed = 50.0
 
-[node name="tree_1" parent="YSort" instance=ExtResource( 12 )]
+[node name="tree_1" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 21, -23 )
 
-[node name="tree_2" parent="YSort" instance=ExtResource( 12 )]
+[node name="tree_2" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 226, -23 )
 
-[node name="basic_minion" parent="YSort" instance=ExtResource( 13 )]
+[node name="basic_minion" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( -195.494, 103.04 )
 
-[node name="loot" parent="YSort" instance=ExtResource( 14 )]
+[node name="loot" parent="YSort" instance=ExtResource( 15 )]
 
 
 [editable path="YSort/player_2"]
