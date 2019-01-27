@@ -5,7 +5,7 @@ var spawn_distance:float = 600.0
 
 var timer:float = 3.0
 export(float) var spawn_time_max:float = 4.0
-export(float) var spawn_time_min:float = 1.5
+export(float) var spawn_time_min:float = 2.5
 var spawn_time:float = 5.0
 
 var enemy_courge_level:int = 3
@@ -20,8 +20,9 @@ func _process(delta):
 		timer -= delta
 	else:
 		spawn_minion()
-		if globals.cart_node.position.x > -9000:
+		if globals.cart_node.position.x > -8500:
 			spawn_time = (1 - abs(globals.cart_node.position.x)/9000) * spawn_time_max + spawn_time_min
+			spawn_time /= max(globals.active_players*0.75, 1.0)
 		else:
 			spawn_time = 0.5
 			enemy_courge_level = 7

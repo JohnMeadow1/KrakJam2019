@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cart_body_treasure.png-9cbeae1b4796c8bcf99adf56ed2fbb1d.stex"
+path="res://.import/tomek_animations.png-9dbd00cc81511d1ee0dda658de3971ab.stex"
 
 [deps]
 
-source_file="res://character_assets/cart_body_treasure.png"
-dest_files=[ "res://.import/cart_body_treasure.png-9cbeae1b4796c8bcf99adf56ed2fbb1d.stex" ]
+source_file="res://sprites/tomek_animations.png"
+dest_files=[ "res://.import/tomek_animations.png-9dbd00cc81511d1ee0dda658de3971ab.stex" ]
 
 [params]
 

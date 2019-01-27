@@ -7,20 +7,21 @@ var track_size   = PoolIntArray()
 var tick:int = 0
 
 func _physics_process(_delta):
-	tick += 1
-	tick %= 10
-	if tick == 0:
-		if( track.size() >= TRACK_LENGTH ):
-			track.remove(0)
-			track2.remove(0)
-			track_size.remove(0)
-		track.append(globals.wheel.global_position)
-		track2.append(globals.wheel.global_position+Vector2(0,-10))
-		if globals.cart_node.bump_velcocity == 0.0:
-			track_size.append(2)
-		else:
-			track_size.append(0)
-		update()
+	if globals.cart_node.cart>0:
+		tick += 1
+		tick %= 10
+		if tick == 0:
+			if( track.size() >= TRACK_LENGTH ):
+				track.remove(0)
+				track2.remove(0)
+				track_size.remove(0)
+			track.append(globals.wheel.global_position)
+			track2.append(globals.wheel.global_position+Vector2(0,-10))
+			if globals.cart_node.bump_velcocity == 0.0:
+				track_size.append(2)
+			else:
+				track_size.append(0)
+			update()
 
 func _draw():
 	for i in range(track.size() -1 ):

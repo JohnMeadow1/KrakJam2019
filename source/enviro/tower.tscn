@@ -6,16 +6,11 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 
-custom_solver_bias = 0.0
 radius = 19.0001
 height = 53.9998
 
 [node name="rock_small" type="StaticBody2D"]
-input_pickable = false
-collision_layer = 32
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 script = ExtResource( 1 )
 frame = null
 

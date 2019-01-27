@@ -9,6 +9,8 @@ var camera:Camera2D = null
 
 var players:Array = []
 
+var active_players:float = 0.0
+
 func _ready():
 	wheel = null
 	cart = null

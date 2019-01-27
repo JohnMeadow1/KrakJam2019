@@ -11,6 +11,7 @@ func _ready():
 func _process(_delta):
 	handle_players_position()
 	handle_camera()
+	globals.active_players = $YSort/player_1.enabled_timer + $YSort/player_2.enabled_timer + $YSort/player_3.enabled_timer + $YSort/player_4.enabled_timer 
 
 func handle_players_position():
 	var target_position = Vector3()

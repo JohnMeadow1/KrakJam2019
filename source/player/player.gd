@@ -60,6 +60,8 @@ func _physics_process(delta):
 						held_item.queue_free()
 						if held_item.is_in_group("wheel"):
 							area.get_parent().add_wheel()
+						elif held_item.is_in_group("goat"):
+							area.get_parent().add_goat()
 						else:
 							area.get_parent().add_loot()
 						break

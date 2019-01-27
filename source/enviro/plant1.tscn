@@ -6,17 +6,10 @@
 
 [sub_resource type="CircleShape2D" id=1]
 
-custom_solver_bias = 0.0
 radius = 16.0
 
 [node name="plant1" type="StaticBody2D"]
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 script = ExtResource( 1 )
-frame = 0
 
 [node name="shade" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -33,7 +26,6 @@ vframes = 4
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 1, -16 )
 shape = SubResource( 1 )
 

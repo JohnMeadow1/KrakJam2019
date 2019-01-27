@@ -116,7 +116,7 @@ func cart_hited():
 	
 func _on_VisibilityNotifier2D_screen_exited():
 	if state == STATES.STATE_RUN:
-		if held_item:
+		if held_item && held_item is Node:
 			held_item.queue_free()
 		self.queue_free()
 		
