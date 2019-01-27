@@ -74,10 +74,13 @@ func _on_Area2D_body_entered(body):
 	
 	if not enemy:
 		return
-	spawn_new_loot = true
+	if loot_in_cart > 0:
+		spawn_new_loot = true
 #	enemy.held_item = spawn_loot()
 #	enemy.grab_loot()
 	enemy.cart_hited()
+	get_node("sfx/enemy_hit_"+str(randi()%6+1)).play()
+	
 	
 func spawn_loot():
 	var new_loot = loot_object.instance()
@@ -90,7 +93,6 @@ func spawn_loot():
 	$cart.frame = clamp(int(loot_in_cart*0.5), 0, 4)
 #	get_node("sfx/pick_gold_"+str(randi()%2+1)).play()
 	get_node("sfx/drop_gold_"+str(randi()%3+1)).play()
-	get_node("sfx/enemy_hit_"+str(randi()%6+1)).play()
 	return new_loot
 	
 func add_loot():

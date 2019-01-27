@@ -150,7 +150,7 @@ rotation = -1.5708
 texture = ExtResource( 2 )
 
 [node name="goat" type="Sprite" parent="."]
-position = Vector2( -50, -40.4492 )
+position = Vector2( -50, -40.2246 )
 texture = ExtResource( 3 )
 vframes = 5
 hframes = 2
@@ -240,7 +240,6 @@ position = Vector2( 60, -27.353 )
 position = Vector2( 50.6231, -30.2246 )
 
 [node name="drive_control" type="Area2D" parent="."]
-editor/display_folded = true
 collision_layer = 0
 collision_mask = 1024
 

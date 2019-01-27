@@ -26,7 +26,7 @@ func spawn_minion():
 	get_parent().add_child(new_enemy)
 
 #	var spawn_point:Vector2 = Vector2(randf(), randf())
-	var spawn_point:Vector2 = globals.players_position.position - globals.cart.global_position
+	var spawn_point:Vector2 = globals.camera.position - globals.cart.global_position
 	spawn_point = spawn_point.normalized()
 	spawn_point *= -spawn_distance
 	spawn_point += globals.cart.global_position

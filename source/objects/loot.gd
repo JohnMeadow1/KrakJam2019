@@ -43,7 +43,6 @@ func _process(_delta):
 	$shade.modulate.a = 1-clamp(-$pivot.position.y/10,0,1)
 	
 func grab(height, who:Node):
-#	$Shape2D.disabled = true
 	is_held = true
 	pickup_height = height
 	self.remove_from_group("loot")
@@ -56,9 +55,15 @@ func grab(height, who:Node):
 	
 func drop():
 	is_held = false
-	$Shape2D.disabled = false
 	self.add_to_group("loot")
 	(sfx_drop[randi() % sfx_drop.size()] as AudioStreamPlayer).play()
 
 func target(enemy:Enemy):
 	enemy_terget = enemy
+
+func _on_VisibilityNotifier2D_screen_entered():
+	self.add_to_group("loot")
+
+func _on_VisibilityNotifier2D_screen_exited():
+	self.remove_from_group("loot")
+

@@ -77,3 +77,8 @@ stream = ExtResource( 7 )
 [node name="pick_gold_2" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 8 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.663422, -5.97078 )
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
