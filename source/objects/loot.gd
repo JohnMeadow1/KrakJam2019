@@ -28,7 +28,6 @@ func _ready():
 func _process(_delta):
 	if is_held:
 		$pivot.position.y = lerp($pivot.position.y, -pickup_height, 0.2)
-		$Shape2D.disabled = true
 		
 		
 	elif $pivot.position.y < 0:
