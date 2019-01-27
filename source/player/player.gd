@@ -52,7 +52,6 @@ func _physics_process(delta):
 	if state == STATE.STATE_STUN && stun_timer > 0:
 		stun_timer -= delta
 	else:
-
 		if held_item:
 			held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
 			if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):

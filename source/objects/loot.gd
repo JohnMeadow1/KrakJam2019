@@ -50,7 +50,6 @@ func grab(height, who:Node):
 	(sfx_pick[randi() % sfx_pick.size()] as AudioStreamPlayer).play()
 	if enemy_terget is Enemy:
 		if(who.is_in_group("player")):
-#			print("kill: " + who.name)
 			enemy_terget.attack_player(who)
 		else:
 			enemy_terget.chose_new_target()
@@ -62,5 +61,4 @@ func drop():
 	(sfx_drop[randi() % sfx_drop.size()] as AudioStreamPlayer).play()
 
 func target(enemy:Enemy):
-#	print("it's mine!")
 	enemy_terget = enemy

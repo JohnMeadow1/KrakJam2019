@@ -88,15 +88,17 @@ func spawn_loot():
 	new_loot.velocity = -5
 	loot_in_cart = max(loot_in_cart-1, 0)
 	$cart.frame = clamp(int(loot_in_cart*0.5), 0, 4)
-	$drop_on_wood.play()
-	get_node("sfx/pick_gold_"+str(randi()%2+1)).play()
+#	get_node("sfx/pick_gold_"+str(randi()%2+1)).play()
+	get_node("sfx/drop_gold_"+str(randi()%3+1)).play()
+	get_node("sfx/enemy_hit_"+str(randi()%6+1)).play()
 	return new_loot
 	
 func add_loot():
 	loot_in_cart += 1
 	$cart.frame = clamp(int(loot_in_cart*0.5), 0,4)
-	$drop_on_wood.play()
-	get_node("sfx/drop_gold_"+str(randi()%3+1)).play()
+	$sfx/drop_gold_0.play()
+#	$drop_on_wood.play()
+#	get_node("sfx/drop_gold_"+str(randi()%3+1)).play()
 
 func _on_bump_area_entered(area):
 #	dissable_area = true
@@ -104,6 +106,7 @@ func _on_bump_area_entered(area):
 	bump_velcocity -= rand_range(1,3)
 	if randi()%100 < 50:
 		spawn_new_loot = true
+	$sfx/wagon_bump_1.play()
 
 
 func _on_drive_control_body_entered(body):

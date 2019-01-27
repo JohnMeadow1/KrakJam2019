@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://objects/cart.gd" type="Script" id=1]
 [ext_resource path="res://sprites/cart_shade.png" type="Texture" id=2]
@@ -14,11 +14,19 @@
 [ext_resource path="res://sprites/progress_over.png" type="Texture" id=12]
 [ext_resource path="res://audio/sfx_carriage_hooves.wav" type="AudioStream" id=13]
 [ext_resource path="res://audio/sfx_drop_on_wood.wav" type="AudioStream" id=14]
-[ext_resource path="res://audio/sfx_drop_gold-001.wav" type="AudioStream" id=15]
-[ext_resource path="res://audio/sfx_drop_gold-002.wav" type="AudioStream" id=16]
-[ext_resource path="res://audio/sfx_drop_gold-003.wav" type="AudioStream" id=17]
-[ext_resource path="res://audio/sfx_pick_gold-001.wav" type="AudioStream" id=18]
-[ext_resource path="res://audio/sfx_pick_gold-002.wav" type="AudioStream" id=19]
+[ext_resource path="res://audio/sfx_wagonbump.wav" type="AudioStream" id=15]
+[ext_resource path="res://audio/sfx_gold_on_wagon.wav" type="AudioStream" id=16]
+[ext_resource path="res://audio/sfx_drop_gold-001.wav" type="AudioStream" id=17]
+[ext_resource path="res://audio/sfx_drop_gold-002.wav" type="AudioStream" id=18]
+[ext_resource path="res://audio/sfx_drop_gold-003.wav" type="AudioStream" id=19]
+[ext_resource path="res://audio/sfx_pick_gold-001.wav" type="AudioStream" id=20]
+[ext_resource path="res://audio/sfx_pick_gold-002.wav" type="AudioStream" id=21]
+[ext_resource path="res://audio/sfx_woodcutting-001.wav" type="AudioStream" id=22]
+[ext_resource path="res://audio/sfx_woodcutting-002.wav" type="AudioStream" id=23]
+[ext_resource path="res://audio/sfx_woodcutting-003.wav" type="AudioStream" id=24]
+[ext_resource path="res://audio/sfx_woodcutting-004.wav" type="AudioStream" id=25]
+[ext_resource path="res://audio/sfx_woodcutting-005.wav" type="AudioStream" id=26]
+[ext_resource path="res://audio/sfx_woodcutting-006.wav" type="AudioStream" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -261,20 +269,44 @@ stream = SubResource( 7 )
 
 [node name="sfx" type="Node" parent="."]
 
-[node name="drop_gold_1" type="AudioStreamPlayer" parent="sfx"]
+[node name="wagon_bump_1" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 15 )
 
-[node name="drop_gold_2" type="AudioStreamPlayer" parent="sfx"]
+[node name="drop_gold_0" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 16 )
 
-[node name="drop_gold_3" type="AudioStreamPlayer" parent="sfx"]
+[node name="drop_gold_1" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 17 )
 
-[node name="pick_gold_1" type="AudioStreamPlayer" parent="sfx"]
+[node name="drop_gold_2" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 18 )
 
-[node name="pick_gold_2" type="AudioStreamPlayer" parent="sfx"]
+[node name="drop_gold_3" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 19 )
+
+[node name="pick_gold_1" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 20 )
+
+[node name="pick_gold_2" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 21 )
+
+[node name="enemy_hit_1" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 22 )
+
+[node name="enemy_hit_2" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 23 )
+
+[node name="enemy_hit_3" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 24 )
+
+[node name="enemy_hit_4" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 25 )
+
+[node name="enemy_hit_5" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 26 )
+
+[node name="enemy_hit_6" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 27 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="cart/wheels_bump" to="." method="_on_bump_area_entered"]
