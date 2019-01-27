@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://sprites/ground.png" type="Texture" id=1]
 [ext_resource path="res://Road.tscn" type="PackedScene" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://enviro/home.tscn" type="PackedScene" id=14]
 [ext_resource path="res://enviro/rock.tscn" type="PackedScene" id=15]
 [ext_resource path="res://enviro/rock_small.tscn" type="PackedScene" id=16]
+[ext_resource path="res://enviro/tree_0.tscn" type="PackedScene" id=17]
+[ext_resource path="res://enviro/tree_1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://enviro/tree_2.tscn" type="PackedScene" id=19]
 
 [node name="Enviroment" type="Node"]
 
@@ -35,6 +38,30 @@ position = Vector2( -4, 0 )
 
 [node name="sand_small" type="Sprite" parent="Sand"]
 position = Vector2( 69, -5 )
+texture = ExtResource( 3 )
+
+[node name="sand_small2" type="Sprite" parent="Sand"]
+position = Vector2( -3249, 241 )
+texture = ExtResource( 3 )
+
+[node name="sand_small3" type="Sprite" parent="Sand"]
+position = Vector2( -6169, 928 )
+texture = ExtResource( 3 )
+
+[node name="sand_small4" type="Sprite" parent="Sand"]
+position = Vector2( -6314, -1563 )
+texture = ExtResource( 3 )
+
+[node name="sand_small5" type="Sprite" parent="Sand"]
+position = Vector2( -3280, -1222 )
+texture = ExtResource( 3 )
+
+[node name="sand_small6" type="Sprite" parent="Sand"]
+position = Vector2( -1974, -862 )
+texture = ExtResource( 3 )
+
+[node name="sand_small7" type="Sprite" parent="Sand"]
+position = Vector2( -1457, 469 )
 texture = ExtResource( 3 )
 
 [node name="sand_big" type="Sprite" parent="Sand"]
@@ -574,6 +601,10 @@ position = Vector2( -7576, -167 )
 
 [node name="tree_1" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -5508, 211 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="hut_semi2" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( -5114, 462 )
@@ -597,12 +628,24 @@ frame = 0
 
 [node name="tree_2" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -4716, 462 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="tree_3" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -5441, 651 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="tree_4" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -5027, -14 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="hut_semi4" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( -5114, 464 )
@@ -671,6 +714,10 @@ frame = 0
 
 [node name="tree_5" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -7771, -374 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="hut_semi6" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( -7377, -123 )
@@ -678,12 +725,24 @@ frame = 8
 
 [node name="tree_6" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -6979, -123 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="tree_7" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -7704, 66 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="tree_8" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -7290, -599 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
 [node name="hut_semi7" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( -7377, -123 )
@@ -1855,4 +1914,1712 @@ position = Vector2( -3621, 95 )
 
 [node name="rock_small255" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( -2870, 91 )
+
+[node name="tree_9" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -853, -382 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_152" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -1010, 633 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_157" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2892, 1076 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_162" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3795, 1321 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_166" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4920, 1408 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_175" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4304, 343 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_180" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2707, -403 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_183" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -1674, -631 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_186" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3465, -943 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_189" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3465, -943 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_190" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4466, -1337 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_195" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5106, -1342 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_198" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5834, -1310 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_201" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -6508, -540 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_202" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -6616, -730 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_209" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -8608, -918 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_214" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -7887, 525 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_220" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -7003, 971 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_226" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5923, 1326 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_232" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3619, 764 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_238" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2661, -1055 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_243" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3694, 85 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_249" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5873, -624 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_155" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -991, -256 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_160" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2873, 187 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_164" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3776, 432 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_170" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4901, 519 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_172" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4285, -546 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_176" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2688, -1292 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_154" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -1084, 282 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_159" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2966, 725 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_163" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3869, 970 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_169" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4994, 1057 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_173" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4378, -8 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_178" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2781, -754 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_182" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -1748, -982 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_185" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3539, -1294 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_187" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3539, -1294 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_192" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -4540, -1688 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_194" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5180, -1693 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_196" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5908, -1661 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_199" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -6582, -891 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_203" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -6342, -760 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_208" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -8334, -948 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_213" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -7613, 495 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_219" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -6729, 941 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_225" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5649, 1296 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_231" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3345, 734 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_237" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -2387, -1085 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_246" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -3420, 55 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_247" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( -5599, -654 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_10" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -690, -430 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_156" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2572, 13 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_161" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3475, 258 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_167" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -4600, 345 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_174" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3984, -720 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_177" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2387, -1466 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_153" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -730, 400 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_158" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2612, 843 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_165" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3515, 1088 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_168" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -4640, 1175 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_171" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -4024, 110 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_179" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2233, -581 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_181" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -1200, -809 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_184" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2991, -1121 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_188" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2991, -1121 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_191" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3992, -1515 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_193" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -4632, -1520 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_197" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -5360, -1488 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_200" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -6034, -718 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_204" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -6034, -721 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_210" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -8026, -909 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_215" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -7305, 534 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_222" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -6421, 980 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_227" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -5341, 1335 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_234" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3037, 773 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_240" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -2079, -1046 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_241" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3112, 94 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_251" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -5291, -615 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_11" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1061, -78 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_13" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1206, 134 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_14" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1645, 165 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_21" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1953, -1121 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_30" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -3358, 1042 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_31" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4120, -1006 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_39" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7156, 150 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_44" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7793, -677 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_15" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -517, 182 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_16" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1123, 580 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_17" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1978, 582 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_22" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2286, -704 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_26" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -3691, 1459 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_35" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4453, -589 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_36" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7489, 567 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_41" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -8126, -260 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_18" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2233, 530 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_25" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2541, -756 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_29" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -3946, 1407 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_33" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4708, -641 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_40" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7744, 515 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_45" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -8381, -312 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_19" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2134, 720 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_23" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2442, -566 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_28" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -3847, 1597 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_34" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4609, -451 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_38" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7645, 705 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_43" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -8282, -122 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_20" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2640, 240 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_142" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -3458, 15 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_143" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4027, 213 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_144" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4259, -87 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_145" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -3857, -1028 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_146" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4300, -1556 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_147" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4934, -520 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_148" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -5863, -696 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_207" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7855, -884 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_216" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7134, 559 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_221" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -6250, 1005 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_228" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -5170, 1360 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_233" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2866, 798 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_239" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -1908, -1021 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_245" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2941, 119 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_252" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -5120, -590 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_149" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -6583, -838 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_150" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -7034, 819 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_151" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -6609, -306 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_24" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -2948, -1046 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_27" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -4353, 1117 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_32" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -5115, -931 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_37" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -8151, 225 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_42" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -8788, -602 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_12" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -819, -351 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_54" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -793, 397 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_59" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -1899, 631 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_62" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3021, 941 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_66" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3883, 1124 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_70" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4726, 1337 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_74" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5217, 998 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_76" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6019, 729 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_80" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6724, 912 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_83" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7407, 723 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_86" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8229, 229 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_90" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -9139, -143 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_92" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8442, -917 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_95" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6618, -609 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_97" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6529, -276 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_102" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5241, -504 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_105" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4722, -143 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_108" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4525, -720 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_109" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3942, -789 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_112" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4075, -1275 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_116" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4500, -1392 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_120" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5191, -1450 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_121" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5771, -1342 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_125" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6273, -1278 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_127" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7150, -1428 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_130" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8102, -409 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_134" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6054, 388 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_137" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4422, 213 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_139" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3873, 207 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_46" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -663, -122 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_52" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -637, 626 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_56" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -1743, 860 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_61" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -2865, 1170 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_67" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3741, 1196 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_72" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4584, 1409 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_75" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5075, 1070 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_78" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5877, 801 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_79" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6582, 984 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_82" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7265, 795 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_85" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8087, 301 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_89" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8997, -71 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_91" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8300, -845 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_94" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6476, -540 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_206" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8468, -728 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_211" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7747, 715 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_217" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6863, 1161 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_223" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5783, 1516 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_229" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3479, 954 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_236" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -2521, -865 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_242" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3554, 275 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_250" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5733, -434 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_98" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6387, -204 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_100" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5099, -432 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_103" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4580, -71 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_106" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4383, -648 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_111" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3800, -717 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_114" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3933, -1203 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_115" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4358, -1320 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_118" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5049, -1378 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_122" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5629, -1270 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_124" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6131, -1206 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_128" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7008, -1356 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_131" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7960, -337 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_133" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5912, 460 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_136" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4280, 285 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_140" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3731, 279 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_47" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -529, -470 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_50" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -503, 278 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_55" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -1609, 512 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_60" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -2731, 822 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_65" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3607, 848 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_71" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4450, 1061 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_73" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4941, 722 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_77" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5743, 453 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_81" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6448, 636 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_84" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7131, 447 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_87" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7953, -47 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_88" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8863, -419 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_93" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8166, -1193 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_96" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6342, -885 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_99" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6253, -555 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_205" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -8245, -743 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_212" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7524, 700 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_218" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6640, 1146 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_224" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5560, 1501 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_230" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3256, 939 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_235" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -2298, -880 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_244" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3331, 260 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_248" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5510, -449 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_101" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4965, -780 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_104" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4446, -419 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_107" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4249, -996 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_110" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3666, -1065 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_113" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3799, -1551 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_117" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4224, -1668 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_119" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4915, -1726 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_123" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5495, -1618 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_126" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5997, -1554 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_129" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -6874, -1704 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_132" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7826, -685 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_135" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5778, 112 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_138" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4146, -63 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_141" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3597, -69 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_48" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -1162, -818 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_51" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -1136, -70 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_58" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -2242, 164 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_63" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3364, 474 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_68" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4240, 500 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_49" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -930, -852 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_53" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -904, -104 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_57" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -2010, 130 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_64" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -3132, 440 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+
+[node name="tree_69" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -4008, 466 )
+input_pickable = false
+collision_layer = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 
