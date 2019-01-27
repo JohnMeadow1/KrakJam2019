@@ -4,23 +4,20 @@
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
 [ext_resource path="res://sprites/building/fence.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 14.1421
+radius = 14.0001
+height = 31.9999
 
-[node name="fence_1" type="Area2D"]
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
+[node name="fence_1" type="StaticBody2D"]
+input_pickable = false
 collision_layer = 32
 collision_mask = 0
-audio_bus_override = false
-audio_bus_name = "Master"
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 script = ExtResource( 1 )
-frame = 12
+frame = 15
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.54902 )
@@ -34,9 +31,10 @@ position = Vector2( 1, -34 )
 texture = ExtResource( 3 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 15
 
 [node name="Shape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -14 )
+rotation = 1.57079
 shape = SubResource( 1 )
 
