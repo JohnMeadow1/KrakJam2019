@@ -1,20 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://sprites/tree2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/tree3.png" type="Texture" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
 
-radius = 13.5654
+radius = 7.45585
 
 [node name="tree_1" type="StaticBody2D"]
 collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1, 17 )
+position = Vector2( -6.00775, -13.6588 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -100 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2.04391, -12.2635 )
+position = Vector2( -0.583984, -5.83977 )
 shape = SubResource( 1 )
 
