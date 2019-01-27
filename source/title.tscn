@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://title.gd" type="Script" id=1]
 [ext_resource path="res://title/intro1.png" type="Texture" id=2]
-[ext_resource path="res://title/intro2.png" type="Texture" id=3]
-[ext_resource path="res://audio/sfx_gore_blade_chop_mono.wav" type="AudioStream" id=4]
+[ext_resource path="res://title/start_banner.png" type="Texture" id=3]
+[ext_resource path="res://title/intro2.png" type="Texture" id=4]
+[ext_resource path="res://audio/sfx_gore_blade_chop_mono.wav" type="AudioStream" id=5]
 
 [node name="title" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,19 +14,16 @@ scale = Vector2( 1.7, 1.7 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Label" type="Label" parent="."]
-margin_left = 652.934
-margin_top = 271.425
-margin_right = 827.934
-margin_bottom = 285.425
-text = "Press any key to end Quest"
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 868.419, 221.052 )
+texture = ExtResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 visible = false
 scale = Vector2( 1.7, 1.7 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="Thrust" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 

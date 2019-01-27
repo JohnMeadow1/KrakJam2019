@@ -39,6 +39,8 @@ func spawn_minion():
 #	var spawn_point:Vector2 = Vector2(randf(), randf())
 #	var spawn_point:Vector2 = globals.players_position.position - globals.cart.global_position
 	var spawn_point:Vector2 = globals.camera.position - globals.cart.global_position
+	if randi()%10 <= 1:
+		spawn_point *= -1
 	spawn_point = spawn_point.normalized()
 	spawn_point += Vector2(rand_range(-0.5,0.5),rand_range(-0.5,0.5))
 	spawn_point = spawn_point.normalized()
