@@ -544,6 +544,7 @@ script = ExtResource( 5 )
 
 [node name="plant1" parent="Enviroment/YSort" instance=ExtResource( 6 )]
 position = Vector2( -375, -140 )
+frame = 0
 
 [node name="dragon_head" parent="Enviroment" instance=ExtResource( 7 )]
 position = Vector2( 427.268, 72.5967 )
@@ -556,9 +557,11 @@ position = Vector2( -10919, -287 )
 
 [node name="rock" parent="Enviroment/everything else" instance=ExtResource( 9 )]
 position = Vector2( 6, -100 )
+frame = 0
 
 [node name="rock2" parent="Enviroment/everything else" instance=ExtResource( 9 )]
 position = Vector2( -179, -238 )
+frame = 0
 
 [node name="rock_small" parent="Enviroment/everything else" instance=ExtResource( 10 )]
 position = Vector2( 126.185, -0.0121765 )

@@ -14,7 +14,7 @@
 
 radius = 20.0
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=3]
 
 resource_name = "attack"
 length = 0.3
@@ -31,7 +31,7 @@ tracks/0/keys = {
 "values": [ 3, 4 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 
 resource_name = "idle"
 length = 0.1
@@ -48,7 +48,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 
 resource_name = "walk"
 length = 0.4
@@ -66,20 +66,20 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=6]
 
 radius = 25.0
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=7]
 
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=5]
+[sub_resource type="GradientTexture" id=8]
 
-gradient = SubResource( 4 )
+gradient = SubResource( 7 )
 width = 128
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="ParticlesMaterial" id=9]
 
 flag_disable_z = true
 gravity = Vector3( -500, 0, 0 )
@@ -89,7 +89,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 angle_random = 1.0
 scale = 0.2
-color_ramp = SubResource( 5 )
+color_ramp = SubResource( 8 )
 
 [sub_resource type="AudioStreamRandomPitch" id=10]
 
@@ -134,9 +134,9 @@ position = Vector2( 28, 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="pivot"]
 autoplay = "idle"
-anims/attack = SubResource( 8 )
-anims/idle = SubResource( 7 )
-anims/walk = SubResource( 9 )
+anims/attack = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/walk = SubResource( 5 )
 next/attack = "idle"
 
 [node name="pickup_area" type="Area2D" parent="."]
@@ -146,7 +146,7 @@ collision_mask = 2
 [node name="Shape2D" type="CollisionShape2D" parent="pickup_area"]
 position = Vector2( 0, -4 )
 rotation = 1.5708
-shape = SubResource( 3 )
+shape = SubResource( 6 )
 
 [node name="StunParticle" type="Particles2D" parent="."]
 position = Vector2( 0, -83 )
@@ -155,7 +155,7 @@ emitting = false
 amount = 3
 explosiveness = 0.3
 visibility_rect = Rect2( -75, -50, 150, 100 )
-process_material = SubResource( 6 )
+process_material = SubResource( 9 )
 texture = ExtResource( 4 )
 
 [node name="rock_hit" type="AudioStreamPlayer2D" parent="."]
