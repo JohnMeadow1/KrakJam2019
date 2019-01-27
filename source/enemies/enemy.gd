@@ -27,7 +27,7 @@ func _on_player_scan_area_entered(area):
 	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
 		return
 	elif area.is_in_group("loot") &&  !targeted_loot:
-		print("target: " + area.name)
+#		print("target: " + area.name)
 		target = area
 		state = STATES.STATE_CHASE
 		targeted_loot = true;

@@ -22,6 +22,8 @@ var can_drive = false
 var is_driving = false
 var held_item:Node = null
 
+var enabled_timer:float = 0.0
+
 func _ready():
 	PLAYER_CONTROLS  = PLAYER_NUM
 	self.state       = STATE.STATE_IDLE
@@ -30,17 +32,8 @@ func _ready():
 func _physics_process(delta):
 	if timer > 0:
 		timer -= delta
+	enabled_timer = max(enabled_timer - delta*0.1, 0)
 
-	if held_item:
-		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
-		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
-			for area in $pivot/drop_area.get_overlapping_areas():
-				if area.is_in_group("drop_point"):
-					held_item.queue_free()
-					area.get_parent().add_loot()
-					break
-			held_item.drop()
-			held_item = null
 			
 	if is_driving:
 		position = globals.cart_node.position
@@ -51,43 +44,59 @@ func _physics_process(delta):
 		var target_stering = handle_drive_input()
 		globals.cart_node.target_stering = target_stering.y
 		globals.cart_node.speed = target_stering.x
-		
-	elif state == STATE.STATE_STUN && stun_timer > 0:
-		stun_timer -= delta
 	elif can_drive && Input.is_action_pressed("action_p" + str(PLAYER_CONTROLS)):
 		if globals.cart_node.get_in(PLAYER_CONTROLS):
 			is_driving = true
 			disable_coliders()
+	
+	if state == STATE.STATE_STUN && stun_timer > 0:
+		stun_timer -= delta
+	else:
+
+		if held_item:
+			held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
+			if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
+				for area in $pivot/drop_area.get_overlapping_areas():
+					if area.is_in_group("drop_point"):
+						held_item.queue_free()
+						area.get_parent().add_loot()
+						break
+				held_item.drop()
+				held_item = null
+		elif player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
+			pickup_loot()
 			
-	elif player_enabled && Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
-		pickup_loot()
-
-	elif player_enabled :
-		$StunParticle.emitting = false
-		
-		var offset = MOVE_SPEED * delta
-		var player_moved = handle_input(offset)
-		
-		if player_moved:
-			self.state = STATE.STATE_WALK
-			walk_cycle += 0.2
-			if walk_cycle >= PI:
-				walk_cycle -= PI
-#				get_node("steps/Steps_" + str( randi() % 10 + 1 ) ).play()
-		elif self.state != STATE.STATE_IDLE:
-
-			if walk_cycle > PI * 0.5:
+	
+		if player_enabled :
+			$StunParticle.emitting = false
+			
+			var offset = MOVE_SPEED * delta
+			var player_moved = handle_input(offset)
+			
+			if player_moved:
+				enabled_timer = min(enabled_timer+delta, 1)
+				if !$pivot/AnimationPlayer.is_playing():
+					$pivot/AnimationPlayer.play("walk")
+				self.state = STATE.STATE_WALK
 				walk_cycle += 0.2
-			else:
-				walk_cycle -= 0.2
+				if walk_cycle >= PI:
+					walk_cycle -= PI
+	#				get_node("steps/Steps_" + str( randi() % 10 + 1 ) ).play()
+			elif self.state != STATE.STATE_IDLE:
+				if !$pivot/AnimationPlayer.current_animation=="attack":
+					$pivot/AnimationPlayer.play("idle")
+				if walk_cycle > PI * 0.5:
+					walk_cycle += 0.2
+				else:
+					walk_cycle -= 0.2
+					
+				if walk_cycle < 0 or walk_cycle > PI:
+					if !walk_cycle == 0:
+	#					get_node("steps/Steps_"+str(randi()%10+1)).play()
+						pass
+					walk_cycle = 0
+					self.state = STATE.STATE_IDLE
 				
-			if walk_cycle < 0 or walk_cycle > PI:
-				if !walk_cycle == 0:
-#					get_node("steps/Steps_"+str(randi()%10+1)).play()
-					pass
-				walk_cycle = 0
-				self.state = STATE.STATE_IDLE
-
 	$pivot.position.y =  -sin( walk_cycle ) * WALK_HEIGHT
 	$shade.modulate.a =  0.8 + $pivot.position.y * 0.1
 	$shade.scale.x =  1.2 - $pivot.position.y * 0.1
@@ -109,25 +118,29 @@ func enable_coliders():
 	$pivot/drop_area/Shape2D.disabled = false
 func pickup_loot():
 	var loot = $pickup_area.get_overlapping_areas()
-	for item in loot:
-		if item.is_in_group("loot"):
-			item.grab(50, self)
-			held_item = item
-			return
+	if loot.size() >0:
+		for item in loot:
+			if item.is_in_group("loot"):
+				item.grab(50, self)
+				held_item = item
+				return
+	else:
+		$pivot/AnimationPlayer.play("attack")
+		$atack_whosh.play()
 		
 func handle_drive_input():
-	var target_stering = Vector2(50,0)
+	var target_stering = Vector2(20,0)
 	if Input.is_action_pressed("move_up_p" + str(PLAYER_CONTROLS)):
-		target_stering.y = -10
+		target_stering.y = -20
 
 	if Input.is_action_pressed("move_down_p" + str(PLAYER_CONTROLS)):
-		target_stering.y = 10
+		target_stering.y = 20
 		
 	if Input.is_action_pressed("move_left_p" + str(PLAYER_CONTROLS)):
 		target_stering.x = 75
 
 	if Input.is_action_pressed("move_right_p" + str(PLAYER_CONTROLS)):
-		target_stering.x = 0
+		target_stering.x = 1
 		
 	return target_stering
 
@@ -160,3 +173,4 @@ func stun():
 	if held_item:
 		held_item.drop()
 		held_item = null
+	$rock_hit.play()

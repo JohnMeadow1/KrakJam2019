@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://enemies/basic_minion/basic_minion.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
 [ext_resource path="res://enemies/basic_minion/goblin_animations.png" type="Texture" id=3]
 [ext_resource path="res://sprites/swing_up.png" type="Texture" id=4]
+[ext_resource path="res://audio/sfx_rock_swing.wav" type="AudioStream" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -86,9 +87,14 @@ radius = 125.0
 
 radius = 25.0
 
+[sub_resource type="AudioStreamRandomPitch" id=9]
+
+audio_stream = ExtResource( 5 )
+
 [node name="basic_minion" type="KinematicBody2D" groups=[
 "enemy",
 ]]
+position = Vector2( -1.61765, 0.647079 )
 collision_layer = 513
 collision_mask = 3
 script = ExtResource( 1 )
@@ -182,6 +188,9 @@ collision_mask = 2
 position = Vector2( 0, -4 )
 rotation = 1.5708
 shape = SubResource( 8 )
+
+[node name="throw" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource( 9 )
 
 [connection signal="area_entered" from="player_scan" to="." method="_on_player_scan_area_entered"]
 [connection signal="body_entered" from="player_scan" to="." method="_on_player_scan_body_entered"]

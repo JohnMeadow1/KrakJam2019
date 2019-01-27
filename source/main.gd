@@ -20,7 +20,18 @@ func handle_players_position():
 
 func handle_camera():
 	var target_camera_position = Vector3()
-	target_camera_position = $YSort/player_1.position + $YSort/player_2.position + $YSort/player_3.position + $YSort/player_4.position + $YSort/cart.position
-	target_camera_position *= 0.2
+#	target_camera_position =  ($YSort/player_1.position) * $YSort/player_1.enabled_timer 
+#	target_camera_position += ($YSort/player_2.position) * $YSort/player_2.enabled_timer 
+#	target_camera_position += ($YSort/player_3.position) * $YSort/player_3.enabled_timer 
+#	target_camera_position += ($YSort/player_4.position) * $YSort/player_4.enabled_timer 
+#	print($YSort/player_1.enabled_timer)
+	target_camera_position =  $YSort/cart.position
+	target_camera_position += ($YSort/player_1.position-$YSort/cart.position) * $YSort/player_1.enabled_timer *0.5
+	target_camera_position += ($YSort/player_2.position-$YSort/cart.position) * $YSort/player_2.enabled_timer *0.5
+	target_camera_position += ($YSort/player_3.position-$YSort/cart.position) * $YSort/player_3.enabled_timer *0.5
+	target_camera_position += ($YSort/player_4.position-$YSort/cart.position) * $YSort/player_4.enabled_timer *0.5
+
+#	target_camera_position /= 5.0
+#	target_camera_position /= 1+($YSort/player_1.enabled_timer + $YSort/player_2.enabled_timer +$YSort/player_3.enabled_timer +$YSort/player_4.enabled_timer )
 	$Camera.position = lerp($Camera.position, target_camera_position, 0.1)
 	$Camera.position.x = min($Camera.position.x,-0 )

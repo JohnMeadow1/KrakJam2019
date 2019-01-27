@@ -61,7 +61,6 @@ autoplay = "idle"
 anims/idle = SubResource( 2 )
 
 [node name="sfx" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="drop_gold_1" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 4 )

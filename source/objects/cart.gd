@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(float) var speed:float = 10.0
+export(float) var speed:float = 1.0
 var current_speed:float = 0.0
 var move:Vector2       = Vector2.ZERO
 
@@ -33,10 +33,10 @@ func _physics_process(delta):
 		current_speed = lerp(current_speed, speed, 0.1)
 		move.x -= current_speed 
 		move.y += current_stering * 3
-		translate(move.normalized() * current_speed * delta)
+		translate(move.normalized() * current_speed *(1.1-min(loot_in_cart*0.1,1)) * delta)
 	#	$AnimationPlayer.playback_speed = current_speed/50.0
 		$cart/AnimationPlayer.playback_speed = current_speed/100.0
-	elif loot_in_cart >=10:
+	elif loot_in_cart >=8:
 		$AudioStreamPlayer.play()
 		has_started = true
 		
@@ -88,11 +88,15 @@ func spawn_loot():
 	new_loot.velocity = -5
 	loot_in_cart = max(loot_in_cart-1, 0)
 	$cart.frame = clamp(int(loot_in_cart*0.5), 0, 4)
+	$drop_on_wood.play()
+	get_node("sfx/pick_gold_"+str(randi()%2+1)).play()
 	return new_loot
 	
 func add_loot():
 	loot_in_cart += 1
 	$cart.frame = clamp(int(loot_in_cart*0.5), 0,4)
+	$drop_on_wood.play()
+	get_node("sfx/drop_gold_"+str(randi()%3+1)).play()
 
 func _on_bump_area_entered(area):
 #	dissable_area = true

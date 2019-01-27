@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_whosh.wav-fc939e973ee3f2f05f8b8c4346b8871e.sample"
+
+[deps]
+
+source_file="res://audio/sfx_whosh.wav"
+dest_files=[ "res://.import/sfx_whosh.wav-fc939e973ee3f2f05f8b8c4346b8871e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

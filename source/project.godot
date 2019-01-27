@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="HEROES GO HOME"
-run/main_scene="res://main.tscn"
+run/main_scene="res://title.tscn"
 config/icon="res://icon.png"
 
 [autoload]

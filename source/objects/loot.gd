@@ -28,6 +28,8 @@ func _ready():
 func _process(_delta):
 	if is_held:
 		$pivot.position.y = lerp($pivot.position.y, -pickup_height, 0.2)
+		$Shape2D.disabled = true
+		
 		
 	elif $pivot.position.y < 0:
 		velocity += 1.0
@@ -41,24 +43,24 @@ func _process(_delta):
 	$shade.modulate.a = 1-clamp(-$pivot.position.y/10,0,1)
 	
 func grab(height, who:Node):
-	$Shape2D.disabled = true
+#	$Shape2D.disabled = true
 	is_held = true
 	pickup_height = height
 	self.remove_from_group("loot")
 	(sfx_pick[randi() % sfx_pick.size()] as AudioStreamPlayer).play()
 	if enemy_terget is Enemy:
 		if(who.is_in_group("player")):
-			print("kill: " + who.name)
+#			print("kill: " + who.name)
 			enemy_terget.attack_player(who)
 		else:
 			enemy_terget.chose_new_target()
 	
 func drop():
-	$Shape2D.disabled = false
 	is_held = false
+	$Shape2D.disabled = false
 	self.add_to_group("loot")
 	(sfx_drop[randi() % sfx_drop.size()] as AudioStreamPlayer).play()
 
 func target(enemy:Enemy):
-	print("it's mine!")
+#	print("it's mine!")
 	enemy_terget = enemy

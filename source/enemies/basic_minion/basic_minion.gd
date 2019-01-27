@@ -7,6 +7,7 @@ export(float) var charge_speed:float	= 250.0
 export(float) var attack_distance = 100.0
 
 var curent_run_speed:float = 0.0
+var rock_object = load("res://objects/throw_rock.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	chose_new_target()
@@ -89,13 +90,22 @@ func charge(delta):
 			state = STATES.STATE_RUN
 			run_speed = charge_speed
 			$pivot/AnimationPlayer.play("throw")
-			(target as Player).stun()
+			throw_rock()
+
 	else:
 		chose_new_target()
 	
 	direction = direction.normalized()
 	direction = move_and_slide(direction * offset)
-
+	
+func throw_rock():
+	$throw.play()
+	var new_rock = rock_object.instance()
+	get_parent().add_child( new_rock )
+	new_rock.target = target
+	new_rock.position = position + Vector2(0,-50)
+#	(target as Player).stun()
+	
 func _on_pickup_area_loot_entered(area):
 	if area == target:
 		held_item = target
