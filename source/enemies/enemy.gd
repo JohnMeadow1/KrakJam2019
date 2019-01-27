@@ -31,6 +31,7 @@ func _on_player_scan_area_entered(area):
 		target = area
 		state = STATES.STATE_CHASE
 		targeted_loot = true;
+		target.target(self)
 
 func _on_player_scan_body_entered(body:KinematicBody2D):
 	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN:
@@ -122,8 +123,13 @@ func chose_new_target():
 		target = globals.cart
 	else:
 		target = loots[randi()%loots.size()]
-		if target.is_held:
+		if target.is_held && target.enemy_target == null:
 			for player in globals.players:
 				if player.held_item == target:
-					target = player
-					state = STATES.STATE_ATTACK
+					attack_player(player)
+		else:
+			target.target(self)
+
+func attack_player(player):
+	target = player
+	state = STATES.STATE_ATTACK
