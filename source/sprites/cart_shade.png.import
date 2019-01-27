@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hut_Bottom.png-71dfaa4a89cab1b084e723d3a11d6cd1.stex"
+path="res://.import/cart_shade.png-1589ab16f8ff21b572122548f3553b5b.stex"
 
 [deps]
 
-source_file="res://objects/Buildings/Hut_Bottom.png"
-dest_files=[ "res://.import/Hut_Bottom.png-71dfaa4a89cab1b084e723d3a11d6cd1.stex" ]
+source_file="res://sprites/cart_shade.png"
+dest_files=[ "res://.import/cart_shade.png-1589ab16f8ff21b572122548f3553b5b.stex" ]
 
 [params]
 

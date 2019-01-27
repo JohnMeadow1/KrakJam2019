@@ -13,4 +13,5 @@ func _process(delta):
 		if Input.is_action_pressed("action_p"+str(i)):
 			start = true
 			$Sprite2.visible = true
+			$Thrust.play()
 

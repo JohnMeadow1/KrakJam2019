@@ -1,15 +1,16 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://cart/cart.gd" type="Script" id=1]
-[ext_resource path="res://character_assets/goat.png" type="Texture" id=2]
-[ext_resource path="res://character_assets/cart.png" type="Texture" id=3]
-[ext_resource path="res://character_assets/rod.png" type="Texture" id=4]
-[ext_resource path="res://character_assets/wheel_back.png" type="Texture" id=5]
-[ext_resource path="res://character_assets/wheel_front.png" type="Texture" id=6]
-[ext_resource path="res://sprites/neina_animations_1.png" type="Texture" id=7]
-[ext_resource path="res://sprites/progress_under.png" type="Texture" id=8]
-[ext_resource path="res://sprites/progress_over.png" type="Texture" id=9]
-[ext_resource path="res://audio/sfx_carriage_hooves.wav" type="AudioStream" id=10]
+[ext_resource path="res://objects/cart.gd" type="Script" id=1]
+[ext_resource path="res://sprites/cart_shade.png" type="Texture" id=2]
+[ext_resource path="res://character_assets/goat.png" type="Texture" id=3]
+[ext_resource path="res://character_assets/cart.png" type="Texture" id=4]
+[ext_resource path="res://character_assets/rod.png" type="Texture" id=5]
+[ext_resource path="res://character_assets/wheel_back.png" type="Texture" id=6]
+[ext_resource path="res://character_assets/wheel_front.png" type="Texture" id=7]
+[ext_resource path="res://sprites/neina_animations_1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/progress_under.png" type="Texture" id=9]
+[ext_resource path="res://sprites/progress_over.png" type="Texture" id=10]
+[ext_resource path="res://audio/sfx_carriage_hooves.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -93,6 +94,11 @@ script = ExtResource( 1 )
 position = Vector2( 0, -26.9038 )
 shape = SubResource( 1 )
 
+[node name="shade" type="Sprite" parent="."]
+position = Vector2( 23.9431, -19.2713 )
+scale = Vector2( 3, 1 )
+texture = ExtResource( 2 )
+
 [node name="Area2D" type="Area2D" parent="." groups=[
 "drop_point",
 ]]
@@ -110,36 +116,47 @@ shape = SubResource( 2 )
 autoplay = "goat_move"
 anims/goat_move = SubResource( 3 )
 
+[node name="shade2" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -50, -14 )
+rotation = -1.5708
+texture = ExtResource( 2 )
+
+[node name="shade3" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -60, 0 )
+rotation = -1.5708
+texture = ExtResource( 2 )
+
 [node name="goat" type="Sprite" parent="."]
 position = Vector2( -50, -40.4492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 vframes = 5
 hframes = 2
 frame = 4
 
 [node name="cart" type="Sprite" parent="."]
 position = Vector2( 20, -47 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 hframes = 5
-frame = 4
 
 [node name="rod" type="Sprite" parent="cart"]
 show_behind_parent = true
 position = Vector2( -60, 19.647 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 hframes = 5
 frame = 2
 
 [node name="wheel_back" type="Sprite" parent="cart"]
 show_behind_parent = true
 position = Vector2( 8.38234, 20.5001 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 hframes = 10
 frame = 1
 
 [node name="wheel_front" type="Sprite" parent="cart"]
 position = Vector2( 5.50005, 29.3636 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 hframes = 10
 frame = 2
 
@@ -161,34 +178,34 @@ position = Vector2( 5, 45 )
 [node name="character1" type="Sprite" parent="cart"]
 visible = false
 position = Vector2( -25.2836, -19.3854 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 hframes = 6
 frame = 5
 
 [node name="character2" type="Sprite" parent="cart"]
 visible = false
 position = Vector2( -25.2836, -19.3854 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 hframes = 6
 frame = 5
 
 [node name="character3" type="Sprite" parent="cart"]
 visible = false
 position = Vector2( -25.2836, -19.3854 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 hframes = 6
 frame = 5
 
 [node name="character4" type="Sprite" parent="cart"]
 visible = false
 position = Vector2( -25.2836, -19.3854 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 hframes = 6
 frame = 5
 
 [node name="goat2" type="Sprite" parent="."]
 position = Vector2( -60, -27.2708 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 vframes = 5
 hframes = 2
 frame = 4
@@ -218,12 +235,12 @@ margin_right = -16.0
 margin_bottom = -33.0
 max_value = 60.0
 value = 20.0
-texture_under = ExtResource( 8 )
-texture_progress = ExtResource( 9 )
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 10 )
 fill_mode = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 11 )
 volume_db = -7.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

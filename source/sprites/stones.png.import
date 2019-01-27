@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stones.png-fb28ddf44e06c6079598ed5f77fb5f34.stex"
+path="res://.import/stones.png-4337fe0aaa1025eea26d8b0dfa46d08a.stex"
 
 [deps]
 
-source_file="res://objects/Stones.png"
-dest_files=[ "res://.import/Stones.png-fb28ddf44e06c6079598ed5f77fb5f34.stex" ]
+source_file="res://sprites/stones.png"
+dest_files=[ "res://.import/stones.png-4337fe0aaa1025eea26d8b0dfa46d08a.stex" ]
 
 [params]
 

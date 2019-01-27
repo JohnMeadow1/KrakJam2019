@@ -1,11 +1,11 @@
 extends Area2D
 
-var sprites = [ "res://objects/loot_0.png", 
-				"res://objects/loot_1.png",
-				"res://objects/loot_2.png",
-				"res://objects/loot_3.png",
-				"res://objects/loot_4.png",
-				"res://objects/loot_5.png"]
+var sprites = [ "res://sprites/loot_0.png", 
+				"res://sprites/loot_1.png",
+				"res://sprites/loot_2.png",
+				"res://sprites/loot_3.png",
+				"res://sprites/loot_4.png",
+				"res://sprites/loot_5.png"]
 
 var sfx_drop = []
 var sfx_pick = []
@@ -25,7 +25,7 @@ func _ready():
 	sfx_pick = [ $sfx/pick_gold_1,
 				 $sfx/pick_gold_2 ]
 	
-func _process(delta):
+func _process(_delta):
 	if is_held:
 		$pivot.position.y = lerp($pivot.position.y, -pickup_height, 0.2)
 		

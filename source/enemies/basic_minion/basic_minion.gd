@@ -27,6 +27,7 @@ func _physics_process(delta):
 		else:
 			wait_timer = wait_time
 			state = STATES.STATE_WAIT
+			$pivot/AnimationPlayer.play("go_home")
 	elif state == STATES.STATE_WAIT:
 		if wait_timer > 0:
 			wait_timer -= delta
@@ -35,7 +36,7 @@ func _physics_process(delta):
 	else:
 		idle(delta)
 
-func idle(delta):
+func idle(_delta):
 	pass
 	
 func chase(delta):
@@ -48,27 +49,27 @@ func chase(delta):
 #	direction = players_target(direction)
 	direction = direction.normalized()
 	
-	self.move_and_slide(direction * offset)
+	direction = move_and_slide(direction * offset)
 	
-func run(delta):
+func run(_delta):
 	var lootDrag = 1
-	if held_item!=null:
+	if held_item is Node:
 		lootDrag = 0.3
 		target   = globals.camera
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
 	else:
 		target = globals.players_position
 	curent_run_speed = lerp(curent_run_speed, run_speed, 0.1)
-	var offset = curent_run_speed * delta * lootDrag * 100.0
+	var offset = curent_run_speed * _delta * lootDrag * 100.0
 	var direction = self.position - target.global_position
 	
 	direction = players_target(direction)
 	direction = direction.normalized()
 	
-	self.move_and_slide(direction * offset)
+	direction = move_and_slide(direction * offset)
 
-func sware(delta):
-	pass
+func sware(_delta):
+	$pivot/AnimationPlayer.play("go_home")
 
 func move_away(delta):
 	if players.size() > 0:
@@ -78,12 +79,12 @@ func move_away(delta):
 	var direction = self.position - globals.players_position.global_position
 	direction = direction.normalized()
 	
-	self.move_and_slide(direction * offset)
+	direction = move_and_slide(direction * offset)
 
 func charge(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = target.global_position - self.position
-	if !target == null:
+	if target is Node:
 		if direction.length() <= attack_distance:
 			state = STATES.STATE_RUN
 			run_speed = charge_speed
@@ -93,7 +94,7 @@ func charge(delta):
 		chose_new_target()
 	
 	direction = direction.normalized()
-	self.move_and_slide(direction * offset)
+	direction = move_and_slide(direction * offset)
 
 func _on_pickup_area_loot_entered(area):
 	if area == target:

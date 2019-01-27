@@ -8,7 +8,7 @@ var bump_velcocity:float = 0.0
 var current_stering:float = 0.0
 var target_stering:float = 0
 var stering_bias:float = 0.0
-var loot_in_cart:int = 9
+var loot_in_cart:float = 0
 var timer:float = 0.0
 
 var in_drive_area:int  = 0
@@ -55,6 +55,8 @@ func _process(delta):
 	current_stering = lerp(current_stering, target_stering, 0.1)
 	$goat.position.y  = abs(sin(timer)*2)-40 + current_stering
 	$goat2.position.y = abs(cos(timer)*2)-27 + current_stering
+	$shade2.position.y  = -14 + current_stering
+	$shade3.position.y = current_stering
 	$cart.position.y += bump_velcocity 
 	if $cart.position.y < -47:
 		bump_velcocity += 0.5
@@ -84,8 +86,8 @@ func spawn_loot():
 	new_loot.position.y +=30
 	new_loot.get_node("pivot").position.y -= 40
 	new_loot.velocity = -5
-	loot_in_cart = max(loot_in_cart-1,0)
-	$cart.frame = int(loot_in_cart*0.5)
+	loot_in_cart = max(loot_in_cart-1, 0)
+	$cart.frame = clamp(int(loot_in_cart*0.5), 0, 4)
 	return new_loot
 	
 func add_loot():
@@ -127,6 +129,7 @@ func get_in(player_id):
 				get_node("cart/character"+str(i+1)).visible = false
 		if !has_started:
 			has_started = true
+			$AudioStreamPlayer.play()
 		return true
 	return false
 	

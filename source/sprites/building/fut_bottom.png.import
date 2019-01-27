@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/loot_1.png-d7be17e2ffe3a23f6c7a0ad90022b990.stex"
+path="res://.import/fut_bottom.png-31861d54bebd4269136da481f1c34185.stex"
 
 [deps]
 
-source_file="res://objects/loot_1.png"
-dest_files=[ "res://.import/loot_1.png-d7be17e2ffe3a23f6c7a0ad90022b990.stex" ]
+source_file="res://sprites/building/fut_bottom.png"
+dest_files=[ "res://.import/fut_bottom.png-31861d54bebd4269136da481f1c34185.stex" ]
 
 [params]
 

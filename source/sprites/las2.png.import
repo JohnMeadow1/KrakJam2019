@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/las2.png-f857fd1198900c74a696a2a0b2b673fd.stex"
+path="res://.import/las2.png-e8a923213012d6a4432c2f1747298a54.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/las2.png"
-dest_files=[ "res://.import/las2.png-f857fd1198900c74a696a2a0b2b673fd.stex" ]
+source_file="res://sprites/las2.png"
+dest_files=[ "res://.import/las2.png-e8a923213012d6a4432c2f1747298a54.stex" ]
 
 [params]
 

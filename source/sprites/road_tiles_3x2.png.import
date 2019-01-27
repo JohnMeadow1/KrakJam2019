@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground.png-dfa6fbb884b4c60a29027e3972ba125d.stex"
+path="res://.import/road_tiles_3x2.png-40f3f28f177dcb13eb6a60afa81fe6b3.stex"
 
 [deps]
 
-source_file="res://objects/ground.png"
-dest_files=[ "res://.import/ground.png-dfa6fbb884b4c60a29027e3972ba125d.stex" ]
+source_file="res://sprites/road_tiles_3x2.png"
+dest_files=[ "res://.import/road_tiles_3x2.png-40f3f28f177dcb13eb6a60afa81fe6b3.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

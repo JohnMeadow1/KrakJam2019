@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fence.png-631d9101b2863e7055bfcffe89002a90.stex"
+path="res://.import/las.png-f0a3269fed471d1a35fbf05af42eedf9.stex"
 
 [deps]
 
-source_file="res://objects/Buildings/Fence.png"
-dest_files=[ "res://.import/Fence.png-631d9101b2863e7055bfcffe89002a90.stex" ]
+source_file="res://sprites/las.png"
+dest_files=[ "res://.import/las.png-f0a3269fed471d1a35fbf05af42eedf9.stex" ]
 
 [params]
 

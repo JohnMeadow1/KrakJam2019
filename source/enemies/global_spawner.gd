@@ -7,6 +7,7 @@ var timer:float = 3.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	timer = 10
 	pass # Replace with function body.
 
 func _process(delta):

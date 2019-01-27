@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground.png-7f1dd8b0efa173e087e5599ea7eded32.stex"
+path="res://.import/home.png-d59c223ab2fe1bb2b60ff70f48b9ee90.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/ground.png"
-dest_files=[ "res://.import/ground.png-7f1dd8b0efa173e087e5599ea7eded32.stex" ]
+source_file="res://sprites/building/home.png"
+dest_files=[ "res://.import/home.png-d59c223ab2fe1bb2b60ff70f48b9ee90.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

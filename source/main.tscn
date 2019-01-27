@@ -2,8 +2,8 @@
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://audio/hgh_bg.wav" type="AudioStream" id=2]
-[ext_resource path="res://objects/ground.png" type="Texture" id=3]
-[ext_resource path="res://objects/Road_tiles_3x2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ground.png" type="Texture" id=3]
+[ext_resource path="res://sprites/road_tiles_3x2.png" type="Texture" id=4]
 [ext_resource path="res://scripts/wheel_marks.gd" type="Script" id=5]
 [ext_resource path="res://enviro/plant1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://enviro/dragon.tscn" type="PackedScene" id=7]
@@ -16,7 +16,7 @@
 [ext_resource path="res://sprites/neina.png" type="Texture" id=14]
 [ext_resource path="res://sprites/hiryu.png" type="Texture" id=15]
 [ext_resource path="res://sprites/leszek.png" type="Texture" id=16]
-[ext_resource path="res://cart/cart.tscn" type="PackedScene" id=17]
+[ext_resource path="res://objects/cart.tscn" type="PackedScene" id=17]
 [ext_resource path="res://enviro/tree.tscn" type="PackedScene" id=18]
 [ext_resource path="res://objects/loot.tscn" type="PackedScene" id=19]
 
@@ -547,10 +547,9 @@ script = ExtResource( 5 )
 position = Vector2( -375, -140 )
 
 [node name="dragon_head" parent="Enviroment" instance=ExtResource( 7 )]
-position = Vector2( 447.174, 76.2949 )
+position = Vector2( 427.268, 72.5967 )
 
 [node name="everything else" type="Node2D" parent="Enviroment"]
-editor/display_folded = true
 
 [node name="home" parent="Enviroment/everything else" instance=ExtResource( 8 )]
 position = Vector2( -10919, -287 )
@@ -604,6 +603,7 @@ player_enabled = true
 [node name="player_2" parent="YSort" instance=ExtResource( 13 )]
 editor/display_folded = true
 position = Vector2( 176, -3 )
+PLAYER_NUM = 2
 player_enabled = true
 
 [node name="player_sprite" parent="YSort/player_2/pivot" index="1"]
@@ -616,6 +616,7 @@ position = Vector2( 0, -4.9955 )
 [node name="player_3" parent="YSort" instance=ExtResource( 13 )]
 editor/display_folded = true
 position = Vector2( -58, -12 )
+PLAYER_NUM = 3
 player_enabled = true
 
 [node name="player_sprite" parent="YSort/player_3/pivot" index="1"]
@@ -643,7 +644,37 @@ position = Vector2( 21, -23 )
 position = Vector2( 226, -23 )
 
 [node name="loot" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 3, 175 )
+position = Vector2( 371.671, -46.2029 )
+
+[node name="loot2" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 306.511, 90.9772 )
+
+[node name="loot3" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 413.683, 133.846 )
+
+[node name="loot4" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 347.665, 12.0986 )
+
+[node name="loot5" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 353.667, 156.995 )
+
+[node name="loot6" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 416.255, -38.4865 )
+
+[node name="loot7" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 316.799, -33.3423 )
+
+[node name="loot8" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 316.799, -33.3423 )
+
+[node name="loot9" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 361.383, 102.98 )
+
+[node name="loot10" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 303.939, 29.2462 )
+
+[node name="loot11" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 404.252, 89.2625 )
 
 
 [editable path="YSort/player_2"]

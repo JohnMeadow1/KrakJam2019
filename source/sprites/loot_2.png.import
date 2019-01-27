@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/loot_4.png-0a1b75f8217ed6003afae0fcb5a593cb.stex"
+path="res://.import/loot_2.png-cd10cf21b8f80992378c3d32de50c76a.stex"
 
 [deps]
 
-source_file="res://objects/loot_4.png"
-dest_files=[ "res://.import/loot_4.png-0a1b75f8217ed6003afae0fcb5a593cb.stex" ]
+source_file="res://sprites/loot_2.png"
+dest_files=[ "res://.import/loot_2.png-cd10cf21b8f80992378c3d32de50c76a.stex" ]
 
 [params]
 

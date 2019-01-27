@@ -8,3 +8,11 @@ var players_position:Node2D = null
 var camera:Camera2D = null
 
 var players:Array = []
+
+func _ready():
+	wheel = null
+	cart = null
+	cart_node = null
+	players_position = null
+	camera = null
+	players = []

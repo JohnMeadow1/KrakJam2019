@@ -3,7 +3,8 @@
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
 [ext_resource path="res://sprites/tomek.png" type="Texture" id=3]
-[ext_resource path="res://objects/star.png" type="Texture" id=4]
+[ext_resource path="res://sprites/star.png" type="Texture" id=4]
+
 
 [sub_resource type="CircleShape2D" id=1]
 

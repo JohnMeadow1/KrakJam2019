@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hut_semi.png-f66ab619102c4c642bea92d1b00b1c81.stex"
+path="res://.import/loot_3.png-9c580aeb41338c287152efe27c1ce25b.stex"
 
 [deps]
 
-source_file="res://objects/Buildings/Hut_semi.png"
-dest_files=[ "res://.import/Hut_semi.png-f66ab619102c4c642bea92d1b00b1c81.stex" ]
+source_file="res://sprites/loot_3.png"
+dest_files=[ "res://.import/loot_3.png-9c580aeb41338c287152efe27c1ce25b.stex" ]
 
 [params]
 

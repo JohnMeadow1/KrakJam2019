@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/las.png-20d82df467a485596b7e7a51d9b84a10.stex"
+path="res://.import/ground.png-55df20774d41ed101a891f191ec3738b.stex"
 
 [deps]
 
-source_file="res://flat_enviro_assets/las.png"
-dest_files=[ "res://.import/las.png-20d82df467a485596b7e7a51d9b84a10.stex" ]
+source_file="res://sprites/ground.png"
+dest_files=[ "res://.import/ground.png-55df20774d41ed101a891f191ec3738b.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

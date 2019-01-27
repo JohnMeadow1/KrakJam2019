@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cart_body_treasure.png-bc877e7dd11da80f21f6d104844a4123.stex"
+path="res://.import/fence.png-d48d6775e18254b7731597a25e58193e.stex"
 
 [deps]
 
-source_file="res://character_assets/Cart_body_treasure.png"
-dest_files=[ "res://.import/Cart_body_treasure.png-bc877e7dd11da80f21f6d104844a4123.stex" ]
+source_file="res://sprites/building/fence.png"
+dest_files=[ "res://.import/fence.png-d48d6775e18254b7731597a25e58193e.stex" ]
 
 [params]
 

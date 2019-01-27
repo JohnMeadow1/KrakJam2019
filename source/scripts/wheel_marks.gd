@@ -6,7 +6,7 @@ var track2 = PoolVector2Array()
 var track_size   = PoolIntArray()
 var tick:int = 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	tick += 1
 	tick %= 10
 	if tick == 0:

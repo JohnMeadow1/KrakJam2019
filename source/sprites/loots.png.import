@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/swing_up.png-135e4d4e6fadad582dc2f483af6cc712.stex"
+path="res://.import/loots.png-5426eea2bc4dfea24ee121c777d9cc44.stex"
 
 [deps]
 
-source_file="res://objects/swing_up.png"
-dest_files=[ "res://.import/swing_up.png-135e4d4e6fadad582dc2f483af6cc712.stex" ]
+source_file="res://sprites/loots.png"
+dest_files=[ "res://.import/loots.png-5426eea2bc4dfea24ee121c777d9cc44.stex" ]
 
 [params]
 

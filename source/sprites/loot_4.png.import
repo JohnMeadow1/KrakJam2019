@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tower.png-fb9d2f9b852c7f82b221439286963e4d.stex"
+path="res://.import/loot_4.png-c4beac5cd2c5d5e92cbe055391580087.stex"
 
 [deps]
 
-source_file="res://objects/Buildings/Tower.png"
-dest_files=[ "res://.import/Tower.png-fb9d2f9b852c7f82b221439286963e4d.stex" ]
+source_file="res://sprites/loot_4.png"
+dest_files=[ "res://.import/loot_4.png-c4beac5cd2c5d5e92cbe055391580087.stex" ]
 
 [params]
 

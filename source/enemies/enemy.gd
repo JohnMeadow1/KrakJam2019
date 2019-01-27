@@ -70,6 +70,7 @@ func _on_sware_distance_body_entered(body):
 		
 	if body.is_in_group("player"):
 		state = STATES.STATE_SWARE
+		
 
 func _on_sware_distance_body_exited(body):
 	if state == STATES.STATE_ATTACK || state == STATES.STATE_RUN || state == STATES.STATE_MOVE_AWAY:

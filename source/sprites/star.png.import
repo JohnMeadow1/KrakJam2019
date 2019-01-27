@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hut_top.png-a01fbc063c23929ed871d581f80b1629.stex"
+path="res://.import/star.png-b168e13ae1f9d03011573f475e49f2fb.stex"
 
 [deps]
 
-source_file="res://objects/Buildings/Hut_top.png"
-dest_files=[ "res://.import/Hut_top.png-a01fbc063c23929ed871d581f80b1629.stex" ]
+source_file="res://sprites/star.png"
+dest_files=[ "res://.import/star.png-b168e13ae1f9d03011573f475e49f2fb.stex" ]
 
 [params]
 
