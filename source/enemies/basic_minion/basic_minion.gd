@@ -54,7 +54,7 @@ func chase(delta):
 	
 func run(_delta):
 	var lootDrag = 1
-	if held_item is Node:
+	if held_item && held_item is Node:
 		lootDrag = 0.3
 		target   = globals.camera
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
