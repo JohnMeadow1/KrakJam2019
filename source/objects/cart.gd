@@ -13,11 +13,15 @@ var timer:float = 0.0
 
 var in_drive_area:int  = 0
 var is_driven = false
-var spawn_new_loot = false
+var spawn_new_loot  = false
+var spawn_new_wheel = false
 
 var has_started = false
 
 var loot_object = load("res://objects/loot.tscn")
+var wheel_object = load("res://objects/wheel_front.tscn")
+var wheels:int = 2
+
 
 func _ready():
 	randomize()
@@ -33,7 +37,7 @@ func _physics_process(delta):
 		current_speed = lerp(current_speed, speed, 0.1)
 		move.x -= current_speed 
 		move.y += current_stering * 3
-		translate(move.normalized() * current_speed *(1.3-min(loot_in_cart*0.1,1)) * delta)
+		translate(move.normalized() * current_speed *(1.3-min(loot_in_cart*0.1,1)) * delta * wheels/2.0)
 	#	$AnimationPlayer.playback_speed = current_speed/50.0
 		$cart/AnimationPlayer.playback_speed = current_speed/100.0
 	elif loot_in_cart >=8:
@@ -45,6 +49,10 @@ func _process(delta):
 	if spawn_new_loot:
 		spawn_new_loot = false
 		spawn_loot()
+	if spawn_new_wheel:
+		spawn_new_wheel = false
+		spaw_wheel()
+		
 	timer += delta * 10
 	if !is_driven:
 		stering_bias += rand_range(-(0.1+stering_bias*0.01), 0.1-stering_bias*0.01 )
@@ -76,11 +84,23 @@ func _on_Area2D_body_entered(body):
 		return
 	if loot_in_cart > 0:
 		spawn_new_loot = true
+	elif wheels>0:
+		spawn_new_wheel = true
+
 #	enemy.held_item = spawn_loot()
 #	enemy.grab_loot()
 	enemy.cart_hited()
 	get_node("sfx/enemy_hit_"+str(randi()%6+1)).play()
 	
+func spaw_wheel():
+	var new_wheel = wheel_object.instance()
+	get_parent().add_child(new_wheel)
+	new_wheel.position = $treasure.global_position
+	new_wheel.position.y +=30
+	new_wheel.get_node("pivot").position.y -= 40
+	new_wheel.velocity = -5
+	get_node("cart/wheel_"+str(wheels)).visible = false
+	wheels -= 1
 	
 func spawn_loot():
 	var new_loot = loot_object.instance()

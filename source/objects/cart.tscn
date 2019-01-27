@@ -28,7 +28,7 @@
 [ext_resource path="res://audio/sfx_woodcutting-005.wav" type="AudioStream" id=26]
 [ext_resource path="res://audio/sfx_woodcutting-006.wav" type="AudioStream" id=27]
 
-[sub_resource type="CapsuleShape2D" id=8]
+[sub_resource type="CapsuleShape2D" id=1]
 
 radius = 30.0
 height = 60.0
@@ -71,7 +71,7 @@ tracks/1/keys = {
 
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("wheel_front:frame")
+tracks/0/path = NodePath("wheel_2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -83,7 +83,7 @@ tracks/0/keys = {
 "values": [ 0, 5, 1, 6, 2, 7, 3, 8, 4, 9, 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("wheel_back:frame")
+tracks/1/path = NodePath("wheel_1:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -115,7 +115,7 @@ script = ExtResource( 1 )
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( -10, -26.9038 )
 rotation = 1.5708
-shape = SubResource( 8 )
+shape = SubResource( 1 )
 
 [node name="shade" type="Sprite" parent="."]
 position = Vector2( 23.9431, -19.2713 )
@@ -128,6 +128,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="." groups=[
 "drop_point",
 ]]
+editor/display_folded = true
 position = Vector2( 0, -6.90382 )
 input_pickable = false
 collision_layer = 8192
@@ -177,7 +178,6 @@ __meta__ = {
 }
 
 [node name="cart" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 20, -47 )
 texture = ExtResource( 4 )
 hframes = 5
@@ -192,14 +192,14 @@ texture = ExtResource( 5 )
 hframes = 5
 frame = 2
 
-[node name="wheel_back" type="Sprite" parent="cart"]
+[node name="wheel_1" type="Sprite" parent="cart"]
 show_behind_parent = true
 position = Vector2( 8.38234, 20.5001 )
 texture = ExtResource( 6 )
 hframes = 10
 frame = 1
 
-[node name="wheel_front" type="Sprite" parent="cart"]
+[node name="wheel_2" type="Sprite" parent="cart"]
 position = Vector2( 5.50005, 29.3636 )
 texture = ExtResource( 7 )
 hframes = 10
@@ -273,6 +273,7 @@ __meta__ = {
 }
 
 [node name="drive_control" type="Area2D" parent="."]
+editor/display_folded = true
 collision_layer = 0
 collision_mask = 1024
 __meta__ = {
@@ -306,6 +307,7 @@ volume_db = -7.0
 stream = SubResource( 7 )
 
 [node name="sfx" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="wagon_bump_1" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 15 )

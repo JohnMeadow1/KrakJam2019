@@ -28,8 +28,8 @@ func _process(delta):
 		timer = spawn_time
 
 func spawn_minion():
-	if globals.cart_node.loot_in_cart + get_tree().get_nodes_in_group("loot").size() <= 0:
-		return
+#	if globals.cart_node.loot_in_cart + get_tree().get_nodes_in_group("loot").size() <= 0:
+#		return
 	
 	var new_enemy = goblin_minion_object.instance()
 	new_enemy.friends_courage = enemy_courge_level

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cart_body_treasure.png-9cbeae1b4796c8bcf99adf56ed2fbb1d.stex"
+path="res://.import/puddle.png-e4326e0e22baad53c736cf15806da2ae.stex"
 
 [deps]
 
-source_file="res://character_assets/cart_body_treasure.png"
-dest_files=[ "res://.import/cart_body_treasure.png-9cbeae1b4796c8bcf99adf56ed2fbb1d.stex" ]
+source_file="res://sprites/puddle.png"
+dest_files=[ "res://.import/puddle.png-e4326e0e22baad53c736cf15806da2ae.stex" ]
 
 [params]
 
