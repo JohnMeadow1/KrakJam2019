@@ -36,7 +36,6 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
 			for area in $pivot/drop_area.get_overlapping_areas():
 				if area.is_in_group("drop_point"):
-					print(area.get_name())
 					held_item.queue_free()
 					area.get_parent().add_loot()
 					break
@@ -45,8 +44,10 @@ func _physics_process(delta):
 			
 	if is_driving:
 		position = globals.cart_node.position
-		if Input.is_action_just_pressed("action_p" + str(PLAYER_CONTROLS)):
-			pass
+		if Input.is_action_pressed("action_p" + str(PLAYER_CONTROLS)):
+			if globals.cart_node.get_out():
+				is_driving = false
+				enable_coliders()
 		var target_stering = handle_drive_input()
 		globals.cart_node.target_stering = target_stering.y
 		globals.cart_node.speed = target_stering.x

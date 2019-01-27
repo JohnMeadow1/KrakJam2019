@@ -109,6 +109,7 @@ func _on_drive_control_body_exited(body):
 func get_in(player_id):
 	$TextureProgress.value -= 2
 	if $TextureProgress.value == 0:
+		$TextureProgress.value = 60
 		$TextureProgress.visible = false
 		is_driven = true
 		target_stering = 0
@@ -119,3 +120,16 @@ func get_in(player_id):
 				get_node("cart/character"+str(i+1)).visible = false
 		return true
 	return false
+	
+func get_out():
+	$TextureProgress.value -= 2
+	$TextureProgress.visible = true
+	if $TextureProgress.value == 0:
+		$TextureProgress.value = 60
+		$TextureProgress.visible = false
+		for i in range(4):   
+			get_node("cart/character"+str(i+1)).visible = false
+		is_driven = false
+		return true
+	return false
+	
