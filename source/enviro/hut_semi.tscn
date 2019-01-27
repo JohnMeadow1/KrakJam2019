@@ -2,7 +2,8 @@
 
 [ext_resource path="res://enviro/static_manual_frame.gd" type="Script" id=1]
 [ext_resource path="res://sprites/shade.png" type="Texture" id=2]
-[ext_resource path="res://objects/Buildings/Hut_semi.png" type="Texture" id=3]
+[ext_resource path="res://sprites/building/hut_semi.png" type="Texture" id=3]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 

@@ -47,7 +47,7 @@ func grab(height, who:Node):
 	pickup_height = height
 	self.remove_from_group("loot")
 	(sfx_pick[randi() % sfx_pick.size()] as AudioStreamPlayer).play()
-	if enemy_terget is Enemy:
+	if enemy_terget && enemy_terget is Enemy:
 		if(who.is_in_group("player")):
 			enemy_terget.attack_player(who)
 		else:

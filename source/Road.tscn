@@ -4,10 +4,6 @@
 [ext_resource path="res://sprites/road_tiles_3x2.png" type="Texture" id=2]
 
 [node name="Road" type="Node2D"]
-editor/display_folded = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="road_start" type="Sprite" parent="."]
 position = Vector2( -407.017, 2.56937 )
@@ -38,9 +34,10 @@ hframes = 3
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_40" type="Sprite" parent="."]
-position = Vector2( -7160.57, 282.769 )
+position = Vector2( -7158, 276 )
 rotation = -3.14159
 texture = ExtResource( 2 )
+flip_v = true
 vframes = 4
 hframes = 3
 region_rect = Rect2( 100, 100, 1000, 100 )
@@ -54,7 +51,7 @@ frame = 3
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_20" type="Sprite" parent="."]
-position = Vector2( -6415.63, 282.117 )
+position = Vector2( -6413, 273 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 4
@@ -104,7 +101,7 @@ frame = 6
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_23" type="Sprite" parent="."]
-position = Vector2( -5679.98, 19.4373 )
+position = Vector2( -5656, 7 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
@@ -112,7 +109,7 @@ frame = 2
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_36" type="Sprite" parent="."]
-position = Vector2( -7949.63, -543.421 )
+position = Vector2( -7944, -558 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
@@ -120,11 +117,11 @@ frame = 2
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_30" type="Sprite" parent="."]
-position = Vector2( -7209.18, -826.998 )
+position = Vector2( -7524, -851 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 2
+frame = 6
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_14" type="Sprite" parent="."]
@@ -144,7 +141,7 @@ frame = 1
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_24" type="Sprite" parent="."]
-position = Vector2( -5675.68, -260.251 )
+position = Vector2( -5652, -265 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
@@ -152,7 +149,7 @@ frame = 1
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_37" type="Sprite" parent="."]
-position = Vector2( -7943.09, -823.113 )
+position = Vector2( -7941, -845 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
@@ -168,19 +165,19 @@ frame = 1
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_25" type="Sprite" parent="."]
-position = Vector2( -6424.11, 24.5548 )
+position = Vector2( -6395, 63 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 1
+frame = 7
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_38" type="Sprite" parent="."]
-position = Vector2( -8683.34, -551.605 )
+position = Vector2( -8664, -496 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 1
+frame = 7
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_13" type="Sprite" parent="."]
@@ -224,7 +221,7 @@ frame = 5
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_21" type="Sprite" parent="."]
-position = Vector2( -5701.5, 564 )
+position = Vector2( -5704, 558 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
@@ -288,35 +285,35 @@ frame = 4
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_19" type="Sprite" parent="."]
-position = Vector2( -6428.98, 564.117 )
+position = Vector2( -6420, 513 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 4
+frame = 9
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_39" type="Sprite" parent="."]
-position = Vector2( -8658.9, 1.43198 )
+position = Vector2( -8667, -49 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 4
+frame = 9
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_18" type="Sprite" parent="."]
-position = Vector2( -5704.12, 849.8 )
+position = Vector2( -5706, 796 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 4
+frame = 9
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_34" type="Sprite" parent="."]
-position = Vector2( -7917.62, 284.201 )
+position = Vector2( -7921, 233 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
-frame = 4
+frame = 9
 region_rect = Rect2( 100, 100, 1000, 100 )
 
 [node name="road_9" type="Sprite" parent="."]
