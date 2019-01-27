@@ -8,13 +8,14 @@ var bump_velcocity:float = 0.0
 var current_stering:float = 0.0
 var target_stering:float = 0
 var stering_bias:float = 0.0
-var loot_in_cart:int = 5
+var loot_in_cart:int = 9
 var timer:float = 0.0
 
 var in_drive_area:int  = 0
-#var drive_progress:int = 20
 var is_driven = false
 var spawn_new_loot = false
+
+var has_started = false
 
 var loot_object = load("res://objects/loot.tscn")
 
@@ -23,17 +24,23 @@ func _ready():
 	globals.cart = $treasure
 	globals.wheel = $cart/wheel_position
 	globals.cart_node = self
+	$cart/AnimationPlayer.playback_speed = 0
 
 func _physics_process(delta):
-#	drive_progress = clamp(drive_progress + 1,0,20)
 	$TextureProgress.value += 1
-	move = Vector2.ZERO
-	current_speed = lerp(current_speed, speed, 0.1)
-	move.x -= current_speed 
-	move.y += current_stering * 3
-	translate(move.normalized() * current_speed * delta)
-#	$AnimationPlayer.playback_speed = current_speed/50.0
-	$cart/AnimationPlayer.playback_speed = current_speed/100.0
+	if has_started:
+		move = Vector2.ZERO
+		current_speed = lerp(current_speed, speed, 0.1)
+		move.x -= current_speed 
+		move.y += current_stering * 3
+		translate(move.normalized() * current_speed * delta)
+	#	$AnimationPlayer.playback_speed = current_speed/50.0
+		$cart/AnimationPlayer.playback_speed = current_speed/100.0
+	elif loot_in_cart >=10:
+		$AudioStreamPlayer.play()
+		has_started = true
+		
+	
 func _process(delta):
 	if spawn_new_loot:
 		spawn_new_loot = false
@@ -56,7 +63,7 @@ func _process(delta):
 		bump_velcocity = 0
 
 func _on_VisibilityNotifier_screen_exited():
-	print("wózek poza ekranem")
+#	print("wózek poza ekranem")
 	pass
 
 
@@ -118,6 +125,8 @@ func get_in(player_id):
 				get_node("cart/character"+str(i+1)).visible = true 
 			else:      
 				get_node("cart/character"+str(i+1)).visible = false
+		if !has_started:
+			has_started = true
 		return true
 	return false
 	
