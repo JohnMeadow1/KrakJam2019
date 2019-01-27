@@ -13,6 +13,7 @@
 
 
 [node name="loot" type="Area2D" groups=[
+"wheel",
 "loot",
 ]]
 collision_layer = 2

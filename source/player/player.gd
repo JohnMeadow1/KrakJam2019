@@ -58,7 +58,10 @@ func _physics_process(delta):
 				for area in $pivot/drop_area.get_overlapping_areas():
 					if area.is_in_group("drop_point"):
 						held_item.queue_free()
-						area.get_parent().add_loot()
+						if held_item.is_in_group("wheel"):
+							area.get_parent().add_wheel()
+						else:
+							area.get_parent().add_loot()
 						break
 				held_item.drop()
 				held_item = null

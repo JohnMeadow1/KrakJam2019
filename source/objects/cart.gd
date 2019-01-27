@@ -66,10 +66,10 @@ func _process(delta):
 	$shade2.position.y  = -14 + current_stering
 	$shade3.position.y = current_stering
 	$cart.position.y += bump_velcocity 
-	if $cart.position.y < -47:
+	if $cart.position.y < -47  + 10 * (1-wheels/2.0):
 		bump_velcocity += 0.5
 	else:
-		$cart.position.y = -47
+		$cart.position.y = -47 + 10 * (1-wheels/2.0)
 		bump_velcocity = 0
 
 func _on_VisibilityNotifier_screen_exited():
@@ -102,6 +102,11 @@ func spaw_wheel():
 	get_node("cart/wheel_"+str(wheels)).visible = false
 	wheels -= 1
 	
+func add_wheel():
+	wheels += 1
+	get_node("cart/wheel_"+str(wheels)).visible = true
+	$drop_on_wood.play()
+	
 func spawn_loot():
 	var new_loot = loot_object.instance()
 	get_parent().add_child(new_loot)
@@ -122,6 +127,7 @@ func add_loot():
 #	$drop_on_wood.play()
 #	get_node("sfx/drop_gold_"+str(randi()%3+1)).play()
 
+	
 func _on_bump_area_entered(area):
 #	dissable_area = true
 	area.get_node("Shape2D").queue_free()
