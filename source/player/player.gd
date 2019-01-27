@@ -111,7 +111,7 @@ func pickup_loot():
 	var loot = $pickup_area.get_overlapping_areas()
 	for item in loot:
 		if item.is_in_group("loot"):
-			item.grab(50)
+			item.grab(50, self)
 			held_item = item
 			return
 		

@@ -14,11 +14,11 @@ func _ready():
 func _physics_process(delta):
 	if state == STATES.STATE_ATTACK:
 		charge(delta)
-	elif state == STATES.STATE_RUN && target != null:
+	elif state == STATES.STATE_RUN && target is Node:
 		run(delta)
 	elif state == STATES.STATE_SWARE:
 		sware(delta)
-	elif state == STATES.STATE_CHASE && target != null:
+	elif state == STATES.STATE_CHASE && target is Node:
 		chase(delta)
 	elif state == STATES.STATE_MOVE_AWAY:
 		if move_away_timer > 0:
@@ -41,7 +41,7 @@ func idle(delta):
 func chase(delta):
 	var offset = chase_speed * delta * 100.0
 	var direction = Vector2()
-	if !target==null:
+	if target is Node:
 		direction = target.global_position - self.position
 	else:
 		chose_new_target()
@@ -52,7 +52,7 @@ func chase(delta):
 	
 func run(delta):
 	var lootDrag = 1
-	if !held_item==null:
+	if held_item!=null:
 		lootDrag = 0.3
 		target   = globals.camera
 		held_item.position = lerp(held_item.position,$pivot/held_item.global_position, 0.2)
@@ -98,6 +98,5 @@ func charge(delta):
 func _on_pickup_area_loot_entered(area):
 	if area == target:
 		held_item = target
-		target.grab(30)
+		target.grab(30, self)
 		state = STATES.STATE_RUN
-
