@@ -211,7 +211,6 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 10000, 10000 )
 
 [node name="Sand" type="Node2D" parent="Enviroment"]
-editor/display_folded = true
 
 [node name="sand_small" type="Sprite" parent="Enviroment/Sand"]
 position = Vector2( 69, -5 )
@@ -1291,6 +1290,7 @@ position = Vector2( 404.252, 89.2625 )
 
 [node name="plant1" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -375, -140 )
+frame = 0
 
 [node name="plant2" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( 432, 75 )
@@ -1312,7 +1312,7 @@ position = Vector2( -7023, -526 )
 frame = 9
 
 [node name="rock_small7" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( -4756, 382 )
+position = Vector2( -4832, 333.341 )
 
 [node name="rock_small28" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( -7019, -203 )
@@ -1405,13 +1405,13 @@ position = Vector2( -5303.43, 51.3673 )
 position = Vector2( -7565, -568 )
 
 [node name="rock_small" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -4693, 428 )
+position = Vector2( -4707.42, 150.339 )
 
 [node name="rock_small27" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( -6956, -157 )
 
 [node name="rock_small2" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -4666, 375 )
+position = Vector2( -4775.08, 336.136 )
 frame = 11
 
 [node name="rock_small29" parent="YSort" instance=ExtResource( 19 )]
@@ -1528,279 +1528,371 @@ position = Vector2( -7425.96, 83.4056 )
 
 [node name="plant3" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4519, 671 )
+frame = 0
 
 [node name="plant12" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3518, 1015 )
+frame = 0
 
 [node name="plant14" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -2325, 634 )
+frame = 0
 
 [node name="plant25" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3673, -155 )
+frame = 0
 
 [node name="plant31" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4866, -653 )
+frame = 0
 
 [node name="plant35" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5569, 280 )
+frame = 0
 
 [node name="plant37" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7832, -305 )
+frame = 0
 
 [node name="plant39" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6184, -682 )
+frame = 0
 
 [node name="plant45" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7209, 770 )
+frame = 0
 
 [node name="plant50" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8393, -310 )
+frame = 0
 
 [node name="plant61" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8762, 247 )
+frame = 0
 
 [node name="plant66" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9536, -142 )
+frame = 0
 
 [node name="plant73" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7498, -1029 )
+frame = 0
 
 [node name="plant78" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8660, 223 )
+frame = 0
 
 [node name="plant81" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6422, 1341 )
+frame = 0
 
 [node name="plant90" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1318, 358 )
+frame = 0
 
 [node name="plant4" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4742, 977 )
+frame = 0
 
 [node name="plant5" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4043, 762 )
+frame = 0
 
 [node name="plant8" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3042, 1106 )
+frame = 0
 
 [node name="plant15" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1849, 725 )
+frame = 0
 
 [node name="plant20" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3197, -64 )
+frame = 0
 
 [node name="plant28" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4390, -562 )
+frame = 0
 
 [node name="plant33" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5093, 371 )
+frame = 0
 
 [node name="plant92" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7356, -214 )
+frame = 0
 
 [node name="plant40" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5708, -591 )
+frame = 0
 
 [node name="plant47" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6733, 861 )
+frame = 0
 
 [node name="plant52" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7917, -219 )
+frame = 0
 
 [node name="plant59" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9022, 326 )
+frame = 0
 
 [node name="plant62" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9060, -51 )
+frame = 0
 
 [node name="plant71" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7022, -938 )
+frame = 0
 
 [node name="plant77" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8205, -160 )
+frame = 0
 
 [node name="plant85" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5946, 1432 )
+frame = 0
 
 [node name="plant86" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -859.023, 410.311 )
+frame = 0
 
 [node name="plant6" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3941, 422 )
+frame = 0
 
 [node name="plant9" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -2940, 766 )
+frame = 0
 
 [node name="plant18" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1747, 385 )
+frame = 0
 
 [node name="plant24" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3095, -404 )
+frame = 0
 
 [node name="plant29" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4288, -902 )
+frame = 0
 
 [node name="plant41" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5606, -931 )
+frame = 0
 
 [node name="plant46" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6631, 521 )
+frame = 0
 
 [node name="plant51" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7815, -559 )
+frame = 0
 
 [node name="plant57" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8920, -14 )
+frame = 0
 
 [node name="plant65" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9694, -403 )
+frame = 0
 
 [node name="plant69" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6920, -1278 )
+frame = 0
 
 [node name="plant75" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8193, 921 )
+frame = 0
 
 [node name="plant80" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5844, 1092 )
+frame = 0
 
 [node name="plant89" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -740, 109 )
+frame = 0
 
 [node name="plant7" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4375, 14 )
+frame = 0
 
 [node name="plant10" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3374, 358 )
+frame = 0
 
 [node name="plant19" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -2181, -23 )
+frame = 0
 
 [node name="plant23" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3529, -812 )
+frame = 0
 
 [node name="plant30" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4722, -1310 )
+frame = 0
 
 [node name="plant34" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5425, -377 )
+frame = 0
 
 [node name="plant38" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6040, -1339 )
+frame = 0
 
 [node name="plant49" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7065, 113 )
+frame = 0
 
 [node name="plant55" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8249, -967 )
+frame = 0
 
 [node name="plant56" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9354, -422 )
+frame = 0
 
 [node name="plant64" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8943, -558 )
+frame = 0
 
 [node name="plant68" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7354, -1686 )
+frame = 0
 
 [node name="plant74" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8627, 513 )
+frame = 0
 
 [node name="plant84" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6278, 684 )
+frame = 0
 
 [node name="plant87" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1174, -299 )
+frame = 0
 
 [node name="plant11" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4058, -262 )
+frame = 0
 
 [node name="plant13" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3057, 82 )
+frame = 0
 
 [node name="plant17" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1864, -299 )
+frame = 0
 
 [node name="plant21" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3212, -1088 )
+frame = 0
 
 [node name="plant27" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4405, -1586 )
+frame = 0
 
 [node name="plant36" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5108, -653 )
+frame = 0
 
 [node name="plant43" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5723, -1615 )
+frame = 0
 
 [node name="plant48" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6748, -163 )
+frame = 0
 
 [node name="plant53" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7932, -1243 )
+frame = 0
 
 [node name="plant58" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9037, -698 )
+frame = 0
 
 [node name="plant67" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8765, -841 )
+frame = 0
 
 [node name="plant72" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7037, -1962 )
+frame = 0
 
 [node name="plant79" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8310, 237 )
+frame = 0
 
 [node name="plant83" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5961, 408 )
+frame = 0
 
 [node name="plant88" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -857, -575 )
+frame = 0
 
 [node name="plant16" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4058, -262 )
+frame = 0
 
 [node name="plant22" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3057, 82 )
+frame = 0
 
 [node name="plant26" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1864, -299 )
+frame = 0
 
 [node name="plant32" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3212, -1088 )
+frame = 0
 
 [node name="plant42" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4405, -1586 )
+frame = 0
 
 [node name="plant44" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5108, -653 )
+frame = 0
 
 [node name="plant54" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5723, -1615 )
+frame = 0
 
 [node name="plant60" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -6748, -163 )
+frame = 0
 
 [node name="plant63" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7932, -1243 )
+frame = 0
 
 [node name="plant70" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -9037, -698 )
+frame = 0
 
 [node name="plant76" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8765, -841 )
+frame = 0
 
 [node name="plant82" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7037, -1962 )
+frame = 0
 
 [node name="plant91" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8310, 237 )
+frame = 0
 
 [node name="plant93" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -5961, 408 )
+frame = 0
 
 [node name="plant94" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -857, -575 )
+frame = 0
 
 [node name="rock_small31" parent="YSort" instance=ExtResource( 22 )]
 position = Vector2( -5347, 190 )
@@ -1838,7 +1930,7 @@ position = Vector2( -4829.42, 761.582 )
 frame = 0
 
 [node name="tree_2" parent="YSort" instance=ExtResource( 23 )]
-position = Vector2( -4716, 462 )
+position = Vector2( -4840, 636 )
 
 [node name="tree_3" parent="YSort" instance=ExtResource( 23 )]
 position = Vector2( -5441, 651 )
@@ -1864,6 +1956,7 @@ frame = 12
 
 [node name="plant95" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -4973.82, -19.119 )
+frame = 0
 
 [node name="hut_semi3" parent="YSort" instance=ExtResource( 24 )]
 position = Vector2( -4905, 442 )
@@ -1933,6 +2026,7 @@ frame = 8
 
 [node name="plant96" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7254, -554 )
+frame = 0
 
 [node name="hut_semi8" parent="YSort" instance=ExtResource( 24 )]
 position = Vector2( -7168, -143 )
@@ -2186,114 +2280,150 @@ position = Vector2( -9551, -572 )
 
 [node name="plant97" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -375, -140 )
+frame = 0
 
 [node name="home" parent="YSort" instance=ExtResource( 26 )]
 position = Vector2( -9671, -246 )
 
 [node name="rock" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( 6, -100 )
+frame = 0
 
 [node name="rock4" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -807, 607 )
+frame = 0
 
 [node name="rock8" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -3186, 339 )
+frame = 0
 
 [node name="rock23" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -617, -259 )
+frame = 0
 
 [node name="rock11" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6087, 1222 )
+frame = 0
 
 [node name="rock29" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -8457, 166 )
+frame = 0
 
 [node name="rock32" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -5111, -744 )
+frame = 0
 
 [node name="rock33" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -4867, 1520 )
+frame = 0
 
 [node name="rock17" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6238.25, 354.079 )
+frame = 0
 
 [node name="rock5" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -1268, 731 )
+frame = 0
 
 [node name="rock7" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -3653, 463 )
+frame = 0
 
 [node name="rock13" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6548, 1346 )
+frame = 0
 
 [node name="rock18" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -7013, 155 )
+frame = 0
 
 [node name="rock2" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -183, -238 )
+frame = 0
 
 [node name="rock3" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -814, 150.265 )
+frame = 0
 
 [node name="rock10" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -3193, -117 )
+frame = 0
 
 [node name="rock26" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -624, -715 )
+frame = 0
 
 [node name="rock14" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6094, 766 )
+frame = 0
 
 [node name="rock28" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -8464, -290 )
+frame = 0
 
 [node name="rock31" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -5118, -1200 )
+frame = 0
 
 [node name="rock34" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -4874, 1064 )
+frame = 0
 
 [node name="rock20" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -3999.5, 682.088 )
+frame = 0
 
 [node name="rock16" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6559, -430 )
+frame = 0
 
 [node name="rock21" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -4433, -491 )
+frame = 0
 
 [node name="rock22" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -3792, -1306 )
+frame = 0
 
 [node name="rock6" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -1237, -104 )
+frame = 0
 
 [node name="rock9" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -3624.55, -632.3 )
+frame = 0
 
 [node name="rock24" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -1047, -970 )
+frame = 0
 
 [node name="rock12" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6517, 511 )
+frame = 0
 
 [node name="rock27" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -8887, -545 )
+frame = 0
 
 [node name="rock30" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -5541, -1455 )
+frame = 0
 
 [node name="rock35" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -4360, 960 )
+frame = 0
 
 [node name="rock19" parent="YSort" instance=ExtResource( 27 )]
-position = Vector2( -4353.5, 437.112 )
+position = Vector2( -4225.16, 401 )
+frame = 0
 
 [node name="rock25" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -2091, -421.228 )
+frame = 0
 
 [node name="rock15" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( -6982, -680 )
+frame = 0
 
 [node name="tree_9" parent="YSort" instance=ExtResource( 23 )]
 position = Vector2( -853, -382 )
@@ -2458,7 +2588,7 @@ position = Vector2( -2572, 13 )
 position = Vector2( -3475, 258 )
 
 [node name="tree_167" parent="YSort" instance=ExtResource( 28 )]
-position = Vector2( -4600, 345 )
+position = Vector2( -4554.55, 267.059 )
 
 [node name="tree_174" parent="YSort" instance=ExtResource( 28 )]
 position = Vector2( -3984, -720 )
@@ -2881,7 +3011,7 @@ position = Vector2( -7960, -337 )
 position = Vector2( -5912, 460 )
 
 [node name="tree_136" parent="YSort" instance=ExtResource( 30 )]
-position = Vector2( -4280, 285 )
+position = Vector2( -4371, 339 )
 
 [node name="tree_140" parent="YSort" instance=ExtResource( 30 )]
 position = Vector2( -3731, 279 )
