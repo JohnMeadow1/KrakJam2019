@@ -8,9 +8,9 @@
 [ext_resource path="res://sprites/leszek_animations.png" type="Texture" id=6]
 [ext_resource path="res://sprites/hiryu_animations.png" type="Texture" id=7]
 [ext_resource path="res://objects/cart.tscn" type="PackedScene" id=8]
-[ext_resource path="res://enviro/tree.tscn" type="PackedScene" id=9]
-[ext_resource path="res://objects/loot.tscn" type="PackedScene" id=10]
-[ext_resource path="res://enviro/plant1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://objects/loot.tscn" type="PackedScene" id=9]
+[ext_resource path="res://enviro/plant1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://enviro/dragon.tscn" type="PackedScene" id=11]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -63,6 +63,8 @@ __meta__ = {
 
 [node name="global_enemy_spawner" type="Node" parent="YSort"]
 script = ExtResource( 4 )
+spawn_time_max = 4.0
+spawn_time_min = 1.5
 
 [node name="player_1" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 322.709, 23.3363 )
@@ -314,21 +316,7 @@ collision/safe_margin = 0.001
 motion/sync_to_physics = false
 speed = 50.0
 
-[node name="tree_1" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 21, -23 )
-input_pickable = false
-collision_layer = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-
-[node name="tree_2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 226, -23 )
-input_pickable = false
-collision_layer = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-
-[node name="loot" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 371.671, -46.2029 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -338,7 +326,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot2" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 306.511, 90.9772 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -348,7 +336,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot3" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 413.683, 133.846 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -358,7 +346,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot4" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 347.665, 12.0986 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -368,7 +356,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot5" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot5" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 353.667, 156.995 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -378,7 +366,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot6" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot6" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 416.255, -38.4865 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -388,7 +376,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot7" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot7" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 316.799, -33.3423 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -398,7 +386,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot8" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot8" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 303.028, 138.495 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -408,7 +396,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot9" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot9" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 361.383, 102.98 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -418,7 +406,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot10" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot10" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 303.939, 29.2462 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -428,7 +416,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="loot11" parent="YSort" instance=ExtResource( 10 )]
+[node name="loot11" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 404.252, 89.2625 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -438,14 +426,11 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="plant1" parent="YSort" instance=ExtResource( 11 )]
+[node name="plant1" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( -375, -140 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-frame = 0
+
+[node name="plant2" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 432, 75 )
 
 
 [editable path="YSort/player_2"]

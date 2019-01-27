@@ -23,13 +23,10 @@
 [node name="Enviroment" type="Node"]
 
 [node name="Ground" type="Sprite" parent="."]
-position = Vector2( 15, -10 )
+position = Vector2( -4870, -10 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 10000, 10000 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Road" parent="." instance=ExtResource( 2 )]
 position = Vector2( -4, 0 )
@@ -67,6 +64,36 @@ texture = ExtResource( 3 )
 [node name="sand_big" type="Sprite" parent="Sand"]
 self_modulate = Color( 1, 1, 1, 0.929412 )
 position = Vector2( -5048, 293 )
+rotation = -1.57676
+texture = ExtResource( 4 )
+
+[node name="sand_big3" type="Sprite" parent="Sand"]
+self_modulate = Color( 1, 1, 1, 0.929412 )
+position = Vector2( 421, -172 )
+rotation = -1.57676
+texture = ExtResource( 4 )
+
+[node name="sand_big4" type="Sprite" parent="Sand"]
+self_modulate = Color( 1, 1, 1, 0.929412 )
+position = Vector2( 502, 187 )
+rotation = -1.57676
+texture = ExtResource( 4 )
+
+[node name="sand_big5" type="Sprite" parent="Sand"]
+self_modulate = Color( 1, 1, 1, 0.929412 )
+position = Vector2( 525, 410 )
+rotation = -1.57676
+texture = ExtResource( 4 )
+
+[node name="sand_big6" type="Sprite" parent="Sand"]
+self_modulate = Color( 1, 1, 1, 0.929412 )
+position = Vector2( 810, -102 )
+rotation = -1.57676
+texture = ExtResource( 4 )
+
+[node name="sand_big7" type="Sprite" parent="Sand"]
+self_modulate = Color( 1, 1, 1, 0.929412 )
+position = Vector2( 493, -202 )
 rotation = -1.57676
 texture = ExtResource( 4 )
 
@@ -763,6 +790,18 @@ position = Vector2( -6, 683 )
 
 [node name="forest_4" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( -6, 683 )
+
+[node name="forest_80" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 454, 651 )
+
+[node name="forest_81" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 380, -385 )
+
+[node name="forest_82" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 875, -317 )
+
+[node name="forest_83" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 927, 560 )
 
 [node name="forest_17" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( -9399, 371 )
