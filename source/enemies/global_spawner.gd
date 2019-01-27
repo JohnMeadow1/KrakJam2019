@@ -1,7 +1,7 @@
 extends Node
 
 var goblin_minion_object = load("res://enemies/basic_minion/basic_minion.tscn")
-var spawn_distance:float = 500.0
+var spawn_distance:float = 600.0
 
 var timer:float = 3.0
 
@@ -26,7 +26,10 @@ func spawn_minion():
 	get_parent().add_child(new_enemy)
 
 #	var spawn_point:Vector2 = Vector2(randf(), randf())
+#	var spawn_point:Vector2 = globals.players_position.position - globals.cart.global_position
 	var spawn_point:Vector2 = globals.camera.position - globals.cart.global_position
+	spawn_point = spawn_point.normalized()
+	spawn_point += Vector2(rand_range(-0.25,0.25),rand_range(-0.25,0.25))
 	spawn_point = spawn_point.normalized()
 	spawn_point *= -spawn_distance
 	spawn_point += globals.cart.global_position

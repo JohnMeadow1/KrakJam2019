@@ -61,6 +61,7 @@ func _on_player_scan_body_exited(body:KinematicBody2D):
 
 func _on_critical_distance_body_entered(body:KinematicBody2D):
 	if body.is_in_group("player"):
+		self.remove_from_group("enemy")
 		state = STATES.STATE_RUN
 		drop_loot()
 
@@ -106,6 +107,7 @@ func drop_loot():
 	if held_item:
 		held_item.drop()
 		held_item = null
+		self.remove_from_group("enemy")
 		
 func cart_hited():
 #	chose_new_target()

@@ -63,7 +63,9 @@ func target(enemy:Enemy):
 
 func _on_VisibilityNotifier2D_screen_entered():
 	self.add_to_group("loot")
+	pass
 
 func _on_VisibilityNotifier2D_screen_exited():
 	self.remove_from_group("loot")
+	pass
 
