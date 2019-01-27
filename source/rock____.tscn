@@ -1,0 +1,1617 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://enviro/rock_small.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enviro/roc_small.gd" type="Script" id=2]
+
+[node name="rock____" type="Node2D"]
+
+[node name="rock_small37" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -108, 194.265 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small40" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -623, 228 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small258" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -623, 228 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small43" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -938, -96 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small46" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1896.73, 173.631 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 2
+
+[node name="rock_small51" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2065.38, 270.106 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small56" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1388, -1027 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small62" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2278, -1063 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small65" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2626, -1372 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small73" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3555, -1426 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small77" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3053, -963 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small84" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4118, -1350 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small90" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4787.42, -851.932 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small100" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5051, -1852 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small102" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5260.74, -1079.47 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small109" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5963, -1483 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small116" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6386, -1756 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small124" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6999, -1465 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small129" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6572, -970 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small133" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6098, -715 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small138" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6520.57, 240.856 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small148" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6421, 853 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small149" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6869, 645 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small159" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7701, 412 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small166" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8759, 93 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small171" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8343, -1263 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small177" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8781, -840 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small179" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -9416, -657 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small187" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7377, -518 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small193" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5674, 152 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small197" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5230, 911 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small203" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5870, 1197 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small209" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4718, 1224 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small218" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4166, 846 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small223" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3743, 1115 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small230" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3201, 720 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small233" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3310, -135 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small239" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4379, -106 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small245" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3733, -128 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small252" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2982, -132 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small38" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -241, 137 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small41" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -721.514, 467.761 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small45" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2358.35, 313.293 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small52" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1665, 844 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small54" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1228, -488 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small60" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2118, -524 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small67" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2466, -833 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small71" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3395, -887 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small79" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2893, -424 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small83" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3958, -811 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small89" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4245, -1098 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small95" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4891, -1313 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small101" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5146, -951 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small111" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5771.65, -1109.3 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small115" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6226, -1217 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small120" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6839, -926 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small126" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6094.67, 11.6819 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small132" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5938, -176 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small137" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6286, 215 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small143" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6261, 1392 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small152" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6709, 1184 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small160" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7541, 951 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small164" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8599, 632 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small170" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3920.34, -530.61 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small178" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8621, -301 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small184" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -9256, -118 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small188" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7217, 21 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small194" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5514, 691 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small202" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5059, 1571 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small208" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5710, 1736 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small213" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4558, 1763 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small216" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4006, 1385 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small224" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3583, 1654 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small232" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3041, 1259 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small235" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3150, 404 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small243" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4219, 433 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small247" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3573, 411 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small256" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2722.49, 350.136 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small44" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1093, 119 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small48" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1468, 380 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small55" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1031, -952 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small61" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1921, -988 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small66" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2269, -1297 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small74" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3198, -1351 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small80" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2696, -888 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small88" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4143.42, -487.347 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small94" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4430.42, -776.932 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small99" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5076.42, -991.932 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small105" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4955.32, -946.579 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small110" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5606, -1408 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small118" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6029, -1681 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small121" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6642, -1390 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small127" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5995.55, -1067.9 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small135" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5741, -640 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small141" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6089, -249 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small147" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6064, 928 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small154" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6512, 720 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small157" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7344, 487 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small161" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8402, 168 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small167" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7986, -1188 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small175" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4085.04, -629.627 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small181" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3337.13, -262.028 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 2
+
+[node name="rock_small304" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4718.99, -240.931 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small309" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2742.05, -169.618 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small185" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7020, -443 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small196" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5317, 227 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small201" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5036, 847 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small207" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5513, 1272 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small211" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4361, 1299 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small219" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3809, 921 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small225" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3386, 1190 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small229" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2844, 795 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small238" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2953, -60 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small240" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4022, -31 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small246" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3376, -53 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small254" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2386.65, -476.256 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small50" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1980, 520 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small57" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1543, -812 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small63" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2433, -848 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small69" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2781, -1157 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small76" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4092.42, -423.347 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small82" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3208, -748 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small85" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4421.42, -835 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small91" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4560, -1422 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small98" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5193.37, -1148.58 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small104" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5461, -1275 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small108" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6118, -1268 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small114" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6541, -1541 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small122" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7154, -1250 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small128" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6727, -755 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small131" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5846.81, 15.6689 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small140" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6601, -109 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small145" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6576, 1068 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small153" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7024, 860 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small156" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7856, 627 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small162" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8914, 308 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small168" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8498, -1048 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small174" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3214.13, -305.028 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small303" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4595.99, -283.931 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small307" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2481.01, -306.786 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 2
+
+[node name="rock_small180" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -9571, -442 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small189" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7532, -303 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small191" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5829, 367 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small198" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5374, 1247 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small204" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6025, 1412 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small210" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4873, 1439 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small217" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4321, 1061 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small226" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3898, 1330 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small231" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3356, 935 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small234" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3465, 80 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small244" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4928.46, -254.435 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small250" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3888, 87 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small253" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3137, 83 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small39" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -289, -179 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small42" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -888.83, 27.1775 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small257" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -729.617, -38.505 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small47" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1270.37, 188.977 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small53" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -761, -944 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small59" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1651, -980 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small68" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1999, -1289 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small75" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2928, -1343 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small81" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2426, -880 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small87" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3491, -1267 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small93" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4160.42, -767.639 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small96" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4806.42, -983.932 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small103" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4679, -1407 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small107" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5407.58, -1132.63 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small113" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5759, -1673 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small123" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6372, -1382 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small130" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5905.1, -1166.3 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small134" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5471, -632 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small139" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5819, -241 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small146" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5794, 936 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small151" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6242, 728 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small155" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7074, 495 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small165" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8132, 176 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small172" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7716, -1180 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small176" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3892.4, -563.61 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small183" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3067.13, -255.081 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 2
+
+[node name="rock_small305" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5287.77, -255.036 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small310" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2357.01, -303.839 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small186" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6750, -435 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small192" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5090.21, -201.565 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small199" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5222, 771 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small205" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5243, 1280 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small214" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4091, 1307 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small220" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3539, 929 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small221" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3116, 1198 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small227" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2574, 803 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small237" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2683, -52 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 3
+
+[node name="rock_small242" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3752, -23 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small249" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3106, -45 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small251" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1718.71, 12.4269 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small49" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2759.81, 518.953 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small58" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1276, -804 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small64" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2166, -840 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small70" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2514, -1149 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small72" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3443, -1203 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small78" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2941, -740 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small86" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4006, -1127 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small92" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4293, -1414 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small97" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4984.26, -1092.16 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small106" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5194, -1267 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small112" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5851, -1260 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small117" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6274, -1533 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small119" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6887, -1242 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small125" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6460, -747 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small136" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5986, -492 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small142" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6334, -101 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small144" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6309, 1076 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small150" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6768.46, 242.228 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small158" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7589, 635 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small163" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8647, 316 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small169" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8231, -1040 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small173" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2947.13, -297.028 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small306" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4328.99, -275.931 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small308" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2214.01, -297.786 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small182" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -9304, -434 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small190" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7265, -295 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small195" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5562, 375 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small200" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5107, 1255 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small206" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5758, 1420 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small212" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4606, 1447 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small215" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4054, 1069 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small222" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3631, 1338 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small228" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3089, 943 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small236" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3488.97, 556.996 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small241" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4267, 117 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small248" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3621, 95 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+
+[node name="rock_small255" type="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2870, 91 )
+collision_layer = 32
+collision_mask = 0
+script = ExtResource( 2 )
+frame = 4
+

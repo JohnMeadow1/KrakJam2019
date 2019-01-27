@@ -42,7 +42,7 @@ func _physics_process(delta):
 			current_speed = lerp(current_speed, speed, 0.1)
 			move.x -= current_speed 
 			move.y += current_stering * 3
-			move = move_and_slide(move.normalized() * current_speed *(1.3-min(loot_in_cart*0.1,1)) * wheels/2.0)
+			move = move_and_slide(move.normalized() * current_speed *(1.5-min(loot_in_cart*0.1,1)) * wheels/2.0 * goats/2.0)
 		#	$AnimationPlayer.playback_speed = current_speed/50.0
 			$cart/AnimationPlayer.playback_speed = current_speed/100.0
 		elif loot_in_cart >=8:

@@ -5,6 +5,7 @@ export(int) onready var frame:int = 0 setget setterfunc, getterfunc
 
 
 func _ready():
+#	$Sprite.frame
 	pass # Replace with function body.
 
 func setterfunc(v):

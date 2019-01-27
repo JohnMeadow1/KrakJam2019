@@ -22,7 +22,7 @@ func _process(delta):
 		spawn_minion()
 		if globals.cart_node.position.x > -8500:
 			spawn_time = (1 - abs(globals.cart_node.position.x)/9000) * spawn_time_max + spawn_time_min
-			spawn_time /= max(globals.active_players*0.75, 1.0)
+			spawn_time /= max(globals.active_players*1.0, 1.0)
 		else:
 			spawn_time = 0.5
 			enemy_courge_level = 7
